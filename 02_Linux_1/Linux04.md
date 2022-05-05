@@ -13,24 +13,38 @@ Users, passwords, and groups are all stored in  (different) files across the sys
 
 
 
-Requirements:
-Your Linux machine
+
 Exercise:
 Create a new user in your VM. 
 
+sudo useradd yaska
 
 The new user should be part of an admin group.
+ sudo groupadd yaska
+
 The new user should have a password.
+sudo passwd yaska
+
 The new user should be able to use ‘sudo’
 Locate the files that store users, passwords, and groups. See if you can find your newly created user’s data in there.
 
+cat etc/group
+
+to test if the new user data is created
+
+grep yaska
 
 ### Sources
 [List your sources you used for solving the exercise]
 
-### Overcome challanges
+https://linuxize.com/post/how-to-add-user-to-group-in-linux/
 
+https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu/
+
+
+### Overcome challanges
+My laptop crushed so I was late with this assignment and i will need to rewrite the steps of the answers again in a little more detailed if i had more time.
 
 ### Results
 
-
+![screenshot user&group](../00_includes/user and group.png)
