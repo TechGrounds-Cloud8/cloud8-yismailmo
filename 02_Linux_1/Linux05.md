@@ -24,7 +24,7 @@ chown for changing the owner of a file
 rw is for read and write (edit) permission
 r- is for only read permission
 
--rw-r--r-- 12 linuxize users 12.0K Apr  8 20:51 filename.txt
+
 |[-][-][-]-   [------] [---]
 | |  |  | |      |       |
 | |  |  | |      |       +-----------> 7. Group
