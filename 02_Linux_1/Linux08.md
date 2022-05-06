@@ -50,8 +50,6 @@ https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu/
 
 
 ### Overcome challanges
-My laptop crushed so I was late with this assignment and i will need to rewrite the steps of the answers again in a little more detailed if i had more time.
+I was able to use VScode from a chromebook because i have to download microsoft on a borrowed laptop (which i was not given the permission), So i have to copy the results from my terminal and i will add the screenshots later when i have a laptop.
 
-### Results
 
-![screenshot user&group](../00_includes/user and group.png)
