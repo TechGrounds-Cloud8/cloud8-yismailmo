@@ -44,9 +44,13 @@ https://ostechnix.com/a-beginners-guide-to-cron-jobs/
 https://www.cyberciti.biz/faq/how-to-run-cron-job-every-minute-on-linuxunix/
 
 
-https://linuxize.com/post/how-to-add-user-to-group-in-linux/
+https://itsfoss.com/cron-job/
 
-https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu/
+https://crontab.guru/examples.html
+
+https://www.cyberciti.biz/faq/unix-linux-getting-current-date-in-bash-ksh-shell-script/#:~:text=Sample%20shell%20script%20to%20display,scripts%20goes%20here%20%23%20...
+
+https://phoenixnap.com/kb/set-up-cron-job-linux
 
 
 ### Overcome challanges
