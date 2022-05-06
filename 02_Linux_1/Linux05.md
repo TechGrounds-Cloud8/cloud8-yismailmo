@@ -1,9 +1,40 @@
+## File permissions
+Linux system has three types of file ownerships:
+
+1.user is the creator of the file thus the owner of the file. So the user can create, delete or modify the file he/she created.
+
+2.Group contains multiple users with the same access permission to a file (create, delete or modify the file).
+
+3.Other does not create a file and does not belong to a group like creating a role
+
+
 You can view a file’s permissions by creating a long listing. A file’s permissions, as well as its owner and group, can be changed as well.
 Any user listed in /etc/passwd can be assigned as owner of a file.
 Any group listed in /etc/group can be assigned as the group of a file.
 
 ## Key terminology
 Every file in Linux contains a set of permissions. There are separate permissions for reading, writing, and executing files (rwx)
+rw means that you read and write
+
+/etc/psswd or /etc/group is used to locally manage users & group.
+
+chgrp for changing the group owner
+chown for changing the owner of a file
+
+rw is for read and write (edit) permission
+r- is for only read permission
+
+-rw-r--r-- 12 linuxize users 12.0K Apr  8 20:51 filename.txt
+|[-][-][-]-   [------] [---]
+| |  |  | |      |       |
+| |  |  | |      |       +-----------> 7. Group
+| |  |  | |      +-------------------> 6. Owner
+| |  |  | +--------------------------> 5. Alternate Access Method
+| |  |  +----------------------------> 4. Others Permissions
+| |  +-------------------------------> 3. Group Permissions
+| +----------------------------------> 2. Owner Permissions
++------------------------------------> 1. File Type
+
 
 ## Exercise
 Create a text file.
@@ -240,3 +271,6 @@ ismael@Nest-Is-Yassin:~/techgrounds$
 
 ### Sources
 https://www.w3cschoool.com/linux-file-ownership
+
+
+https://linuxize.com/post/chmod-command-in-linux/#:~:text=The%20permissions%20can%20have%20a,read%20permissions%20(%20r%2D%2D%20).&text=The%20file%20is%20not%20readable,cannot%20view%20the%20file%20contents.
