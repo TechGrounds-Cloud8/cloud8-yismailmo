@@ -6,9 +6,9 @@ ls list iems in a directory
 
 cd .. to go back to home directory
 
-SSH
+SSH  or Secure Shell enables two computers to communicate securely
 
-chmod 400
+chmod  give permission to who is able to read, edit, or run a files.
 ### Sources
 [List your sources you used for solving the exercise]
 
