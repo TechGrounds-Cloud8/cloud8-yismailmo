@@ -1,41 +1,48 @@
-# Users and groups
-Users and groups
-introduction:
-linux has users, similar to accounts on windows and macos. every user has their own home directory. users can also be part of groups.
-there is a special user called ‘root’. Root is allowed to do anything.
-To gain temporary root permissions, you can type ‘sudo’ in front of a command, but that only works if you’re allowed to do that.
+# Cron jobs
+Introduction:
+There might be processes that you want to execute on a regular schedule. For example, you might want to write the available disk space to a log file every hour. Or maybe you want to check for system updates every 2nd day of the month.
 
-Some actions require (root) permissions.
+These kinds of jobs can be automated using Cron jobs.
 
-Users, passwords, and groups are all stored in  (different) files across the system.
-
-# Key terminology
-
-
+Requirements:
+Your Linux machine
 
 
 Exercise:
-Create a new user in your VM. 
 
-sudo useradd yaska
 
-The new user should be part of an admin group.
- sudo groupadd yaska
+# Create a Bash script that writes the current date and time to a file in your home directory.
 
-The new user should have a password.
-sudo passwd yaska
+ismael@Nest-Is-Yassin:~$ ls
+scripts  techgrounds  time.sh
+ismael@Nest-Is-Yassin:~$ cd time.sh
+ismael@Nest-Is-Yassin:~/time.sh$ cat time.sh
+#!/bin/bash
+echo `date` >> date.txt
+ismael@Nest-Is-Yassin:~/time.sh$ nano time.sh
+ismael@Nest-Is-Yassin:~/time.sh$ ls
+time.sh
+ismael@Nest-Is-Yassin:~/time.sh$ nano time.sh
+ismael@Nest-Is-Yassin:~/time.sh$ chmod u+x time.sh
+ismael@Nest-Is-Yassin:~/time.sh$ ./time.sh
+ismael@Nest-Is-Yassin:~/time.sh$ ls
+date.txt  time.sh
+ismael@Nest-Is-Yassin:~/time.sh$ cat date.txt
+Fri May 6 14:07:39 UTC 2022
+ismael@Nest-Is-Yassin:~/time.sh$ 
 
-The new user should be able to use ‘sudo’
-Locate the files that store users, passwords, and groups. See if you can find your newly created user’s data in there.
 
-cat etc/group
+# Register the script in your crontab so that it runs every minute.
 
-to test if the new user data is created
 
-grep yaska
+# Create a script that writes available disk space to a log file in ‘/var/logs’. Use a cron job so that it runs weekly.
 
-### Sources
-[List your sources you used for solving the exercise]
+# source
+https://ostechnix.com/a-beginners-guide-to-cron-jobs/
+
+
+https://www.cyberciti.biz/faq/how-to-run-cron-job-every-minute-on-linuxunix/
+
 
 https://linuxize.com/post/how-to-add-user-to-group-in-linux/
 
