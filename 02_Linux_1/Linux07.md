@@ -160,6 +160,4 @@ https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu/
 ### Overcome challanges
 My laptop crushed so I was late with this assignment and i will need to rewrite the steps of the answers again in a little more detailed if i had more time.
 
-### Results
 
-![screenshot user&group](../00_includes/user and group.png)
