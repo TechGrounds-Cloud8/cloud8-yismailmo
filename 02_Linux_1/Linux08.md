@@ -54,6 +54,6 @@ https://phoenixnap.com/kb/set-up-cron-job-linux
 
 
 ### Overcome challanges
-I was able to use VScode from a chromebook because i have to download microsoft on a borrowed laptop (which i was not given the permission), So i have to copy the results from my terminal and i will add the screenshots later when i have a laptop.
+I was not able to use VScode from a chromebook because i have to download microsoft on a borrowed laptop (which i was not given the permission), So i have to copy the results from my terminal and i will add the screenshots later when i have a laptop.
 
 
