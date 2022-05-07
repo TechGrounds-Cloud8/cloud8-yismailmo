@@ -4,7 +4,7 @@ cd is changing directory
 
 ls list iems in a directory
 
-cd .. to go back to home directory
+cd .. to move one level up to previous directory
 
 SSH  or Secure Shell enables two computers to communicate securely
 
