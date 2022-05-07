@@ -62,6 +62,3 @@ cat nieuwesamen.txt
 
 ![echo techgrounds](https://github.com/yismailmo/TechGrounds-cloud8-cloud8-yismailmo/blob/main/00_includes/techgrounds%20echo.png)
 ![echo techgrounds](https://github.com/yismailmo/TechGrounds-cloud8-cloud8-yismailmo/blob/main/00_includes/techgrounds%20output.png)
-
-![
-![
