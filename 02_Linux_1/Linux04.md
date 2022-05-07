@@ -47,4 +47,4 @@ My laptop crushed so I was late with this assignment and i will need to rewrite 
 
 ### Results
 
-![screenshot user&group](../00_includes/user and group.png)
+![screenshot user&group](My files/Linux files/cloud8-yismailmo/00_includes/LNX04-1.png)
