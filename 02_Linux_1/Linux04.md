@@ -11,11 +11,14 @@ Users, passwords, and groups are all stored in  (different) files across the sys
 
 # Key terminology
 
-
+sudo "super user do" allows you to elevate your current user account to have root privileges (do whatever with the file)
+cat to create, view, concatenate (merge) files.
+etc/group  defines the groups to which users belong
+grep finds all the lines of a file that contain a particular word (grep "ẅord" filename)
 
 
 Exercise:
-Create a new user in your VM. 
+## Create a new user in your VM. 
 
 sudo useradd yaska
 
@@ -28,10 +31,9 @@ sudo passwd yaska
 The new user should be able to use ‘sudo’
 Locate the files that store users, passwords, and groups. See if you can find your newly created user’s data in there.
 
-cat etc/group
+cat ect/group
 
 to test if the new user data is created
-
 grep yaska
 
 ### Sources
