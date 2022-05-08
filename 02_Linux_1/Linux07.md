@@ -1,28 +1,31 @@
 ## Bash scripting
 Introduction:
-The default command line interface in Linux is called a Bash shell. You’ve already interacted with Linux using commands in this shell.
-A Bash script is a series of commands written in a text file. You can execute multiple commands in a row by just executing the script.
-Additional logic can be applied with the use of variables, conditions, and loops among others.
+The default command line interface in Linux is called a Bash shell also know as Bourne again shell. 
+A Bash script = series of commands written into a text file. 
 
-In order to be able to execute the script, a user needs to have permissions to execute (x) the file.
-Linux will only be able to find the script if you specify the path name, or if you add the path to the directory in which the script lives to the PATH variable.
+PATH (not to confuse with path of a directory address) = environmental variable that tells the shell which directories to search for a file.
+
+= = Use this to assign a variable
+
+export PATH=$PATH:/some/new/path = Use this command to add paths to PATH variable
+
+export PATH=/some/new/path:$PATH = Use this command to set a path
 
 Hint: although there are no file extensions in Linux, it’s easier for humans to understand if you end your script names with ‘.sh’.
 
 Requirements:
 Your Linux machine
-Exercise 1:
-# Create a directory called ‘scripts’. Place all the scripts you make in this directory.
-
-ismael@Nest-Is-Yassin:~$ mkdir scripts
-ismael@Nest-Is-Yassin:~$ ls
-scripts  techgrounds
-ismael@Nest-Is-Yassin:~$ cd scripts
-ismael@Nest-Is-Yassin:~/scripts$ 
+## Exercise 1:
+### Create a directory called ‘scripts’. Place all the scripts you make in this directory.
+mkdir scripts then cd scripts
 
 
-# Add the scripts directory to the PATH variable.
+
+### Add the scripts directory to the PATH variable.
 Create a script that appends a line of text to a text file whenever it is executed.
+echo $PATH to show this > /home/ismael/scripts
+
+export PATH=$PATH:/home/ismael/path
 
 ismael@Nest-Is-Yassin:~$ ls
 scripts  techgrounds
@@ -90,7 +93,7 @@ ismael@Nest-Is-Yassin:~/scripts$ echo $(( $RANDOM % 10 + 1 ))
 4
 
     
-# Exercise 2:
+## Exercise 2:
 # Create a script that generates a random number between 1 and 10, stores it in a variable, and then appends the number to a text file.
 
     
@@ -156,8 +159,7 @@ https://linuxize.com/post/how-to-add-user-to-group-in-linux/
 
 https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu/
 
-
-### Overcome challanges
-My laptop crushed so I was late with this assignment and i will need to rewrite the steps of the answers again in a little more detailed if i had more time.
+### overcaming challenges
+I have finished the assignments, so now i only have to add the screenshots which i've  already saved but Adding the image address is difficult with the chromebook. 
 
 
