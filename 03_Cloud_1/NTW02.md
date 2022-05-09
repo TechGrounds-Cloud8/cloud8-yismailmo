@@ -75,3 +75,8 @@ Manage Internet Access
 Waar staat je DHCP server op jouw netwerk? Wat zijn de configuraties hiervan?
 Een DHCP server zorgt ervoor dat een apparaat met de router is verbonden een uniek ip adres krijgt, dus DHCP staat in de router.
 
+### Source
+https://www.infoblox.com/glossary/dhcp-server/
+
+
+https://forum.kpn.com/internet-9/hoe-kan-ik-inloggen-op-de-experia-box-469617
