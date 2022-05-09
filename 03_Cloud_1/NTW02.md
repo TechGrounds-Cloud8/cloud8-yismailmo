@@ -18,8 +18,6 @@ Admin toegangsgegevens voor je router
 ## Opdracht:
 ### Benoem en beschrijf de functies van veel voorkomend netwerkapparatuur
 
-Switch ensures that devices can communicate with each other without collision 
-
 1.Switch zorgt ervoor dat computers met elkaar kunnen praten zonder "collision (botsing)want een switch verdeelt een netwerk van computers in "segmenten" om ervoor te zorgen dat geen collision tussen twee connecties optreden.
 
 2.hub, doet hetzelfde als een switch maar stuurt telkens als een computer iets zegt, stuurt de hub het door naar ALLE ANDERE computers.Dit zorgt ervoor dat collision (botsing) plaatsvindt
