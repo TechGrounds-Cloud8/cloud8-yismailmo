@@ -3,7 +3,7 @@
 The Open Systems Interconnection model (OSI model) is a model primarily used for troubleshooting of telecommunication or computing systems.
 
 ## Key terminology: 
-Protocol; set of rules that determine how data is transmitted between different devices in the same network.
+Protocol; set of rules used to determine how data is transmitted between different devices in the same network.
 Host ; A host (can be computer, phone) will recognize its peer host at the remote network by its port number.
 
 
