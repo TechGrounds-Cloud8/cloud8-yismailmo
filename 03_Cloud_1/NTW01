@@ -1,0 +1,36 @@
+OSI Stack
+Introduction:
+The Open Systems Interconnection model (OSI model) is a model primarily used for troubleshooting of telecommunication or computing systems.
+
+The OSI stack has 7 layers, each representing a different component of network communications. Each layer has different protocols associated with it.
+OSI Stack
+Introduction:
+The Open Systems Interconnection model (OSI model) is a model primarily used for troubleshooting of telecommunication or computing systems.
+
+The OSI stack has 7 layers, each representing a different component of network communications. Each layer has different protocols associated with it.
+
+When troubleshooting an IT issue, you can use the OSI model as a reference point, by taking a bottom-up or a top-down approach. For example, you might start at layer 1 by checking if all cables are connected and all devices are turned on.
+
+An alternative to the OSI model is the TCP/IP model. The TCP/IP model describes the standard on which the internet was built, so it is a more realistic model. OSI is generally more practical for troubleshooting purposes because of its extra layers, even if it isn’t entirely accurate.
+
+
+A key difference between the models is that TCP/IP is simpler, collapsing several OSI layers into one:
+
+OSI layers 5, 6, 7 are combined into one Application Layer in TCP/IP
+OSI layers 1, 2 are combined into one Network Access Layer in TCP/IP – however TCP/IP does not take responsibility for sequencing and acknowledgement functions, leaving these to the underlying transport layer.
+Requirements:
+
+
+Study:
+The OSI model and its uses.
+The TCP/IP model and its uses.
+
+When troubleshooting an IT issue, you can use the OSI model as a reference point, by taking a bottom-up or a top-down approach. For example, you might start at layer 1 by checking if all cables are connected and all devices are turned on.
+
+An alternative to the OSI model is the TCP/IP model. The TCP/IP model describes the standard on which the internet was built, so it is a more realistic model. OSI is generally more practical for troubleshooting purposes because of its extra layers, even if it isn’t entirely accurate.
+Requirements:
+
+
+Study:
+The OSI model and its uses.
+The TCP/IP model and its uses.
