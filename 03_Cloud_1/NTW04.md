@@ -13,6 +13,7 @@ Translate the following decimal numbers into binary:
 
 Decimal
 Binary
+
 16  
 
 0001 0000
