@@ -80,6 +80,9 @@ https://en.wikipedia.org/wiki/Port_(computer_networking)
 https://www.freecodecamp.org/news/tcp-vs-udp/
 
 
+https://www.rfc-editor.org/rfc/pdfrfc/rfc8613.txt.pdf
+
+
 https://en.wikipedia.org/wiki/List_of_network_protocols_(OSI_model)
 
 
@@ -88,5 +91,5 @@ https://en.wikipedia.org/wiki/Communication_protocol
 
 https://www.internetsociety.org/about-the-ietf/
 
-http://www.tcpipguide.com/free/t_InternetStandardsandtheRequestForCommentRFCProcess.htm
+http://www.tcpipguide.com/free/t_InternetStandardsandtheRequestForCommentRFCProcess.html
 
