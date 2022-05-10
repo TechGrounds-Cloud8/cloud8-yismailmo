@@ -4,6 +4,7 @@ The Open Systems Interconnection model (OSI model) is a model primarily used for
 
 ## Key terminology: 
 Protocol; set of rules used to determine how data is transmitted between different devices in the same network.
+
 Host ; A host (can be computer, phone) will recognize its peer host at the remote network by its port number.
 
 
@@ -13,7 +14,9 @@ Therefore the OSI model is helpful when troubleshooting an IT issue, you can use
 
 
 Layer 7: Application
-is closest to the end-user. It means the OSI application layer allows users to interact with other software applications. By using API’s and resource sharing.
+is closest to the end-user. It means the OSI application layer allows users to interact with other software applications. 
+
+By using API’s and resource sharing.
 With the following protocol;SMTP, HTTP, FTP, POP3, SNMP
 
 Layer 6: presentation
@@ -34,17 +37,25 @@ Layer 3: Network
 
 To provide internetworking. To move packets from source to destination
 With the following protocol; IPV5, IPV6, ICMP, IPSEC, ARP, MPLS.
+
+
 Layer 3 devices include
 1, Router, used for communication for inter and intra network-wide area networks (WAN’s).
+
+
 2, Subnet mask,  is a 32-bit logical address that is used along with the IP address by the routers to determine the location of the destination host to route the packet data.
 
 Layer 2: Data Link
 
 Flow and error control by ensuring not sending more data than the network can handle.
 It also supervises the physical addressing system called the MAC address for the networks and handles the access of the assorted network components to the physical medium.
+
 Layer 2 devices include 
-1, Layer-2 switches forward the data to the next layer on the basis of the physical address (MAC address) of the machine). 
+
+1, Layer-2 switches that forward the data to the next layer on the basis of the physical address (MAC address) of the machine). 
+
 2, Bridges, to connect two LAN networks.
+
 With the following protocol; RAPA, PPP, Frame Relay, ATM, Fiber Cable, etc.
 
 
