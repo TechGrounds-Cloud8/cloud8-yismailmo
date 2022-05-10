@@ -77,6 +77,7 @@ An alternative to the OSI model is the TCP/IP model. The TCP/IP model describes 
 Transmission control protocol (TCP) and Internet protocol (IP), a number of protocols that are used to make internet communication possible.
 
 TCP/IP has 4 layers compared OSI model:
+
 Layer 1: Application layer
 
 Combiness the 1st and 3rd layers of OSI model.
