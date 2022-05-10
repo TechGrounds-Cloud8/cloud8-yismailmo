@@ -92,6 +92,11 @@ Maps directly to the network layer of the OSI model.
 Layer 4: Network access
 Maps to the last two layers (data link and physical).
 
+### Dealing with challenges
+Understanding OSI model and TCP/IP model, because there is huge amount of information available about the topic, 
+
+so I was comparing two or more sources in order to better understand the models.
+
 
 ### Exercise:
 The OSI model and its uses.
