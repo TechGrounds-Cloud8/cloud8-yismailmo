@@ -59,9 +59,16 @@ Internet communication protocols are published by the Internet Engineering Task 
 IETF develops open standards through open processes with one goal in mind: to make the Internet work better. 
 With a large open international community of network designers, operators, vendors, and researchers.
 
-So to introduce your own protocal the process of creating one is much more formal and organized today,
-Compared to when 
+So to introduce your own protocal, the process of creating one is much more formal and organized today.
+
+This due to having an informal system where anyone could just write an RFC (Request for comment) would lead to chaos. 
+
+Thus, Internet and TCP/IP standards are still called RFCs and IETF is still responsible for the creation of Internet standards(protocals). 
+
+
 ### Look into wireshark and install this program. Try and capture a bit of your own network data. Search for a protocol you know and try to understand how it functions.
+
+
 
 
 ## Source
