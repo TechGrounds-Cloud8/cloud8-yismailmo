@@ -13,19 +13,29 @@ Translate the following decimal numbers into binary:
 
 Decimal
 Binary
-16
+16  
+
+0001 0000
 
 
-128
+128 
+
+1000 0000
 
 
-228
+228 
+
+1110 0100
 
 
-112
+112  
+
+0111 0000
 
 
-73
+73  
+
+0100 1001
 
 
 
@@ -35,19 +45,24 @@ Binary
 Decimal
 1010 1010
 
+128 + 32 + 8 + 2 = 170
 
 1111 0000
+
+128+64+32+16 = 240
 
 
 1101 1011
 
+128+64+16+8+2+1 = 219
 
 1010 0000
 
+128+32 = 160
 
 0011 1010
 
-
+32+16+8+2 = 58
 
 
 Translate the following decimal numbers into hexadecimal:
@@ -89,6 +104,8 @@ d8
 
 ### source
 https://kidscodecs.com/a-binary-numbers-tutorial-with-1-and-0/#:~:text=To%20calculate%20the%20number%20value,to%2064%20%2B%201%20or%2065.
+
+https://www.youtube.com/watch?v=R8bdSWiBsfw
 
 
 
