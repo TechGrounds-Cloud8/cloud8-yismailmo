@@ -65,10 +65,12 @@ This due to having an informal system where anyone could just write an RFC (Requ
 
 Thus, Internet and TCP/IP standards are still called RFCs and IETF is still responsible for the creation of Internet standards(protocals). 
 
+IETF’s working groups, overseen by the Internet Engineering Steering Group (IESG) and the Internet Architecture Board (IAB), develop new protocols and technologies continuously, and these developments are formalized in RFCs.
+
 
 ### Look into wireshark and install this program. Try and capture a bit of your own network data. Search for a protocol you know and try to understand how it functions.
 
-
+Wireshark is a tool for collecting network traffic.
 
 
 ## Source
