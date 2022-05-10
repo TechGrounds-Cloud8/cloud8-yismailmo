@@ -86,3 +86,5 @@ https://en.wikipedia.org/wiki/Communication_protocol
 
 https://www.internetsociety.org/about-the-ietf/
 
+http://www.tcpipguide.com/free/t_InternetStandardsandtheRequestForCommentRFCProcess.htm
+
