@@ -9,6 +9,11 @@ Om dit te ondersteunen hebben netwerken een subnet mask (prefix) die definieert 
 Een subnet is een kleiner netwerk dat onderdeel is van een groter netwerk. Subnets kunnen worden gebruikt om een deel van het netwerk logisch te isoleren. Een subnet heeft per definitie een grotere prefix dan het netwerk waar het subnet in zit.
 
 Om dit alles leesbaar te maken voor mensen maken we gebruik van CIDR notation.
+
+Subnet
+
+LAN
+
 Benodigdheden:
 https://app.diagrams.net/
 Een subnet calculator
