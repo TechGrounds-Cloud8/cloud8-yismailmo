@@ -27,7 +27,7 @@ Admin toegangsgegevens voor je router
 
 5.Router:een Router, routeert op level 3 van het OSI model
 
-6.DHCP, Dynamic Host Configuration Protocol (DHCP) is a network management protocol used on Internet Protocol (IP) networks for automatically assigning IP addresses and other communication parameters to devices connected to the network using a client–server architecture.[1]
+6.DHCP, Dynamic Host Configuration Protocol (DHCP) is a network management protocol used on Internet Protocol (IP) networks for automatically assigning IP addresses and other communication parameters to devices connected to the network using a client–server architecture.
 
 
 
@@ -170,7 +170,7 @@ DHCP Lease file /var/lib/dhcpcd/wifi_any_56525639353137303731384630_managed_psk.
   
   
   ### challenges
-figure out where DHCP is located from my router and from chrome developer shell.
+figure out where DHCP is located from my router and from chrome developer shell. but eventually i found it my router after log in (moden.kpn)
 
 
 ### Source
