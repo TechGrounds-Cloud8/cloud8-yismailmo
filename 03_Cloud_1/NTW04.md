@@ -133,6 +133,6 @@ https://kidscodecs.com/a-binary-numbers-tutorial-with-1-and-0/#:~:text=To%20calc
 https://www.youtube.com/watch?v=R8bdSWiBsfw
 
 
-
+https://www.youtube.com/watch?v=pg-HEGBpCQk
 
 
