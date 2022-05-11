@@ -27,7 +27,7 @@ Admin toegangsgegevens voor je router
 
 5.Router:een Router, routeert op level 3 van het OSI model
 
-6. DHCP, Dynamic Host Configuration Protocol (DHCP) is a network management protocol used on Internet Protocol (IP) networks for automatically assigning IP addresses and other communication parameters to devices connected to the network using a client–server architecture.[1]
+6.DHCP, Dynamic Host Configuration Protocol (DHCP) is a network management protocol used on Internet Protocol (IP) networks for automatically assigning IP addresses and other communication parameters to devices connected to the network using a client–server architecture.[1]
 
 
 
