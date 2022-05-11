@@ -27,6 +27,8 @@ Admin toegangsgegevens voor je router
 
 5.Router:een Router, routeert op level 3 van het OSI model
 
+6. DHCP, Dynamic Host Configuration Protocol (DHCP) is a network management protocol used on Internet Protocol (IP) networks for automatically assigning IP addresses and other communication parameters to devices connected to the network using a client–server architecture.[1]
+
 
 
 
@@ -73,7 +75,7 @@ Ook telefoon  (landline) connectie, DHCP, DNS assigments, en Logs of the router.
 
 Waar staat je DHCP server op jouw netwerk? Wat zijn de configuraties hiervan?
 
-Een DHCP server zorgt ervoor dat een apparaat met de router is verbonden een uniek ip adres krijgt, dus DHCP staat in de router.
+Een DHCP server zorgt ervoor dat een apparaat met de router is verbonden een uniek ip adres automatisch krijgt, dus DHCP staat in de router.
 Dit is hoe ik de DHCP via chrome os developer shell heb gevonden: IP config 
 
 in crosh> (chrome developer shell)  deze command , network_diag --dhcp
@@ -167,8 +169,8 @@ DHCP Lease file /var/lib/dhcpcd/wifi_any_56525639353137303731384630_managed_psk.
   Rebinding Time: 75600 seconds (46586 seconds ago)
   
   
-  
-
+  ### challenges
+figure out where DHCP is located from my router and from chrome developer shell.
 
 
 ### Source
@@ -178,3 +180,5 @@ https://www.infoblox.com/glossary/dhcp-server/
 https://www.google.com/search?q=command+prompt+chromebook+ipconfig
 
 https://forum.kpn.com/internet-9/hoe-kan-ik-inloggen-op-de-experia-box-469617
+
+https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol
