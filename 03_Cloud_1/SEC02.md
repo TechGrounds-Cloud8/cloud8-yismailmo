@@ -52,18 +52,40 @@ It includes the features of stateful inspection plus having the capability of cl
 
 Thus it can monitor traffic from HTTP and FTP and find out the possibility of attacks. Thus firewall behaves as a proxy means the client initiates a connection with the firewall and the firewall in return initiates a solo link with the server on the client’s side.
 
+Software Firewall:
+
+
+software firewalls operate from inside your computer via an application. They have the same general mission, but they go about it in slightly different ways, giving them their own set of advantages:
+
+Cost less initially: When first purchased, a software firewall is relatively cheap. Some come with a free trial, and after that, a relatively low monthly fee. In the long run, however, the subscription expense may end up being more costly than what you would have paid for a hardware solution.
+
+Require little space: If space is a concern, software may be a better choice because, as an application, it has no footprint.
+
+Easy to install: Many software firewalls only require a few clicks to be up and running, whereas hardware firewalls require attaching wires, connecting to power, and proper positioning.
+
+At the same time, the protection of a software firewall also comes with limitations. They have to be installed on every computer in the network. When it comes time to update your protection, if any of the units are not prepared to receive the update, they have to be updated manually. Since they don't have their own operating systems, software firewalls can also drain crucial computing power and memory, affecting user experience and network security.
+
+ufw is the standard Ubuntu firewall.
+
+What is a Hardware Firewall?
+A hardware firewall acts as a gatekeeper and antivirus solution for your server. It sits directly behind the router and can be configured to analyze incoming traffic, filtering out specific threats as they come across the device.
+
+A hardware firewall is a physical device much like a server that filters the traffic going to a computer. While a user would normally plug a network cable directly into a computer or server, with a hardware firewall, the cable is plugged into the firewall first. The firewall sits between the external network and the server, providing an antivirus solution and a hard barrier against intrusions. 
+
+A hardware firewall provides several benefits:
+
+Can be used to intelligently control the traffic that reaches your server
+
+Can be configured with specific rules for all traffic
+
+Can ease the burden on other server resources. For example, you can disable software firewalls, which can free up much-needed memory and processor power
 
 
 Een firewall kan dit verkeer filteren op protocol, poortnummer, bron en bestemming van een pakket. 
 
-Meer geavanceerdere firewalls kunnen ook de inhoud inspecteren voor 
-
-CentOS en REHL hebben een standaard firewall daemon (firewalld) geïnstalleerd. Voor Ubuntu is de standaard firewall ufw. Een oudere nog veel voorkomende firewall is iptables.
- 
-Firewalls kunnen stateful of stateless zijn. Stateful firewalls onthouden de verschillende states van vertrouwde actieve sessies. Hierbij hoeft een stateful firewall niet elke pakketje te scannen voor deze verbindingen.
 
 
-In een cloud omgeving zal je firewalls veel tegenkomen als een van de vele verdedigingslinies tegen het publieke internet. 
+
 
 
 Bestudeer:
