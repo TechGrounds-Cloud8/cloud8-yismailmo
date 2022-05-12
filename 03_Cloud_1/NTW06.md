@@ -57,6 +57,12 @@ Een subnet calculator
 
 #### Plaats de architectuur die je hebt gemaakt inclusief een korte uitleg in de Github repository die je met de learning coach hebt gedeeld.
 
+
+#### challenges
+
+alot of of information about subnetting to filter through, eventhough i had previous experience with AWS, it was still challenging to come up with the architecture of the three networks.
+
+
 ### Sources
 
 https://www.cloudflare.com/learning/network-layer/what-is-a-subnet/
