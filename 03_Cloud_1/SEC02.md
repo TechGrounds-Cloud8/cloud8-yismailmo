@@ -94,6 +94,20 @@ sudo ufw app list , displaying available app profiles on UFW:
 
 sudo ufw enable, to enable firewall
 
+sudo ufw logging on
+
+sudo ufw status verbose
+
+sudo ufw allow 55815
+
+sudo ufw deny 55815
+
+sudo ufw allow 55815/tcp
+
+sudo ufw deny 55815/tcp
+
+sudo ufw allow ssh
+
 
 
 
