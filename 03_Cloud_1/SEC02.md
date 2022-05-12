@@ -90,6 +90,12 @@ Apache2 ubuntu default page
 
 #### Stel de firewall zo in dat je webverkeer blokkeert, maar wel ssh-verkeer toelaat.Controleer of de firewall zijn werk doet.
 
+sudo ufw app list , displaying available app profiles on UFW:
+
+sudo ufw enable, to enable firewall
+
+
+
 
 ### sources
 
@@ -98,3 +104,5 @@ https://www.softwaretestinghelp.com/firewall-security/
 https://phoenixnap.com/kb/how-to-install-apache-web-server-on-ubuntu-18-04
 
 https://www.journaldev.com/34113/opening-a-port-on-linux
+
+https://linuxconfig.org/how-to-enable-disable-firewall-on-ubuntu-18-04-bionic-beaver-linux
