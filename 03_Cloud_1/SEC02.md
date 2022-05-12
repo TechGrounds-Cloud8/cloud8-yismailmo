@@ -10,7 +10,7 @@ For Example, a firewall always exists between a private network and the Internet
 Firewall and OSI Reference Model
 A firewall system can work on five layers of the OSI model. But most of them run at only four layers i.e. data-link layer, network layer, transport layer, and application layers.
 
-Firewall System contains;
+### Firewall System contains;
 
 
 1) Perimeter Router
@@ -21,10 +21,10 @@ It also provisions the filtering of packets and addresses translations.
 2) Firewall
 As discussed earlier also its main task is to provisions distinctive levels of security and supervises traffic among each level. Most of the firewall exists near the router to provide security from external threats but sometimes present in the internal network also to protect from internal attacks.
 
-#3) VPN
+3) VPN
 Its function is to provisions a secured connection among two machines or networks or a machine and a network. This consists of encryption, authentication, and, packet-reliability assurance. It provisions the secure remote access of the network, thereby connecting two WAN networks on the same platform while not being physically connected.
 
-#4) IDS
+4) IDS
 Its function is to identify, preclude, investigate, and resolve unauthorized attacks. A hacker can attack the network in various ways. It can execute a DoS attack or an attack from the backside of the network through some unauthorized access. An IDS solution should be smart enough to deal with these types of attacks.
 
 IDS solution is of two kinds, network-based and host-based. A network-based IDS solution should be skilled in such a way whenever an attack is spotted, can access the firewall system and after logging into it can configure an efficient filter that can restrict the unwanted traffic.
@@ -32,7 +32,7 @@ IDS solution is of two kinds, network-based and host-based. A network-based IDS 
 A host-based IDS solution is a kind of software that runs on a host device such as a laptop or server, which spots the threat against that device only. IDS solution should inspect network threats closely and report them timely and should take necessary actions against the attacks.
 
 
-Firewall Categories
+### Firewall Categories
 Based on the filtering of traffic there are many categories of the firewall, some are explained below:
 
 #1) Packet Filtering Firewall
@@ -79,12 +79,22 @@ Je unieke poortnummer voor http-verkeer
 ### Opdracht:
 #### Installeer een webserver op je VM.
 
+Sudo apt-get install apache2
+Then i checked my using:
+ip address (18.196.32.244): port(55815) = 18.196.32.244:55815
+
 
 #### Bekijk de standaardpagina die met de webserver geïnstalleerd is.
 
+Apache2 ubuntu default page
 
 #### Stel de firewall zo in dat je webverkeer blokkeert, maar wel ssh-verkeer toelaat.Controleer of de firewall zijn werk doet.
+
 
 ### sources
 
 https://www.softwaretestinghelp.com/firewall-security/
+
+https://phoenixnap.com/kb/how-to-install-apache-web-server-on-ubuntu-18-04
+
+https://www.journaldev.com/34113/opening-a-port-on-linux
