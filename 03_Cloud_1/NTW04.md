@@ -12,8 +12,7 @@ Counting in base 2 and base 16
 Exercise :
 Translate the following decimal numbers into binary:
 
-Decimal
-Binary
+Decimal to Binary (check where the number is in  128, 64, 32, 16, 8, 4, 2, 1)
 
 16  
 
@@ -43,8 +42,8 @@ Binary
 
 
 Translate the following binary numbers into decimal:
-Binary
-Decimal
+Binary to Decimal (Adding from left to right when you have (1) 128, 64, 32, 16, 8, 4, 2, 1)
+
 1010 1010
 
 128 + 32 + 8 + 2 = 170
@@ -71,12 +70,11 @@ Translate the following decimal numbers into hexadecimal:
 
 Decimal to Hex
 
-0-9 and from 10 you count as A, B, C, D, E, F(16 digits for hex)
-15
+0-9 and from 10 you count as A, B, C, D, E, F(16 digits for hex) 
 
-F
+--15 = F
 
-37
+--37
 
 37/16 = 2,3125 --> 2 remainder 5
 
@@ -84,7 +82,7 @@ F
 So now you read (bottom to top).
  37 = 25
 
-246
+--246
 
 246/16 = 15,375 --> 15 remainder 6
 
@@ -93,11 +91,11 @@ So now you read (bottom to top).
 So it will be F6
 
 
-125
+--125
 
 7D
 
-209
+--209
 
 D1
 
