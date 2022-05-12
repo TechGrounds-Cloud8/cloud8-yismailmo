@@ -1,7 +1,12 @@
 
 # Firewalls
-Introductie:
-Firewalls is software dat netwerkverkeer filtert. 
+
+A firewall is a device or a combination of systems that supervises the flow of traffic between distinctive parts of the network. 
+
+A firewall is used to guard and filters using the port numbers, protocals, source and destination of a pakket in the network against nasty people and prohibit their actions at predefined boundary levels.
+
+For Example, a firewall always exists between a private network and the Internet which is a public network thus filters packets coming in and out.
+
 
 Een firewall kan dit verkeer filteren op protocol, poortnummer, bron en bestemming van een pakket. 
 
@@ -25,3 +30,6 @@ Bekijk de standaardpagina die met de webserver geïnstalleerd is.
 Stel de firewall zo in dat je webverkeer blokkeert, maar wel ssh-verkeer toelaat.
 Controleer of de firewall zijn werk doet.
 
+### sources
+
+https://www.softwaretestinghelp.com/firewall-security/
