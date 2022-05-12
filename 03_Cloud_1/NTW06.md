@@ -15,6 +15,10 @@ Class B network: Everything before the second period indicates the network. Agai
 
 Class C network: For Class C networks, everything before the third period indicates the network. Using the same example, "203.0.113" indicates the Class C network, and "112" indicates the device.
 
+The problem would commonly occur when an organization required more than 254 host machines and therefore would no longer fall into class C but rather class B. This means that the organization would use a class B license even though they had far less than 65,535 hosts. Therefore if an organization only required 2,500 hosts, they would be wasting about 63,000 hosts by holding a class B license which would greatly decrease the availability of IPv4 addresses unnecessarily.
+
+
+
 Subnet mask:
 
 A subnet mask is like an IP address, but for only internal usage within a network. Routers use subnet masks to route data packets to the right place. Subnet masks are not indicated within data packets traversing the Internet — those packets only indicate the destination IP address, which a router will match with a subnet.
@@ -26,6 +30,13 @@ LAN:
 Local area network is a network contained within a small geographic area, usually within the same building. Home WiFi networks and small business networks are common examples of LANs. 
 
 LANs can also be fairly large, although if they take up multiple buildings, it is usually more accurate to classify them as wide area networks (WAN) or metropolitan area networks (MAN).
+
+CIDR;
+which stands for Classless Inter-Domain Routing, is an IP addressing scheme that improves the allocation of IP addresses. It replaces the old system based on classes A, B, and C. This scheme also helped greatly extend the life of IPv4 as well as slow the growth of routing tables.
+
+CIDR is based on variable-length subnet masking (VLSM). This allows it to define prefixes of arbitrary lengths making it much more efficient than the old system. CIDR IP addresses are composed of two sets of numbers. The network address is written as a prefix, like you would see a normal IP address (e.g. 192.255.255.255). The second part is the suffix which indicates how many bits are in the entire address (e.g. /12). Putting it together, a CIDR IP address would look like the following:
+
+192.255.255.255/12
 
 Benodigdheden:
 https://app.diagrams.net/
@@ -51,3 +62,7 @@ Een subnet calculator
 https://www.cloudflare.com/learning/network-layer/what-is-a-subnet/
 
 https://www.cloudflare.com/learning/network-layer/what-is-a-lan/
+
+https://www.keycdn.com/support/what-is-cidr
+
+https://www.nstec.com/is-internet-gateway-just-a-firewall/
