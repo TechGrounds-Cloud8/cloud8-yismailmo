@@ -72,3 +72,5 @@ https://www.cloudflare.com/learning/network-layer/what-is-a-lan/
 https://www.keycdn.com/support/what-is-cidr
 
 https://www.nstec.com/is-internet-gateway-just-a-firewall/
+
+https://www.ipaddressguide.com/cidr
