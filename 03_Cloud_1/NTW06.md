@@ -46,4 +46,8 @@ Een subnet calculator
 
 #### Plaats de architectuur die je hebt gemaakt inclusief een korte uitleg in de Github repository die je met de learning coach hebt gedeeld.
 
+### Sources
 
+https://www.cloudflare.com/learning/network-layer/what-is-a-subnet/
+
+https://www.cloudflare.com/learning/network-layer/what-is-a-lan/
