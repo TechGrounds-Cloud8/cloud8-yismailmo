@@ -56,5 +56,11 @@ Still need to download wireshark on own computer and make a screenshot of the br
 
 https://phoenixnap.com/kb/how-to-install-nmap-ubuntu-18-04
 
-https://linuxhint.com/install_wireshark_ubuntu/
+
+https://www.varonis.com/blog/nmap-commands
+
+
+https://www.howtogeek.com/423709/how-to-see-all-devices-on-your-network-with-nmap-on-linux/
+
+
 
