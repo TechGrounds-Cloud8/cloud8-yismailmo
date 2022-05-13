@@ -59,13 +59,17 @@ Een subnet calculator
 
 #### 1 private subnet dat alleen van binnen het LAN bereikbaar is. Dit subnet moet minimaal 15 hosts kunnen plaatsen.
 
+I have created this subnet with ip (196.168.2.0/24) because there is no minimal host required.
 
 #### 1 private subnet dat internet toegang heeft via een NAT gateway. 
 #### Dit subnet moet minimaal 30 hosts kunnen plaatsen (de 30 hosts is exclusief de NAT gateway).
 
-
+This subnet will connect with the other private subnet but it will be on a different availability zone(another data centre) and it will have the same 
+ip range (196.168.2.0/24) since there is no maximum requirement for hosts
 
 #### 1 public subnet met een internet gateway. Dit subnet moet minimaal 5 hosts kunnen plaatsen (de 5 hosts is exclusief de internet gateway).
+
+So this public subnet will have an ip of 196.168.1.0 and it will have access to the public through an internet gateway.
 
 #### Plaats de architectuur die je hebt gemaakt inclusief een korte uitleg in de Github repository die je met de learning coach hebt gedeeld.
 
