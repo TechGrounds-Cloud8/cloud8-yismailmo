@@ -87,7 +87,7 @@ This is a two step verification to identify a user.
 It does not require only a username and password but also needs the unique information that only the particular user knows, such as first school name, a favorite destination( e.g. when a user is resetting email password). Apart from this, it can also verify the user by sending a unique link on the user's registered number or email address.
 
 c. Multi-factor Authentication
-This is the most secure and advanced level of authorization. It improves securty by requiring two or more than two levels of security from different and independent categories. For aexample using Google authenticator app together with the user login credentials(username&password) to sign in the AWS console. This type of authentication is usually used in financial organizations, banks, and law enforcement agencies. This can eliminate any data exposure from the third party or hackers.
+This is the most secure and advanced level of authorization. It **improves securty**  by requiring two or more than two levels of security from different and independent categories. For aexample using Google authenticator app together with the user login credentials(username&password) to sign in the AWS console. This type of authentication is usually used in financial organizations, banks, and law enforcement agencies. This can eliminate any data exposure from the third party or hackers.
 
 ##### What is the principle of least privilege  and how it improves security?
 
