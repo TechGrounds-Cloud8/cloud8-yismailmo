@@ -52,7 +52,7 @@ So, the recipient needs to have the key before the message is decrypted.
 
 Common symmetric encryption methods:
 
-Data Encryption Standards (DES:
+Data Encryption Standards (DES):
 
 DES is a low-level encryption block cipher algorithm that converts plain text in blocks of 64 bits and converts them to ciphertext using keys of 48 bits. 
 
@@ -122,12 +122,14 @@ There are several systems that cover this range of applications, from transactio
 
 #### Send a symmetrically encrypted message to one of your peers via the public Slack channel. They should be able to decrypt the message using a key you share with them. Try to think of a way to share this encryption key without revealing it to everyone. 
 
+![privmsg](../00_includes/keymessSEC04.png)
 
 You are not allowed to use any private messages or other communication channels besides Slack. **Analyse the shortcomings of this method**.
 
+Everyone can decrypt the message because this is on a public website and it's not secure way of sharing the key.
 #### Challenges overcame:
 
-Learning about cryptography
+Coming up with encrypted message to use in public slack channel.
 
 ### Sources
 
@@ -139,3 +141,5 @@ https://www.ibm.com/topics/encryption
 
 https://interestingengineering.com/11-cryptographic-methods-that-marked-history-from-the-caesar-cipher-to-enigma-code-and-beyond
 
+
+https://www.laits.utexas.edu/~anorman/BUS.FOR/course.mat/SSim/life.html
