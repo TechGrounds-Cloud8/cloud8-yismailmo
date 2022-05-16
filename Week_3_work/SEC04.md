@@ -6,6 +6,14 @@ Throughout history humanity has come up with many ciphers to encode information.
 
 ### Key terminologies:
 
+**cryptography**; 
+
+It refers to the method used to protect sensitive information. 
+
+So this means that it's mainly used to encrypt and decrypt data or messages that cannot be deciphered by unauthorized access. 
+
+It deploys the use of scrambled or distorted symbols. It is simply used to provide extra security to ensure that only authorized users can understand the message. 
+
 
 **Encryption**:
 
@@ -64,20 +72,6 @@ Twofish: Twofish is considered one of the fastest encryption algorithms and is f
 
 
 
-
-
-
-cryptography; 
-
-It refers to the method used to protect sensitive information. 
-
-So this means that it's mainly used to encrypt and decrypt data or messages that cannot be deciphered by unauthorized access. 
-
-It deploys the use of scrambled or distorted symbols. It is simply used to provide extra security to ensure that only authorized users can understand the message. 
-
- 
-
-
 Requirements
 The Slack channel your share with your group
 A peer
@@ -127,6 +121,7 @@ There are several systems that cover this range of applications, from transactio
 You are not allowed to use any private messages or other communication channels besides Slack. **Analyse the shortcomings of this method**.
 
 Everyone can decrypt the message because this is on a public website and it's not secure way of sharing the key.
+
 #### Challenges overcame:
 
 Coming up with encrypted message to use in public slack channel.
