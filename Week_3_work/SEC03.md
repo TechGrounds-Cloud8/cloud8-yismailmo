@@ -63,7 +63,7 @@ OAuth is an authorization protocol, which enables the API to authenticate and ac
 
 
 
-### Study
+### Exercises
 The difference between authentication and authorization.
 
 ![Authentication&Authorization](../00_includes/SEC03Diff.jpg)
