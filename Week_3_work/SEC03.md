@@ -64,16 +64,16 @@ OAuth is an authorization protocol, which enables the API to authenticate and ac
 
 
 ### Exercises
-The difference between authentication and authorization.
+##### The difference between authentication and authorization.
 
 ![Authentication&Authorization](../00_includes/SEC03Diff.jpg)
 
-Here are the differences between Authentication and Authorization;
+##### Here are the differences between Authentication and Authorization;
 
 ![differences](../00_includes/SEC03-1.png)
 
 
-The three factors of authentication and how MFA improves security.
+##### The three factors of authentication and how MFA improves security.
 
 According to the security level and type of application, there are different type of authentication factors:
 
@@ -89,10 +89,37 @@ It does not require only a username and password but also needs the unique infor
 c. Multi-factor Authentication
 This is the most secure and advanced level of authorization. It improves securty by requiring two or more than two levels of security from different and independent categories. For aexample using Google authenticator app together with the user login credentials(username&password) to sign in the AWS console. This type of authentication is usually used in financial organizations, banks, and law enforcement agencies. This can eliminate any data exposure from the third party or hackers.
 
-What the principle of least privilege is and how it improves security.
+##### What is the principle of least privilege  and how it improves security?
 
+This principle is about giving a person or a system only the minimun necessary rights (privileges) to complete a given work. 
 
+For example if an employee's role does not need an access to some files right, then the employee should not have that right. 
+
+practicing least privilege improves security by;
+ 
+ reducing an organization’s attack surface(refers to all entry points through which an attacker could potentially gain unauthorized access) to a network or system to extract or enter data or to carry out other malicious activities.
+
+A broad attack surface is challenging for organizations to defend. The outcomes can be disastrous if, for example, attackers happen upon unprotected cloud-based databases, APIs with no authentication controls, backdoorsAn(undocumented way to access a system) that allows an attacker to bypass typical security controls left in critical software, or servers that are wide open to any type of traffic. 
+
+Any of these situations can lead to destructive attacks or significant data breaches.
+
+##### Least privileges Best practices:
+
+1. Adopt “least privilege as default.”
+
+2. Enforce related security principles. Using need to know and separation of duties in conjunction with the principle of least privilege refines privileges granted to subjects, further reducing risk.
+
+3. Limit the number of privileged accounts.
+
+4. Disable unnecessary components.
+
+5. Review logs frequently. Log and monitor all authentications and authorizations to critical systems and review logs daily, if feasible. 
+
+6. Regularly reevaluate accounts and privileges. If possible, review privileges monthly or, at a minimum, quarterly.
+
+7. Use time-limited privileges. As much as possible (without impeding an employee’s ability to do their job), grant privileges just long enough for a subject to perform a specific task.
 ### Challenges 
+Link to the screenshot was not working, so I used (../) before the file relative path.
 
 
 ### sources
@@ -101,3 +128,8 @@ https://www.javatpoint.com/authentication-vs-authorization
 
 
 https://www.sailpoint.com/identity-library/difference-between-authentication-and-authorization/#:~:text=Simply%20put%2C%20authentication%20is%20the,a%20user%20has%20access%20to.
+
+https://www.cisa.gov/uscert/bsi/articles/knowledge/principles/least-privilege
+
+
+https://www.f5.com/labs/articles/education/what-is-the-principle-of-least-privilege-and-why-is-it-important
