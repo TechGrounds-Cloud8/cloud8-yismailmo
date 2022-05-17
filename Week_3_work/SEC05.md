@@ -53,6 +53,16 @@ A key pair generator like https://travistidwell.com/jsencrypt/demo/
 Send an asymmetrically encrypted message to one of your peers via the public Slack channel. They should be able to decrypt the message using a key you share with them. The recipient should be able to read the message, but it should remain a secret to everyone else.
 You are not allowed to use any private messages or other communication channels besides Slack. Analyse the difference between this method and symmetric encryption.
 
+So in the screenshot below i used my teammate Sanjay's public key to generate an  encrypted message. Then in order to decrypt his message i used my private key and the encrypted text to decrypt his message. 
+
+![asymmetric-encryption](../00_includes/SEC05.png)
+
+### challenges overcame
+
+Learning about public and private keys and how to encrypt and decrypt a message using public/private keys.
+
 ### Sources
 
 https://www.preveil.com/blog/public-and-private-key/
+
+https://www.devglan.com/online-tools/rsa-encryption-decryption
