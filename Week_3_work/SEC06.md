@@ -42,6 +42,11 @@ Create a self-signed certificate on your VM.
 
 Analyze some certification paths of known websites (ex. techgrounds.nl / google.com / ing.nl).
 
+![certRoot](../00_includes/SEC06CertRoot.png)
+
+![Certgoogle](../00_includes/SEC06Google%20(2).png)
+
+![ING](../00_includes/SEC06ING.png)
 
 Find the list of trusted certificate roots on your system (bonus points if you also find it in your VM).
 
