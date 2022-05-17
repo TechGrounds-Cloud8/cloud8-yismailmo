@@ -40,6 +40,7 @@ Exercise
 Create a self-signed certificate on your VM.
 
 
+
 Analyze some certification paths of known websites (ex. techgrounds.nl / google.com / ing.nl).
 
 ![certRoot](../00_includes/SEC06CertRoot.png)
