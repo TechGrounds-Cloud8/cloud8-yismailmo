@@ -39,6 +39,7 @@ An internet browser
 Exercise
 Create a self-signed certificate on your VM.
 
+First I need to install required packages for OpenSSL, the open source SSL toolkit.
 
 
 Analyze some certification paths of known websites (ex. techgrounds.nl / google.com / ing.nl).
@@ -59,3 +60,5 @@ https://www.csoonline.com/article/3400836/what-is-pki-and-how-it-secures-just-ab
 
 
 https://en.wikipedia.org/wiki/Public_key_infrastructure
+
+https://www.bogotobogo.com/Linux/Linux-How-to-Make-a-Self-Signed-SSL-Certificate.php
