@@ -39,7 +39,7 @@ The public and private key  are really large prime numbers that are mathematical
 
 2. Digital Signature Standard (DSS) – a Federal Information Processing Standard specifying the algorithms that can be used to generate digital signatures used by NIST. 
 
-3. Elliptic curve cryptography (ECC)– As its name implies, ECC relies on elliptic curves to generate keys. Often used for key agreement and digital signatures. At PreVeil, we use elliptic-curve cryptography’s Curve-25519 and NIST P-256.
+3. Elliptic curve cryptography (ECC)– As its name implies, ECC relies on elliptic curves to generate keys. Often used for key agreement and digital signatures. 
 
 
 Requirements
@@ -61,7 +61,7 @@ https://www.devglan.com/online-tools/rsa-encryption-decryption
 Send an asymmetrically encrypted message to one of your peers via the public Slack channel. They should be able to decrypt the message using a key you share with them. The recipient should be able to read the message, but it should remain a secret to everyone else.
 You are not allowed to use any private messages or other communication channels besides Slack. Analyse the difference between this method and symmetric encryption.
 
-So in the screenshot below i used my teammate Sanjay's public key to generate an  encrypted message. Then in order to decrypt his message i used my private key and the encrypted text to decrypt his message. 
+So in the screenshot below i used my teammate Sanjay's public key to generate an  encrypted message(Good teamwork Jay). After that my teammate needs to use my encrypted message and his private key to decrypt my message. Then in return i can decrypt his message by using my private key and his encrypted text(which he created by using my public key) to decrypt his message. 
 
 ![asymmetric-encryption](../00_includes/SEC05.png)
 
