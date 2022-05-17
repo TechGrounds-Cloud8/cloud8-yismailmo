@@ -2,9 +2,9 @@
 
 ### Introduction
 
-The previous assignment introduced you to cryptography and symmetric encryption. In the previous exercise, you shared your encryption key with the recipient of your message. This means that anyone who has the key can decrypt the message.
+In Symmetric encryption I shared my encryption key with the recipient of my message. This means that anyone who has the key can decrypt the message.
 
-Asymmetric encryption solves this issue. Instead of 1 key, you get 2: A public key, and a private key.
+Asymmetric encryption solves this issue. Instead of 1 key, I  get 2: A public key, and a private key.
 
  
 **Asymmetrical encryption**:
@@ -17,11 +17,13 @@ Together, they are used to encrypt and decrypt messages. If you encode a message
 
 **Difference between Public keys and private keys**:
 
-*Puclic keys* can be looked up by everyone anyone  and share it widely. In asymmetric encryption, public keys can be shared with everyone in the system. Once the sender has the public key, he uses it to encrypt his message.
+*Puclic keys* can be looked up by everyone and share it widely. In asymmetric encryption, public keys can be shared with everyone in the system. Once the sender has the public key, he uses it to encrypt his message.
 
 *Private keys*  can be seen as  the key to the front door of a business where only you have a copy. 
 
-So a message encrypted with the public key cannot be decrypted without using the corresponding private key.
+
+
+Together, the publi/private keys help to ensure the security of the exchanged data. 
 
 ![publ-to-priv-encry](../00_includes/end-to-end-encryption.png)
 
@@ -43,7 +45,13 @@ The public and private key  are really large prime numbers that are mathematical
 Requirements
 The Slack channel your share with your group
 A peer
-A key pair generator like https://travistidwell.com/jsencrypt/demo/
+A key pair generator like 
+
+https://travistidwell.com/jsencrypt/demo/
+
+Or 
+
+https://www.devglan.com/online-tools/rsa-encryption-decryption
 
 ### Exercise
 
