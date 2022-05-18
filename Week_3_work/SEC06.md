@@ -71,7 +71,11 @@ First I need to install required packages for OpenSSL, the open source SSL toolk
 
 ![ING](../00_includes/SEC06ING.png)
 
-Find the list of trusted certificate roots on your system (bonus points if you also find it in your VM).
+#### Find the list of trusted certificate roots on your system (bonus points if you also find it in your VM).
+
+I found out about the certifacates in my system by typing to 'cert' in powershell, then went to the certifactions file.
+
+![certsinmysys](../00_includes/SEC06certbonus.png)
 
 ### Chsllenges overcssme
 
