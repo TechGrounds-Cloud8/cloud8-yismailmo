@@ -35,17 +35,26 @@ There have traditionally been three approaches to getting this trust: certificat
 
 There are many ways of implementing a PKI, not all of them comply with the X.509 standard.
 
+### Key terminolgy
+OpenSSL: is a software library for applications that secure communications over computer networks against eavesdropping or need to identify the party at the other end.
+
 Requirements
 Your Linux machine
 An internet browser
 
 Exercise
-Create a self-signed certificate on your VM.
+#### Create a self-signed certificate on your VM.
+
 
 First I need to install required packages for OpenSSL, the open source SSL toolkit.
 
+ Then i used openssl to generate a new RSA private key in 'Myfuro.key'
 
-Analyze some certification paths of known websites (ex. techgrounds.nl / google.com / ing.nl).
+![genRSAprivkey](../00_includes/SEC06VMCert1.png)
+
+![VMRSAprivkey](../00_includes/SEC06CMcert2.png)
+
+#### Analyze some certification paths of known websites (ex. techgrounds.nl / google.com / ing.nl).
 
 ![certRoot](../00_includes/SEC06CertRoot.png)
 
@@ -72,3 +81,5 @@ https://en.wikipedia.org/wiki/Public_key_infrastructure
 
 https://www.bogotobogo.com/Linux/Linux-How-to-Make-a-Self-Signed-SSL-Certificate.php
 
+
+https://en.wikipedia.org/wiki/OpenSSL
