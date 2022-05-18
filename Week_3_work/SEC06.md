@@ -77,7 +77,7 @@ I found out about the certifacates in my system by typing to 'cert' in powershel
 
 ![certsinmysys](../00_includes/SEC06certbonus.png)
 
-### Chsllenges overcssme
+### Challenges overcssme
 
 Learning about PKI and different entities that assure secure online communications. Generating RSA private key on my vm. 
 
