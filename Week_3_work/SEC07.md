@@ -15,13 +15,43 @@ On the front-end, passwords can be guessed. This can be made harder with the fol
 Of course, these strategies make it harder to remember your own passwords. Password managers were created to solve this problem.
 On the back-end, passwords need to be stored securely. If your database (or /etc/shadow file in Linux) gets leaked or stolen, you don’t want anyone to just be able to read passwords in plaintext. This is why most stored passwords are hashed. Hackers will try to use a Rainbow Table to crack hashed passwords.
 
+Key Terminology:
+
+Here are different hashing algorithms used in hashing. 
+
+MD5: MD5 used to be the most popular hash algorithm which converted a 16-byte hash value to a 32-bit hexadecimal number. It has been deprecated from use because of vulnerabilities found in it, but it can still be used as a checksum to verify data integrity only against unintentional corruption.
+
+SHA-0: SHA-0 is the first SHA algorithm of the three groups of SHA algorithms. SHA-0 has been deprecated from use thanks to its susceptibilities. This algorithm was soon replaced by the SHA-1 algorithm.
+
+SHA-1: SHA-1 is the successor of the SHA-0 and became the most widely adopted algorithm of the SHA family. It produces a 160-bit (20-byte) hash value known as a message digest — typically rendered as a hexadecimal number that’s 40 digits long. However, it was found to be insecure and since 2010, many organizations recommended its replacement with SHA-2 algorithms. In 2017, all major browsers deprecated the use of SHA-1.
+
+SHA-2 replaced SHA-1 and became the most widely adopted hashing algorithm. It might be carrying the family name but SHA-2 is significantly different from its predecessor. The SHA-2 family consists of SIX hash functions — SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, SHA-512/256 — with digests (hash values) that are 224, 256, 384 or 512 bits
+
 Requirements
 Your Linux machine
 A peer
 An online Rainbow Table like https://crackstation.net/
 
 Exercise
-Find out what hashing is and why it is preferred over symmetric encryption for storing passwords.
+
+#### What is Hashing?:
+
+Hashing is the process of transforming any given key or a string of characters(big numbers) into another value (small numbers).
+
+Therefore hashing is a technique or process of mapping keys, values into the hash table by using a hash function. It is done for faster access to elements.
+
+Hash Function: 
+
+A function that converts a given big number to a small practical integer value.
+
+Hash table:
+
+An array that stores pointers to records corresponding to a given number. An entry in hash table is NIL if no existing number has hash function value equal to the index for the entry. 
+
+#### why Hashing is preferred over symmetric encryption for storing passwords.
+
+The biggest difference between Symmetric encryption and Hashing is that, Symmetric encryption is reversible because the data can be encrypted and decrypted using the same cryptographic key. — hashing is not reversible because it is one-way process that uses an algorithm to take data and convert it to a fixed length known as a hash value (also known as a hash digest).
+
 Find out how a Rainbow Table can be used to crack hashed passwords.
 Below are two MD5 password hashes. One is a weak password, the other is a string of 16 randomly generated characters. Try to look up both hashes in a Rainbow Table.
 03F6D7D1D9AAE7160C05F71CE485AD31
