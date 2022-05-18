@@ -25,7 +25,11 @@ SHA-0: SHA-0 is the first SHA algorithm of the three groups of SHA algorithms. S
 
 SHA-1: SHA-1 is the successor of the SHA-0 and became the most widely adopted algorithm of the SHA family. It produces a 160-bit (20-byte) hash value known as a message digest — typically rendered as a hexadecimal number that’s 40 digits long. However, it was found to be insecure and since 2010, many organizations recommended its replacement with SHA-2 algorithms. In 2017, all major browsers deprecated the use of SHA-1.
 
-SHA-2 replaced SHA-1 and became the most widely adopted hashing algorithm. It might be carrying the family name but SHA-2 is significantly different from its predecessor. The SHA-2 family consists of SIX hash functions — SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, SHA-512/256 — with digests (hash values) that are 224, 256, 384 or 512 bits
+SHA-2 replaced SHA-1 and became the most widely adopted hashing algorithm. It might be carrying the family name but SHA-2 is significantly different from its predecessor. The SHA-2 family consists of SIX hash functions — SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, SHA-512/256 — with digests (hash values) that are 224, 256, 384 or 512 bits.
+
+**Collision** is when two keys  generate an identical hash. 
+
+**Salting** is to ensure the uniqueness of encrypted outputs, by also adding random data into the hash function. This approach, guarantees a unique output even when the inputs are identical. The u unique and random string of characters are placed in front of each password.
 
 Requirements
 Your Linux machine
@@ -52,9 +56,29 @@ An array that stores pointers to records corresponding to a given number. An ent
 
 The biggest difference between Symmetric encryption and Hashing is that, Symmetric encryption is reversible because the data can be encrypted and decrypted using the same cryptographic key. — hashing is not reversible because it is one-way process that uses an algorithm to take data and convert it to a fixed length known as a hash value (also known as a hash digest).
 
-Find out how a Rainbow Table can be used to crack hashed passwords.
+#### Find out how a Rainbow Table can be used to crack hashed passwords.
+
+Rainbow tables are tables of reversed hashes used to crack password hashes. Computer systems requiring passwords typically store the passwords as a hash value of the user’s password. When a computer user enters a password, the system hashes the password and compares it to the stored hash. 
+
+
 Below are two MD5 password hashes. One is a weak password, the other is a string of 16 randomly generated characters. Try to look up both hashes in a Rainbow Table.
 03F6D7D1D9AAE7160C05F71CE485AD31
 03D086C9B98F90D628F2D1BD84CFA6CA
 Create a new user in Linux with the password 12345. Look up the hash in a Rainbow Table.
 Despite the bad password, and the fact that Linux uses common hashing algorithms, you won’t get a match in the Rainbow Table. This is because the password is salted. To understand how salting works, find a peer who has the same password in /etc/shadow, and compare hashes.
+
+
+### Sources:
+
+https://en.wikipedia.org/wiki/Hash_function#Overview
+
+https://www.geeksforgeeks.org/hashing-set-1-introduction/
+
+https://comodosslstore.com/resources/hashing-vs-encryption-simplifying-the-differences/#:~:text=There%20is%20no%20use%20of,and%20private%20keys%20are%20used.
+
+
+https://www.techtarget.com/searchdatamanagement/definition/hashing
+
+
+https://www.cyberciti.biz/faq/understanding-etcshadow-file/
+
