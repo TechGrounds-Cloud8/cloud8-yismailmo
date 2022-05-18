@@ -79,6 +79,7 @@ I found out about the certifacates in my system by typing to 'certmgr' in powers
 
 ![certinVM](../00_includes/SEC06vmbonuscerts.png)
 
+
 ### Challenges overcssme
 
 Learning about PKI and different entities that assure secure online communications. Generating RSA private key on my vm. 
