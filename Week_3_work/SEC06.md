@@ -65,7 +65,7 @@ Find the list of trusted certificate roots on your system (bonus points if you a
 
 ### Chsllenges overcssme
 
-Learning about PKI and different entities that assure secure online communications.
+Learning about PKI and different entities that assure secure online communications. Generating RSA private key on my vm. 
 
 
 
