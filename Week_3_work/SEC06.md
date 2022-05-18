@@ -78,6 +78,7 @@ https://www.csoonline.com/article/3400836/what-is-pki-and-how-it-secures-just-ab
 
 https://en.wikipedia.org/wiki/Public_key_infrastructure
 
+
 https://www.bogotobogo.com/Linux/Linux-How-to-Make-a-Self-Signed-SSL-Certificate.php
 
 
