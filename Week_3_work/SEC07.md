@@ -19,7 +19,7 @@ Key Terminology:
 
 Here are different hashing algorithms used in hashing. 
 
-MD5: MD5 used to be the most popular hash algorithm which converted a 16-byte hash value to a 32-bit hexadecimal number. It has been deprecated from use because of vulnerabilities found in it, but it can still be used as a checksum to verify data integrity only against unintentional corruption.
+MD5: MD5(message-digest algorithm) is a one-way cryptographic function that accepts a message of any length as input and returns as output a fixed-length digest value to be used for authenticating the original message. It used to be the most popular hash algorithm which converted a 16-byte hash value to a 32-bit hexadecimal number. It has been deprecated from use because of vulnerabilities found in it, but it can still be used as a checksum to verify data integrity only against unintentional corruption.
 
 SHA-0: SHA-0 is the first SHA algorithm of the three groups of SHA algorithms. SHA-0 has been deprecated from use thanks to its susceptibilities. This algorithm was soon replaced by the SHA-1 algorithm.
 
@@ -61,10 +61,18 @@ The biggest difference between Symmetric encryption and Hashing is that, Symmetr
 Rainbow tables are tables of reversed hashes used to crack password hashes. Computer systems requiring passwords typically store the passwords as a hash value of the user’s password. When a computer user enters a password, the system hashes the password and compares it to the stored hash. 
 
 
-Below are two MD5 password hashes. One is a weak password, the other is a string of 16 randomly generated characters. Try to look up both hashes in a Rainbow Table.
+#### Below are two MD5 password hashes. One is a weak password, the other is a string of 16 randomly generated characters. Try to look up both hashes in a Rainbow Table.
+
 03F6D7D1D9AAE7160C05F71CE485AD31
 03D086C9B98F90D628F2D1BD84CFA6CA
-Create a new user in Linux with the password 12345. Look up the hash in a Rainbow Table.
+
+![MD5pswd](../00_includes/SEC07rainbow.png)
+
+From the picture it is clear that when the hash is present in the database(https://crackstation.net/), the password can be recovered in a fraction of a second (it was a match because it is a weak password), while the other password consists of 16 randomly generated characters.
+
+Create a new user in Linux with the password 12345. 
+
+Look up the hash in a Rainbow Table.
 Despite the bad password, and the fact that Linux uses common hashing algorithms, you won’t get a match in the Rainbow Table. This is because the password is salted. To understand how salting works, find a peer who has the same password in /etc/shadow, and compare hashes.
 
 
