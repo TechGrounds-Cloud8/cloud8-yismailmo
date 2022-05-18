@@ -51,7 +51,7 @@ Your Linux machine
 A peer
 An online Rainbow Table like https://crackstation.net/
 
-## Exercise
+# Exercises
 
 #### What is Hashing?:
 
