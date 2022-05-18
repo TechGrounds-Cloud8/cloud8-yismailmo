@@ -2,8 +2,18 @@
 
 Introduction
 
-In terms of factors of authentication, passwords fall into the ‘something you know’ category.
+In terms the three common factors used for authentication:
+
+1. Something you know (such as a password).
+
+2. Something you have (such as a smart card)
+
+3. Something you are (such as a fingerprint or other biometric method)
+
+So, passwords fall into the ‘something you know’ category.
+
 On the front-end, passwords can be guessed. This can be made harder with the following strategies:
+
 	- Not using common passwords
 	- Using longer passwords
 	- Using special characters like @,*,%, etc.
@@ -13,11 +23,16 @@ On the front-end, passwords can be guessed. This can be made harder with the fol
 	- Using a sentence
 
 Of course, these strategies make it harder to remember your own passwords. Password managers were created to solve this problem.
+
 On the back-end, passwords need to be stored securely. If your database (or /etc/shadow file in Linux) gets leaked or stolen, you don’t want anyone to just be able to read passwords in plaintext. This is why most stored passwords are hashed. Hackers will try to use a Rainbow Table to crack hashed passwords.
 
 Key Terminology:
 
-Here are different hashing algorithms used in hashing. 
+**/etc/shadow** is a text-based password file. The shadow file stores the hashed passphrase (or “hash”) format for Linux user account with additional properties related to the user password.
+
+contains one entry per line, each representing a user account. You can view the contents of the file, with a text editor or a command such as cat.
+
+![etcshd](../00_includes/SEC07etcshdw.png)
 
 MD5: MD5(message-digest algorithm) is a one-way cryptographic function that accepts a message of any length as input and returns as output a fixed-length digest value to be used for authenticating the original message. It used to be the most popular hash algorithm which converted a 16-byte hash value to a 32-bit hexadecimal number. It has been deprecated from use because of vulnerabilities found in it, but it can still be used as a checksum to verify data integrity only against unintentional corruption.
 
@@ -29,7 +44,7 @@ SHA-2 replaced SHA-1 and became the most widely adopted hashing algorithm. It mi
 
 **Collision** is when two keys  generate an identical hash. 
 
-**Salting** is to ensure the uniqueness of encrypted outputs, by also adding random data into the hash function. This approach, guarantees a unique output even when the inputs are identical. The u unique and random string of characters are placed in front of each password.
+**Salting** is to ensure the uniqueness of encrypted outputs, by adding random data into the hash function. This approach, guarantees a unique output even when the inputs are identical. The unique and random string of characters are placed in front of each password.
 
 Requirements
 Your Linux machine
@@ -44,11 +59,14 @@ Hashing is the process of transforming any given key or a string of characters(b
 
 Therefore hashing is a technique or process of mapping keys, values into the hash table by using a hash function. It is done for faster access to elements.
 
-Hash Function: 
+**Hash Function**: 
 
 A function that converts a given big number to a small practical integer value.
 
-Hash table:
+![hashfunc](../00_includes/SEC07hash_function-mapsnames.png)
+
+
+**Hash table**:
 
 An array that stores pointers to records corresponding to a given number. An entry in hash table is NIL if no existing number has hash function value equal to the index for the entry. 
 
