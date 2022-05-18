@@ -33,9 +33,8 @@ There have traditionally been three approaches to getting this trust: certificat
 
 ![digital-cert](../00_includes/digital_certificate-x509.jpg)
 
-There are many ways of implementing a PKI, not all of them comply with the X.509 standard.
 
-### Key terminolgy
+### Key terminology
 OpenSSL: is a software library for applications that secure communications over computer networks against eavesdropping or need to identify the party at the other end.
 
 Requirements
