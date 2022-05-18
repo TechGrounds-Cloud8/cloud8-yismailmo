@@ -88,12 +88,26 @@ Rainbow tables are tables of reversed hashes used to crack password hashes. Comp
 
 From the picture it is clear that when the hash is present in the database(https://crackstation.net/), the password can be recovered in a fraction of a second (it was a match because it is a weak password), while the other password consists of 16 randomly generated characters.
 
-Create a new user in Linux with the password 12345. 
+#### Create a new user in Linux with the password 12345. 
+
+Create a new user by 
+**sudo useradd then name**.
+
+Then give the user a password by **sudo passwd then name of the new user created** .
+
+After I used the command 
+**sudo tail /etc/shadow** to see my hashed password:
 
 Look up the hash in a Rainbow Table.
-Despite the bad password, and the fact that Linux uses common hashing algorithms, you won’t get a match in the Rainbow Table. This is because the password is salted. To understand how salting works, find a peer who has the same password in /etc/shadow, and compare hashes.
 
+![hashpsswd2usrs](../00_includes/SEC07rnbwusrcompare.png)
 
+![diffusrpsswd](../00_includes/SEC072usrpswd.png)
+
+Despite the bad password, and the fact that Linux uses common hashing algorithms, I can't get a match in the Rainbow Table. This is because the password is salted even when copmaring to a teammate with the same password. 
+
+### Challenges overcame
+Learning about hashing, salting and also using the rainbow table for the salted passwords.
 ### Sources:
 
 https://en.wikipedia.org/wiki/Hash_function#Overview
@@ -108,3 +122,4 @@ https://www.techtarget.com/searchdatamanagement/definition/hashing
 
 https://www.cyberciti.biz/faq/understanding-etcshadow-file/
 
+https://linuxize.com/post/etc-shadow-file/
