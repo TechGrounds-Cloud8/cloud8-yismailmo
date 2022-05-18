@@ -104,7 +104,7 @@ Look up the hash in a Rainbow Table.
 
 ![diffusrpsswd](../00_includes/SEC072usrpswd.png)
 
-Despite the bad password, and the fact that Linux uses common hashing algorithms, I can't get a match in the Rainbow Table. This is because the password is salted even when copmaring to a teammate with the same password. 
+Despite the bad password, and the fact that Linux uses common hashing algorithms, I can't get a match in the Rainbow Table. This is because the passwords are salted even when comparing to a teammate with the same password. 
 
 ### Challenges overcame
 Learning about hashing, salting and also using the rainbow table for the salted passwords.
