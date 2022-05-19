@@ -27,7 +27,8 @@ A pipe can be used to have the output of one command be the input of another com
 Requirements:
 Your Linux machine
 A text file with 2 lines of text
-Exercise:
+
+# Exercise:
 Use the echho command and output redirection to write a new sentence into your text file using the command line. The new sentence should contain the word ‘techgrounds’. 
 
 **First step is to create a techgrounds file and edit it by adding the text in nano the following text file.**
@@ -88,3 +89,13 @@ cat nieuwesamen.txt
 
 
 ![echo techgrounds](https://github.com/yismailmo/TechGrounds-cloud8-cloud8-yismailmo/blob/main/00_includes/techgrounds%20output.png)
+
+# Challenges overcame
+
+Learning how to redirect files and using grep.
+
+# Sources
+
+https://www.w3cschoool.com/linux-grep
+
+https://www.w3cschoool.com/linux-create-file
