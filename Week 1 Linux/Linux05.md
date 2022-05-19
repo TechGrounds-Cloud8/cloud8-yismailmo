@@ -44,103 +44,17 @@ Any group listed in /etc/group can be assigned as the group of a file.
 Create a text file.
 
 
-# Who is the file’s owner and group? 
-
+# Who is the file’s owner and group? # What kind of permissions does the file have?
 
 ![fileperm](../00_includes/LNX05-1.png)
 
 
-# What kind of permissions does the file have?
--rw-rw-r-- 1 ismael ismael 30 May  5 20:49 denbosch.txt
+-rw-rw-r-- 1 ismael ismael   15 May  8 19:50 date1.txt
 
 # Make a long listing to view the file’s permissions.
 
-ismael@Nest-Is-Yassin:~/techgrounds$ cat /etc/passwd
-root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin
-sys:x:3:3:sys:/dev:/usr/sbin/nologin
-sync:x:4:65534:sync:/bin:/bin/sync
-games:x:5:60:games:/usr/games:/usr/sbin/nologin
-man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
-lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
-mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
-news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
-uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
-proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
-www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
-backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
-list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
-irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
-gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
-nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
-systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
-systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
-systemd-timesync:x:102:104:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
-messagebus:x:103:106::/nonexistent:/usr/sbin/nologin
-syslog:x:104:110::/home/syslog:/usr/sbin/nologin
-_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
-tss:x:106:111:TPM software stack,,,:/var/lib/tpm:/bin/false
-uuidd:x:107:112::/run/uuidd:/usr/sbin/nologin
-tcpdump:x:108:113::/nonexistent:/usr/sbin/nologin
-sshd:x:109:65534::/run/sshd:/usr/sbin/nologin
-landscape:x:110:115::/var/lib/landscape:/usr/sbin/nologin
-pollinate:x:111:1::/var/cache/pollinate:/bin/false
-systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
-ismael:x:1000:1000::/home/ismael:/bin/bash
-lxd:x:998:100::/var/snap/lxd/common/lxd:/bin/false
-yaska:x:1001:1001::/home/yaska:/bin/sh
+![filelst](../00_includes/LNX05-2.png)
 
-
-# Make the file executable by adding the execute permission (x).
-
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -lh
-total 20K
--rw-r--r-- 1 root   root   40 May  4 09:27 Imani.txt
--rw-rw-r-- 1 ismael ismael 30 May  5 20:49 denbosch.txt
--rw-rw-r-- 1 ismael ismael 47 May  4 13:33 ismail.txt
--rw-rw-r-- 1 ismael ismael 22 May  4 14:18 samen.txt
--rw-rw-r-- 1 ismael ismael 19 May  4 14:21 techgrounds.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -lh denbosch.txt
--rw-rw-r-- 1 ismael ismael 30 May  5 20:49 denbosch.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ chmod u+x denbosch.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -l
-total 20
--rw-r--r-- 1 root   root   40 May  4 09:27 Imani.txt
--rwxrw-r-- 1 ismael ismael 30 May  5 20:49 denbosch.txt
--rw-rw-r-- 1 ismael ismael 47 May  4 13:33 ismail.txt
--rw-rw-r-- 1 ismael ismael 22 May  4 14:18 samen.txt
--rw-rw-r-- 1 ismael ismael 19 May  4 14:21 techgrounds.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo chgrp stad denbosch.txt
-chgrp: invalid group: ‘stad’
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo groupadd kruiskamp
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -l
-total 20
--rw-r--r-- 1 root   root   40 May  4 09:27 Imani.txt
--rwxrw-r-- 1 ismael ismael 30 May  5 20:49 denbosch.txt
--rw-rw-r-- 1 ismael ismael 47 May  4 13:33 ismail.txt
--rw-rw-r-- 1 ismael ismael 22 May  4 14:18 samen.txt
--rw-rw-r-- 1 ismael ismael 19 May  4 14:21 techgrounds.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo chgrp kruiskamp denbosch.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -l
-total 20
--rw-r--r-- 1 root   root      40 May  4 09:27 Imani.txt
--rwxrw-r-- 1 ismael kruiskamp 30 May  5 20:49 denbosch.txt
--rw-rw-r-- 1 ismael ismael    47 May  4 13:33 ismail.txt
--rw-rw-r-- 1 ismael ismael    22 May  4 14:18 samen.txt
--rw-rw-r-- 1 ismael ismael    19 May  4 14:21 techgrounds.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo gr
-grep       gresource  groff      grog       grops      grotty     groupadd   groupdel   groupmems  groupmod   groups     growpart   grpck      grpconv    grpunconv  
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo groupadd kruiskamp
-groupadd: group 'kruiskamp' already exists
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -l
-total 20
--rw-r--r-- 1 root   root      40 May  4 09:27 Imani.txt
--rwxrw-r-- 1 ismael kruiskamp 30 May  5 20:49 denbosch.txt
--rw-rw-r-- 1 ismael ismael    47 May  4 13:33 ismail.txt
--rw-rw-r-- 1 ismael ismael    22 May  4 14:18 samen.txt
--rw-rw-r-- 1 ismael ismael    19 May  4 14:21 techgrounds.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ 
 
 # Remove the read and write permissions (rw) from the file for the group and everyone else, but not for the owner. Can you still read it?
 
