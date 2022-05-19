@@ -205,3 +205,5 @@ https://www.geeksforgeeks.org/what-is-system-hardening/
 https://dynamixsolutions.com/types-disaster-recovery-plans/
 
 https://www.techtarget.com/searchdisasterrecovery/definition/disaster-recovery-plan
+
+https://www.techtarget.com/searchdisasterrecovery/podcast/What-you-need-to-know-about-automatic-failover-and-disaster-recovery-automation
