@@ -79,7 +79,7 @@ An IPS monitors the network for suspicious activity or attacks in progress. When
 
 - False positives. If an IDS gives you an alert about something that isn't troublesome at all, you're the only one inconvenienced. If an IPS shuts down traffic, many people could be impacted. 
 
-![IDSvsIPS](../00_includes/SEC08IDSvsIPS.png)
+![IDSvsIPS](../00_includes/SEC08IDSvsIPS1.jpg)
 
 
 Many companies avoid the IDS vs. IPS problem by **deploying both solutions(IDS&IPS)**  they could use the IPS for active network security while the IDS gives you a deep understanding of how the traffic moves across your network. 
