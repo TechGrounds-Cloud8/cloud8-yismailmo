@@ -1,6 +1,7 @@
 # Users and groups
-Users and groups
+
 introduction:
+
 linux has users, similar to accounts on windows and macos. every user has their own home directory. users can also be part of groups.
 there is a special user called ‘root’. Root is allowed to do anything.
 To gain temporary root permissions, you can type ‘sudo’ in front of a command, but that only works if you’re allowed to do that.
@@ -11,19 +12,23 @@ Users, passwords, and groups are all stored in  (different) files across the sys
 
 # Key terminology
 
-sudo "super user do" allows you to elevate your current user account to have root privileges (do whatever with the file)
+sudo "super user do" allows you to elevate your current user account to have root privileges (do whatever with the file).
+
 cat to create, view, concatenate (merge) files.
-etc/group  defines the groups to which users belong
+
+etc/group  defines the groups to which users belong.
+
 grep finds all the lines of a file that contain a particular word (grep "ẅord" filename)
 
 
-Exercise:
+# Exercise:
 ## Create a new user in your VM. 
 
 sudo useradd yaska
 
 The new user should be part of an admin group.
- sudo groupadd yaska
+
+sudo groupadd yaska
 
 The new user should have a password.
 sudo passwd yaska
@@ -37,7 +42,7 @@ to test if the new user data is created
 grep yaska
 
 ### Sources
-[List your sources you used for solving the exercise]
+
 
 https://linuxize.com/post/how-to-add-user-to-group-in-linux/
 
@@ -45,8 +50,11 @@ https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu/
 
 
 ### Overcome challanges
-My laptop crushed so I was late with this assignment and i will need to rewrite the steps of the answers again in a little more detailed if i had more time.
+
+Creating a user in my VM and navigating through vm.
 
 ### Results
 
-![screenshot user&group](My files/Linux files/cloud8-yismailmo/00_includes/LNX04-1.png)
+![usergrpadd](../00_includes\LNX04grpadd.png)
+
+![usergroup](../00_includes\LNX04grpadd2.png)
