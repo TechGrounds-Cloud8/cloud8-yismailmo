@@ -57,4 +57,8 @@ Creating a user in my VM and navigating through vm.
 
 ![usergrpadd](../00_includes\LNX04grpadd.png)
 
-![usergroup](../00_includes\LNX04grpadd2.png)
+
+![usergroup](../00_includes/LNX04usrgrp.png)
+
+
+![usrgrp](../00_includes/LNX04grpadd2.png)
