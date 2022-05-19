@@ -88,14 +88,59 @@ A solution like this gives the companies information they can build on to keep t
 
 Hack response strategies:
 
+IR: incident response (IR) plan.The first point is to make this IR plan.
+
+One of the standard guidance for security incident handling is the National Institute of Standards and Technology (NIST, USA) SP 800-61. which specifies the following areas;
+
+- Preparation – Planning in advance how to handle and prevent security incidents.
+
+- Detection and analysis – Encompasses everything from monitoring potential attack vectors to looking for signs of an incident, to prioritization.
+
+- Containment, eradication, and recovery – Developing a containment strategy, identifying the hosts and systems under attack, mitigating the effects, and having a plan for recovery.
+
+- Post-incident activity – Reviewing lessons learned and having a plan for evidence retention.
+
+ ![IRplan](../00_includes/SEc08IRplan.png)
+
+#### The concept of systems hardening:
+
+System hardening is the process of securing a server or computer system by minimizing its attack surface, or surface of vulnerability, and potential attack vectors. It’s a form of cyberattack protection that involves closing system loopholes that cyberattackers frequently use to exploit the system and gain access to users’ sensitive data.
+
+There are five main types of system hardening:
+
+- Server hardening
+
+- Software application hardening
+
+- Operating system hardening
+
+- Database hardening
+
+- Network hardening
+
+For example, system hardening best practices outlined by the NIST in Special Publication (SP) 800-123, a document focused entirely on system hardening, include:
+
+- Establishing a system security plan
 
 
-The concept of systems hardening:
+- Patching and updating the OS
+
+- Removing or disabling unnecessary services, applications, and network protocols
+
+- Configuring OS user authentication
+
+- Configuring resource controls appropriately
+
+- Selecting and implementing authentication and encryption technologies
 
 
 Different types of disaster recovery options:
 
 
+
+RPO
+
+RTO
 
 # Exercise
 
@@ -119,4 +164,12 @@ https://www.okta.com/identity-101/ids-vs-ips/
 
 https://www.upguard.com/blog/ids-vs-ips
 
+
+https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r2.pdf
+
+https://www.msp360.com/resources/blog/how-to-respond-to-cyberattacks/
+
+https://www.trentonsystems.com/blog/system-hardening-overview
+
+https://www.geeksforgeeks.org/what-is-system-hardening/
 
