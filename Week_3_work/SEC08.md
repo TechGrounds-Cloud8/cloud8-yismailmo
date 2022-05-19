@@ -134,13 +134,38 @@ For example, system hardening best practices outlined by the NIST in Special Pub
 - Selecting and implementing authentication and encryption technologies
 
 
-Different types of disaster recovery options:
+Different types of disaster recovery plans(DRP) options:
 
+(DRP) is a documented, structured approach that describes how an organization can quickly resume work after an unplanned incident.
 
+![DRP](../00_includes/SEC08DRP.png)
 
-RPO
+Types of disaster recovery plans(DRP):
 
-RTO
+- Data center DRP
+
+- Data back-up DRP
+
+- virtual DRP (entire IT infrastructure is backed up on cloud servers).
+
+- DRaaS; Disaster recovery as a service. This is a complete copy of a company's IT infrastructure in a 3rd party cloud environment.
+
+- Hot site DRP; a form of DRaaS for  like medical facilities, nursing homes, and financial institutions, that includes setting up a second physical facility filled with identical IT infrastructure. 
+
+- Cold site DR; slightly less-expensive alternative to a hot site. This involves renting space that can be used if needed.
+
+RPO:
+
+The recovery point objective (RPO) describes the age of files that must be recovered from data backup storage for normal operations to resume.
+
+RTO:
+
+The recovery time objective (RTO) describes the amount of time critical applications can be down, typically measured in hours, minutes or seconds. 
+
+![RTO&RPO](../00_includes/SEC08RTO%26RPO.png)
+
+Failover:
+
 
 # Exercise
 
@@ -148,15 +173,17 @@ A Company makes daily backups of their database. The database is automatically r
 
 #### What is the RPO of the database?
 
+Since the company makes daily(24hrs) backups in a different physical machine, this is how far the last backup took place. So the RPO  is 24hour. 
+
 
 An automatic failover to a backup web server has been configured for a website. Because the backup has to be powered on first and has to pull the newest version of the website from GitHub, the process takes about 8 minutes. 
 
 #### What is the RTO of the website?
 
-
+8 minutes because this is the time (RTO) or how long it takes to get the last version(roll back) from github.
 ### Challenges overcame
 
-Not that much just alot of reading.
+Not that much just alot of reading and understanding how RTO and RPO work.
 
 ### Sources
 
@@ -173,3 +200,6 @@ https://www.trentonsystems.com/blog/system-hardening-overview
 
 https://www.geeksforgeeks.org/what-is-system-hardening/
 
+https://dynamixsolutions.com/types-disaster-recovery-plans/
+
+https://www.techtarget.com/searchdisasterrecovery/definition/disaster-recovery-plan
