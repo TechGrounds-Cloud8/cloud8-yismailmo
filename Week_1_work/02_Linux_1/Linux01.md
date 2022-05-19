@@ -1,8 +1,37 @@
 # Connecting to a machine using ssh
+
 # Key terminology
+
 cd is changing directory 
 
 ls list iems in a directory
+
+Tab (autocomplete)
+
+Double Tab (if unable to autocomplete, list all options)
+
+clear or CTRL+L (Clear terminal screen)
+history list history of commands
+
+!<num> type index of command in history
+
+cd - Go back to previous working directory
+
+cd ~ Go directly to /home directory
+
+cd / Go directly to /root directory
+
+up/down arrows (move through history of commands) (CTRL+P & CTRL+N)
+
+CTRL+R (search through command history)
+
+CTRL+D (exit current shell session)
+
+CTRL+C (exit/quit)
+
+<command> --help get help for command
+
+man <command> manual for command, but can be in nicer format than help
 
 cd .. to move one level up to previous directory
 
@@ -10,15 +39,18 @@ SSH  or Secure Shell enables two computers to communicate securely
 
 chmod  give permission to who is able to read, edit, or run a files.
 ### Sources
-[List your sources you used for solving the exercise]
+
+https://lazyadmin.nl/powershell/powershell-ssh/
+
+https://en.wikipedia.org/wiki/Secure_Shell
 
 ### Overcome challanges
-[Give a short description of your challanges you encountered, and how you solved them.]
-Finding how to link an image into a page and finally learned from my team mambers that I can use ![comment](put the remote file url). Since i didn't finish the Git02 markdown assignment, but once I did the Git markdown assignment everything made sense.
+
+Finding out how to link an image into a page by using ![comment](../put the file). 
 
 ### Results
-[Here is  an SSH-connection to my machine. So SSH requires the key file to have specific permissions.
-When the connection was successful, I typed whoami in the terminal. This following command  showed my username.]
+Here is  an SSH-connection to my machine. So SSH requires the key file to have specific permissions.
+When the connection was successful, I typed whoami in the terminal. This following command  showed my username.
 
 ![screenshot of powershell](https://github.com/yismailmo/TechGrounds-cloud8-cloud8-yismailmo/blob/main/00_includes/Linux01%20user-login.png)
 
