@@ -23,7 +23,7 @@ A pipe can be used to have the output of one command be the input of another com
 - cat textfile (prints contents of textfile to terminal)
 
 - grep -> "global regular expression print" (use this to filter partial text)
-regular expressions (code to describe language patterns)
+
 Requirements:
 Your Linux machine
 A text file with 2 lines of text
