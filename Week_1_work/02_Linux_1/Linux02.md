@@ -24,5 +24,9 @@ Move around your directory
 
 ![file directories in absolute&relative paths](https://github.com/yismailmo/TechGrounds-cloud8-cloud8-yismailmo/blob/main/00_includes/file%20directories.png)
 
+# Challenges overcame:
+
+Learning the commands like cats and nano  
+
 # sources
 https://linuxhandbook.com/linux-directory-structure/
