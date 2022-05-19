@@ -53,6 +53,6 @@ Simplifying the words to describe the key terminologies used.
 
 ### Results
 
-![screenshot of Git-Reps](https://github.com/yismailmo/TechGrounds-cloud8-cloud8-yismailmo/blob/main/00_includes/Git-Repos%20opdr1.png)
+![screenshot of Git-Reps](../00_includes/GITfork2.png)
 
-![screenshot of shared Repo](https://github.com/yismailmo/TechGrounds-cloud8-cloud8-yismailmo/blob/main/00_includes/shared%20Repo-to-teams4.png)
+![screenshot of shared Repo](../00_includes/GITfork1.png)
