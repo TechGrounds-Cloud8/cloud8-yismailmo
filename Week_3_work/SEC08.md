@@ -27,12 +27,67 @@ Requirements
 
 # Key terminologies:
 
-IDS:
+#### Network intrusion: 
 
-IPS:
+Is any unauthorized activity on a computer network. Detecting an intrusion depends on having a clear understanding of network activity and common security threats.
 
+#### Common network vulnerabilities include:
+
+- Malware: 
+
+Also known as malicious software, is any program or file that is harmful to a computer user. Types of malware include computer viruses, worms, Trojan horses, spyware, adware and ransomware. 
+
+- Social engineering attacks:
+
+Is an attack vector that exploits human psychology and susceptibility to manipulate victims into divulging confidential information and sensitive data or performing an action that breaks usual security standards. Common examples of social engineering include phishing, spear phishing, and whaling attacks.
+
+- Outdated or unpatched software and hardware: 
+
+This can have known vulnerabilities. A vulnerability is a weakness which can be exploited by a cyber attack to gain unauthorized access to or perform unauthorized actions on a computer system. Wormable vulnerabilities like the one that led to the WannaCryransomware are particularly high risk.
+
+- Data storage devices: Portable storage devices like USB and external hard drives can introduce malware into the network. 
+
+#### IDS:
+
+An intrusion detection system (IDS) monitors traffic on your network, analyzes that traffic for signatures matching known attacks, and when something suspicious happens, you're alerted. In the meantime, the traffic keeps flowing. 
+
+This system might detect problems with:
+
+1. Patterns. The technology flags unusual requests, very large packet sizes, or anything that seems out of the ordinary for your system at that time.
+
+2. Prior attacks. The technology flags anything on your server that's been used in a known and successful attack on another server.
+
+3. Machine learning. The system picks up information about everything that happens on your server in an average day, and that data helps to refine the protections in place. 
+
+#### IPS:
+
+An intrusion prevention system (IPS) also monitors traffic. But when something unusual happens, the traffic stops altogether until you investigate and decide to open the floodgates again.
+
+An IPS monitors the network for suspicious activity or attacks in progress. When a suspicious activity is spotted, you're alerted. But in the interim, the system springs to action. It might:
+
+1. Close sessions; It can identify the entry point for the unusual activity and block it from continuing. That might mean terminating the TCP session, blocking an IP address, or some similar step.
+
+2. Strengthen firewalls; The system might identify the gap in the firewall that allowed the attack to enter. A change in programming could prevent something similar in the future.
+
+3. Clean up; The system can scan for damaged or malicious content within the server and remove it. 
+
+#### Differences between IDS and IPS are:
+
+- Response. An IDS is passive, while an IPS is an active control system. You must take action after an IDS alerts you, as your system is still under attack.
+
+- Protection. Arguably, an IDS offers less help when you're under threat. You must figure out what to do, when to do it, and how to clean up the mess. An IPS does all of this for you.
+
+- False positives. If an IDS gives you an alert about something that isn't troublesome at all, you're the only one inconvenienced. If an IPS shuts down traffic, many people could be impacted. 
+
+![IDSvsIPS](../00_includes/SEC08IDSvsIPS.png)
+
+
+Many companies avoid the IDS vs. IPS problem by **deploying both solutions(IDS&IPS)**  they could use the IPS for active network security while the IDS gives you a deep understanding of how the traffic moves across your network. 
+
+A solution like this gives the companies information they can build on to keep their entire system safe. But they'll also avoid letting an attack go unchecked.
 
 Hack response strategies:
+
 
 
 The concept of systems hardening:
@@ -52,3 +107,16 @@ A Company makes daily backups of their database. The database is automatically r
 An automatic failover to a backup web server has been configured for a website. Because the backup has to be powered on first and has to pull the newest version of the website from GitHub, the process takes about 8 minutes. 
 
 #### What is the RTO of the website?
+
+
+### Challenges overcame
+
+Not that much just alot of reading.
+
+### Sources
+
+https://www.okta.com/identity-101/ids-vs-ips/
+
+https://www.upguard.com/blog/ids-vs-ips
+
+
