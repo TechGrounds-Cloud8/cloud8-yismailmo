@@ -164,7 +164,9 @@ The recovery time objective (RTO) describes the amount of time critical applicat
 
 ![RTO&RPO](../00_includes/SEC08RTO%26RPO.png)
 
-Failover:
+Automatic Failover:
+
+is the process of automatically moving an application to a standby server during a failure or service event to preserve its uptime.
 
 
 # Exercise
