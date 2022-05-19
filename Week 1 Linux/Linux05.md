@@ -1,39 +1,43 @@
 ## File permissions
+
 Linux system has three types of file ownerships:
 
-1.user is the creator of the file thus the owner of the file. So the user can create, delete or modify the file he/she created.
+1. user is the creator of the file thus the owner of the file. So the user can create, delete or modify the file he/she created.
 
-2.Group contains multiple users with the same access permission to a file (create, delete or modify the file).
+2. Group contains multiple users with the same access permission to a file (create, delete or modify the file).
 
-3.Other does not create a file and does not belong to a group like creating a role
+3. Other does not create a file and does not belong to a group like creating a role
 
 
 You can view a file’s permissions by creating a long listing. A file’s permissions, as well as its owner and group, can be changed as well.
+
 Any user listed in /etc/passwd can be assigned as owner of a file.
+
 Any group listed in /etc/group can be assigned as the group of a file.
 
 ## Key terminology
-Every file in Linux contains a set of permissions. There are separate permissions for reading, writing, and executing files (rwx)
-rw means that you read and write
-
-/etc/psswd or /etc/group is used to locally manage users & group.
-
-chgrp for changing the group owner
-chown for changing the owner of a file
-
-rw is for read and write (edit) permission
-r- is for only read permission
 
 
-|[-][-][-]-   [------] [---]
-| |  |  | |      |       |
-| |  |  | |      |       +-----------> 7. Group
-| |  |  | |      +-------------------> 6. Owner
-| |  |  | +--------------------------> 5. Alternate Access Method
-| |  |  +----------------------------> 4. Others Permissions
-| |  +-------------------------------> 3. Group Permissions
-| +----------------------------------> 2. Owner Permissions
-+------------------------------------> 1. File Type
+- Every file in Linux contains a set of permissions. There are separate permissions for 
+
+- rwx: reading, writing, and executing files.
+
+- rw means that you read and write
+
+- /etc/psswd or /etc/group is used to locally manage users & group.
+
+- chgrp for changing the group owner
+
+- chown for changing the owner of a file
+
+- rw is for read and write (edit) permission
+
+- r- is for only read permission
+
+- ls -l command, ten characters are displayed before user owner and group. First character tells us about the type of the file.
+
+![fileperm](../00_includes/LNX05files.png)
+
 
 
 ## Exercise
@@ -42,31 +46,9 @@ Create a text file.
 
 # Who is the file’s owner and group? 
 
-yismailmo@penguin:~$ ls
-acceskey  cloud8-yismailmo  ouderepo
-yismailmo@penguin:~$ cd acceskey/
-yismailmo@penguin:~/acceskey$ chmod 400 access_key.pem 
-yismailmo@penguin:~/acceskey$ ssh ismael@18.196.32.244 -p55215 -i access_key.pem 
-Last login: Thu May  5 14:39:43 2022 from 86.91.152.25
-ismael@Nest-Is-Yassin:~$ cd home
--bash: cd: home: No such file or directory
-ismael@Nest-Is-Yassin:~$ cd /home
-ismael@Nest-Is-Yassin:/home$ ls
-ismael
-ismael@Nest-Is-Yassin:/home$ cd ismael/
-ismael@Nest-Is-Yassin:~$ ls
-techgrounds
-ismael@Nest-Is-Yassin:~$ cd techgrounds
-ismael@Nest-Is-Yassin:~/techgrounds$ nano denbosch.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ cat denbosch.txt
-Welkom op deze prachtige stad
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -lh
-total 20K
--rw-r--r-- 1 root   root   40 May  4 09:27 Imani.txt
--rw-rw-r-- 1 ismael ismael 30 May  5 20:49 denbosch.txt
--rw-rw-r-- 1 ismael ismael 47 May  4 13:33 ismail.txt
--rw-rw-r-- 1 ismael ismael 22 May  4 14:18 samen.txt
--rw-rw-r-- 1 ismael ismael 19 May  4 14:21 techgrounds.txt
+
+![fileperm](../00_includes/LNX05-1.png)
+
 
 # What kind of permissions does the file have?
 -rw-rw-r-- 1 ismael ismael 30 May  5 20:49 denbosch.txt
