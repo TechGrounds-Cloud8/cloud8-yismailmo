@@ -71,6 +71,7 @@ Create a text file.
 
 ![grpchg](../00_includes/LNX05grpownch.png)
 
+
 ### Sources
 https://www.w3cschoool.com/linux-file-ownership
 
