@@ -96,15 +96,11 @@ It is encoded and decoded by producing a grid or set of grids to produce the sub
 
 ###### Find two digital ciphers that are being used today.
 
-1. Secure Socket Layer (SSL):
+1. SHA (Secure Hash Algorithm): SHA has been developed by the NSA. There have been multple versions, SHA-0 was flawed and quickly retracted. The most recent version is SHA-3 This is an example of a cryptographic hash function. 
 
-Netscape has developed a public-key protocol called Secure Socket Layer (SSL) for providing data security layered between TCP/IP (the foundation of Internet-based communications) and application protocols (such as HTTP, Telnet, NNTP, or FTP). SSL supports data encryption, server authentication, message integrity, and client authentication for TCP/IP connections.
 
-The SSL Handshake Protocol authenticates each end of the connection (server and client), with the second or client authentication being optional. 
+Also Secure Socket Layer (SSL):
 
-In phase 1, the client requests the server's certificate and its cipher preferences. When the client receives this information, it generates a master key and encrypts it with the server's public key, then sends the encrypted master key to the server. The server decrypts the master key with its private key, then authenticates itself to the client by returning a message encrypted with the master key. Following data is encrypted with keys derived from the master key. 
-
-Phase 2, client authentication, is optional. The server challenges the client, and the client responds by returning the client's digital signature on the challenge with its public-key certificate.
 
 SSL uses the *RSA public-key* cryptosystem for the authentication steps. After the exchange of keys, a number of different cryptosystems are used, including RC2, RC4, IDEA, DES and triple-DES.
 
