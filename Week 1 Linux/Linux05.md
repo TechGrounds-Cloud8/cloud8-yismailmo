@@ -69,7 +69,7 @@ Create a text file.
 
 #### Change the group ownership of the file to a different group.
 
-![grpchg](../00_includes/LNX05grpownch.png)
+![grpc](../00_includes/LNX05grpownch.png)
 
 
 ### Sources
