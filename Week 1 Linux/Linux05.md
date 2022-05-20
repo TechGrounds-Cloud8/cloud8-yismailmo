@@ -44,129 +44,38 @@ Any group listed in /etc/group can be assigned as the group of a file.
 Create a text file.
 
 
-# Who is the file’s owner and group? # What kind of permissions does the file have?
+#### Who is the file’s owner and group? # What kind of permissions does the file have?
 
 ![fileperm](../00_includes/LNX05-1.png)
 
 
 -rw-rw-r-- 1 ismael ismael   15 May  8 19:50 date1.txt
 
-# Make a long listing to view the file’s permissions.
+#### Make a long listing to view the file’s permissions.
 
 ![filelst](../00_includes/LNX05-2.png)
 
 
-# Remove the read and write permissions (rw) from the file for the group and everyone else, but not for the owner. Can you still read it?
+#### Remove the read and write permissions (rw) from the file for the group and everyone else, but not for the owner. Can you still read it?
 
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo groupadd kruiskamp
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -l
-total 20
--rw-r--r-- 1 root   root   40 May  4 09:27 Imani.txt
--rwxrw-r-- 1 ismael ismael 30 May  5 20:49 denbosch.txt
--rw-rw-r-- 1 ismael ismael 47 May  4 13:33 ismail.txt
--rw-rw-r-- 1 ismael ismael 22 May  4 14:18 samen.txt
--rw-rw-r-- 1 ismael ismael 19 May  4 14:21 techgrounds.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo chgrp kruiskamp denbosch.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -l
-total 20
--rw-r--r-- 1 root   root      40 May  4 09:27 Imani.txt
--rwxrw-r-- 1 ismael kruiskamp 30 May  5 20:49 denbosch.txt
--rw-rw-r-- 1 ismael ismael    47 May  4 13:33 ismail.txt
--rw-rw-r-- 1 ismael ismael    22 May  4 14:18 samen.txt
--rw-rw-r-- 1 ismael ismael    19 May  4 14:21 techgrounds.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo gr
-grep       gresource  groff      grog       grops      grotty     groupadd   groupdel   groupmems  groupmod   groups     growpart   grpck      grpconv    grpunconv  
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo groupadd kruiskamp
-groupadd: group 'kruiskamp' already exists
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -l
-total 20
--rw-r--r-- 1 root   root      40 May  4 09:27 Imani.txt
--rwxrw-r-- 1 ismael kruiskamp 30 May  5 20:49 denbosch.txt
--rw-rw-r-- 1 ismael ismael    47 May  4 13:33 ismail.txt
--rw-rw-r-- 1 ismael ismael    22 May  4 14:18 samen.txt
--rw-rw-r-- 1 ismael ismael    19 May  4 14:21 techgrounds.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo chgrp kruiskamp denbosch.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -l
-total 20
--rw-r--r-- 1 root   root      40 May  4 09:27 Imani.txt
--rwxrw-r-- 1 ismael kruiskamp 30 May  5 20:49 denbosch.txt
--rw-rw-r-- 1 ismael ismael    47 May  4 13:33 ismail.txt
--rw-rw-r-- 1 ismael ismael    22 May  4 14:18 samen.txt
--rw-rw-r-- 1 ismael ismael    19 May  4 14:21 techgrounds.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo chown ismael denbosch.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo go-rw pandapunt.txt
-sudo: go-rw: command not found
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo go-rw denbosch.txt
-sudo: go-rw: command not found
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo chmod -rw denbosch.txt
-chmod: denbosch.txt: new permissions are --x-w----, not --x------
+#### Change the owner of the file to a different user. If everything went well, you shouldn’t be able to read the file unless you assume root privileges with ‘sudo’.
 
-# Change the owner of the file to a different user. If everything went well, you shouldn’t be able to read the file unless you assume root privileges with ‘sudo’.
+![rmrw](../00_includes/LNX05chgrp.png)
 
-
-ismael@Nest-Is-Yassin:~/techgrounds$ cat denbosch.txt
-cat: denbosch.txt: Permission denied
-ismael@Nest-Is-Yassin:~/techgrounds$ cat "denbosch.txt"
-cat: denbosch.txt: Permission denied
-ismael@Nest-Is-Yassin:~/techgrounds$ ls 
-Imani.txt        denbosch.txt     ismail.txt       samen.txt        techgrounds.txt  
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -l
-total 20
--rw-r--r-- 1 root   root      40 May  4 09:27 Imani.txt
----x-w---- 1 ismael kruiskamp 30 May  5 20:49 denbosch.txt
--rw-rw-r-- 1 ismael ismael    47 May  4 13:33 ismail.txt
--rw-rw-r-- 1 ismael ismael    22 May  4 14:18 samen.txt
--rw-rw-r-- 1 ismael ismael    19 May  4 14:21 techgrounds.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ chmod u-r denbosch.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -l
-total 20
--rw-r--r-- 1 root   root      40 May  4 09:27 Imani.txt
----x-w---- 1 ismael kruiskamp 30 May  5 20:49 denbosch.txt
--rw-rw-r-- 1 ismael ismael    47 May  4 13:33 ismail.txt
--rw-rw-r-- 1 ismael ismael    22 May  4 14:18 samen.txt
--rw-rw-r-- 1 ismael ismael    19 May  4 14:21 techgrounds.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo cat "denbosch.txt"
-Welkom op deze prachtige stad
-ismael@Nest-Is-Yassin:~/techgrounds$ 
-
-
-# Change the group ownership of the file to a different group.
-
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo chown brabant denbopsch.txt
-chown: invalid user: ‘brabant’
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo chown kruiskamp denbosch.txt
-chown: invalid user: ‘kruiskamp’
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo chown yaska denbosch.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -l
-total 20
--rw-r--r-- 1 root   root      40 May  4 09:27 Imani.txt
----x-w---- 1 yaska  kruiskamp 30 May  5 20:49 denbosch.txt
--rw-rw-r-- 1 ismael ismael    47 May  4 13:33 ismail.txt
--rw-rw-r-- 1 ismael ismael    22 May  4 14:18 samen.txt
--rw-rw-r-- 1 ismael ismael    19 May  4 14:21 techgrounds.txt
+![chownfile](../00_includes/LNX05chfileperm.png)
 
 
 
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo chgrp yaska denbosch.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -l
-total 20
--rw-r--r-- 1 root   root   40 May  4 09:27 Imani.txt
----x-w---- 1 yaska  yaska  30 May  5 20:49 denbosch.txt
--rw-rw-r-- 1 ismael ismael 47 May  4 13:33 ismail.txt
--rw-rw-r-- 1 ismael ismael 22 May  4 14:18 samen.txt
--rw-rw-r-- 1 ismael ismael 19 May  4 14:21 techgrounds.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ sudo chmod go+rw denbosch.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ ls -l
-total 20
--rw-r--r-- 1 root   root   40 May  4 09:27 Imani.txt
----xrw-rw- 1 yaska  yaska  30 May  5 20:49 denbosch.txt
--rw-rw-r-- 1 ismael ismael 47 May  4 13:33 ismail.txt
--rw-rw-r-- 1 ismael ismael 22 May  4 14:18 samen.txt
--rw-rw-r-- 1 ismael ismael 19 May  4 14:21 techgrounds.txt
-ismael@Nest-Is-Yassin:~/techgrounds$ 
+
+#### Change the group ownership of the file to a different group.
+
+![grpchg](../00_includes/LNX05grpownch.png)
 
 ### Sources
 https://www.w3cschoool.com/linux-file-ownership
 
 
 https://linuxize.com/post/chmod-command-in-linux/#:~:text=The%20permissions%20can%20have%20a,read%20permissions%20(%20r%2D%2D%20).&text=The%20file%20is%20not%20readable,cannot%20view%20the%20file%20contents.
+
+
+https://www.cyberciti.biz/faq/how-to-use-chmod-and-chown-command/
