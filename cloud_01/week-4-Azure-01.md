@@ -43,6 +43,8 @@ Je hebt zelf controle over welke regio je gebruikt,
 
 Not all services are available in every region, so you will need to choose the region with the desired service.  
 
+- Data Sovereignty; e.g some data can only reside in EU.
+
 - Storage availability;
 
 Understanding Azure regions and geographies becomes important when you consider the available storage replication options. Depending on the storage type, you have different replication options.
@@ -51,7 +53,7 @@ Understanding Azure regions and geographies becomes important when you consider 
 
 Prices vary depending on the storage type and availability that you select.
 
-Latency to users.
+- Latency to end users; proximity to the end user
 
 # Sources
 
