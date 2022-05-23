@@ -44,9 +44,7 @@ Microsoft ensures that those  virtual machines(VM) are allocated in a region but
 Microsoft Azure design their infrastructure in such a way as to ensure fault tolerance. For example, from an unhealthy VM to a healthy VM. However, there are times when much larger failures can occur. For example, natural disasters in a region can impact all resources in that particular region. Not only can something like that impact availability, but without a plan in place, disasters can also mean the loss of valuable data.
 
 
-Microsoft Azure design their infrastructure in such a way as to ensure fault tolerance. For example, if you have an application running on two VMs in Azure.
-
-Consumption based model:
+#### Consumption based model:
 
 That customers only pay when they use resources, as such they have no upfront cost associated. Because of that you can create resources at any time and delete them at any time, so you don’t waste any resources. Once resources are deleted, customers stop paying.
 
