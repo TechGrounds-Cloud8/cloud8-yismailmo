@@ -13,11 +13,6 @@ Azure Storage explorer is a free GUI to manage your data in Azure. So I download
 Many IaaS and PaaS services from Azure also use Azure Storage Accounts.
 
 
-Necessities:
-Your Azure Cloud environment (link)
-Azure Storage Explorer
-
-
 # Assignment:
 #### Create an Azure Storage Account. Make sure that only you have access to the data.
 
