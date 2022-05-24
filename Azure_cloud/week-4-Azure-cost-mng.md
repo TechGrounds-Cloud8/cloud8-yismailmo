@@ -41,10 +41,13 @@ The Total Cost of Ownership (TCO) is used to calculate how much an infrastructur
 
 #### Create your own alert 
 
+Go to 'cost management', then choose 'cost alerts' in order to create an alert. Then add anomaly alert.
+
+![costalert](../00_includes/AZ-costmng.png)
 
 #### Understand the options Azure offers to view your spend.
 
-Azure Monitor includes functionality for the;
+Azure Monitor includes functionality for the;See also photo above under cost management.
 
 - collection and analysis of log data (billed by data ingestion, retention, and export).
 
