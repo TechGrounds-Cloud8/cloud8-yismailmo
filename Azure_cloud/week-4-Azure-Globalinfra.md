@@ -1,13 +1,9 @@
 # Azure Global Infrastructure
 
-Introductie:
+Everything in the cloud, from servers to networking, is virtualized. As a customer of a cloud provider, you don't have to worry about the underlying physical infrastructure. However, the physical location of your application or data can be important.
 
 
-
-Alles in de cloud, van servers tot networking, is virtualized. Als klant van een cloud provider hoef je je geen zorgen te maken over de onderliggende fysieke infrastructuur. De fysieke locatie van je applicatie of data kan echter wel belangrijk zijn.
-
-
-De global infrastructure van Azure bestaat uit de volgende componenten:
+The global infrastructure of Azure consists of the following components:
 
 - Regions:
 
@@ -34,7 +30,6 @@ AZ fall under regions.
 
 Is a relationship between 2 Azure Regions within the same geographic region for disaster recovery purposes. If one of the regions were to experience a disaster or failure, then the services in that region will automatically failover to that regions secondary region in the pair. 
 
-Je hebt zelf controle over welke regio je gebruikt, 
 
 
 #### Why choose a region above another region?
@@ -54,6 +49,10 @@ Understanding Azure regions and geographies becomes important when you consider 
 Prices vary depending on the storage type and availability that you select.
 
 - Latency to end users; proximity to the end user
+
+### Challenges overcame:
+
+Not much because i was familiar with most of the terms.
 
 # Sources
 

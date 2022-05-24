@@ -1,10 +1,8 @@
 # Advantages of the cloud
 
-Introductie:
 
-#### Also important for Azure AZ-900 exam.
 
-The 6 benefits of the cloud in Azure are: 
+#### The 6 benefits of the cloud in Azure are: 
 
 1. High Availability;
 
@@ -62,6 +60,10 @@ That customers only pay when they use resources, as such they have no upfront co
 
 6. Go global in minutes
 
+
+### Challenges overcame:
+
+Not much because i was familiar with most of the terms from AWS CCP.
 
 # Sources
 
