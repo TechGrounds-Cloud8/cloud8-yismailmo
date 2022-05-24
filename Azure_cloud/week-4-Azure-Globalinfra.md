@@ -24,7 +24,7 @@ Connected with an extremely low-latency network, they become a building block to
 
 Availability zones (AZ) ensure that if there's an event impacting a datacenter site—for example, if someone cuts the power, or there are issues with cooling—your data will be protected.
 
-AZ fall under regions.
+AZ falls under a regions.
 
 - Region Pairs
 

@@ -68,4 +68,6 @@ https://azure.microsoft.com/en-us/pricing/details/monitor/
 https://azure.microsoft.com/nl-nl/services/cost-management/#overview
 
 
+
+
 https://spot.io/resources/azure-pricing/azure-cost-management-4-ways-to-optimize-azure-costs/
