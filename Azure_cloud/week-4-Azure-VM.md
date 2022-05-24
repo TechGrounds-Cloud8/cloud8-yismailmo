@@ -64,6 +64,8 @@ systemctl restart apache2
 
 ![VMgemaakt](../00_includes/VMAzuregemaakt.png)
 
+![vmgemaakt](../00_includes/VMmaken.png)
+
 ![VMmade](../00_includes/VMAzuregemaakt02.png)
 
 #### Check if your server is working.
