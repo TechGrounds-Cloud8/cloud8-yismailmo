@@ -44,10 +44,24 @@ So to connect to the 2 vms i had to enable share disk in the disk configuration.
 
 #### Check on the second machine if you can read the file.
 
-#### Take a snapshot of the disk and try to create a new Disk with it Mount this new Disk and view the file.
+#### Take a snapshot of the disk and try to create a new Disk with it Mount this
+new Disk and view the file.
+
+![mountsnap](../00_includes/AZ07snapshop.png)
+
+![snapmountdisk](../00_includes/AZ07snapshotmountDisk.png)
+
+
+# Challenges overcame
+Learning about Azure Managed Disk and attaching it to 2 VMs. 
+
+Checking on the second Vmachine if i can read the file.
+
 
 # Sources: 
 
 https://docs.microsoft.com/en-us/azure/virtual-machines/disks-types
 
 https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-disk-portal
+
+https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-create-file-share?tabs=azure-portal
