@@ -22,6 +22,7 @@ There are 4 types of managed disks. In general you can say that more performance
 A disk can be encrypted for security. Disks can get bigger, but not smaller.
 If you want to use an external device (including a Data Disk) on Linux, you must first mount it.
 
+
 ### Key Terminologies:
 
 - IOPS;
@@ -29,6 +30,9 @@ input output per sec
 
 - Throughput;
 Amount of Data that passes through( compare input and output).
+
+Mounting;
+Attaching the filesystem of an external device(usb,hard disks) to the filesystem of a system(linux).
 
 # Assignment:
 #### Start 2 Linux VMs. Ensures you have access to both via SSH
@@ -71,3 +75,5 @@ https://docs.microsoft.com/en-us/azure/virtual-machines/disks-types
 https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-disk-portal
 
 https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-create-file-share?tabs=azure-portal
+
+https://www.javatpoint.com/linux-mount
