@@ -40,12 +40,18 @@ So to connect to the 2 vms i had to enable share disk in the disk configuration.
 
 ![shareddisk2vm](../00_includes/AZ07shareddisk.png)
 
+![shareddisks2vm](../00_includes/AZ07sharedDisk2vm02.png)
+
+![2vmshareddisk](../00_includes/AZ072vmsharedDisk03.png)
+
 #### On your first machine, create a file and place it on the Shared Disk.
 
 #### Check on the second machine if you can read the file.
 
 #### Take a snapshot of the disk and try to create a new Disk with it Mount this
 new Disk and view the file.
+
+![shareddisks2vmview](../00_includes/AZ07sharedDiskvisible2vm.png)
 
 ![mountsnap](../00_includes/AZ07snapshop.png)
 
