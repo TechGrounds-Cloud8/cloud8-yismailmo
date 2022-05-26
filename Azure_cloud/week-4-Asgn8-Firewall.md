@@ -65,6 +65,9 @@ Is the recommended method to configure your Azure Firewall. It's a global resour
 
 #### Create an Azure Firewall in VNET. Make sure that your web server is still reachable via HTTP, but that SSH is blocked.
 
+![FWRG](../00_includes/AZ08FWRG01.png)
+
+
 # Sources
 
 https://docs.microsoft.com/en-us/azure/firewall-manager/
