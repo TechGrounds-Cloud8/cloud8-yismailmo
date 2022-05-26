@@ -67,6 +67,8 @@ Is the recommended method to configure your Azure Firewall. It's a global resour
 
 ![FWNAT](../00_includes/AZ08FWRG01.png)
 
+![FWroute](../00_includes/AZ08FWR01.png)
+
 ![FWRoute](../00_includes/AZFWNATrule.png)
 
 
