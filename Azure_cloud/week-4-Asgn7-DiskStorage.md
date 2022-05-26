@@ -31,7 +31,7 @@ input output per sec
 - Throughput;
 Amount of Data that passes through( compare input and output).
 
-Mounting;
+- Mounting;
 Attaching the filesystem of an external device(usb,hard disks) to the filesystem of a system(linux).
 
 # Assignment:
