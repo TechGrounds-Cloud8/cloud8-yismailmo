@@ -50,7 +50,15 @@ So to connect to the 2 vms i had to enable share disk in the disk configuration.
 
 #### On your first machine, create a file and place it on the Shared Disk.
 
+![vm2fileshare](../00_includes/AZ072vmstarted02.png)
+
+![vm1fileshare](../00_includes/AZ072vmstarted02.png)
+
+
 #### Check on the second machine if you can read the file.
+
+![vmfilesharemount](../00_includes/AZ07mountfilevm1.png)
+
 
 #### Take a snapshot of the disk and try to create a new Disk with it Mount this
 new Disk and view the file.
@@ -77,3 +85,21 @@ https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-d
 https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-create-file-share?tabs=azure-portal
 
 https://www.javatpoint.com/linux-mount
+
+
+https://help.ubuntu.com/community/InstallingANewHardDrive
+
+
+https://superuser.com/questions/934678/fdisk-do-i-need-it-or-can-i-make-a-filesystem-directly
+
+
+https://www.howtogeek.com/443342/how-to-use-the-mkfs-command-on-linux/
+
+
+https://superuser.com/questions/676093/partition-not-showing-up-in-dev
+
+
+https://docs.microsoft.com/en-us/azure/virtual-machines/disks-types
+
+
+https://docs.microsoft.com/nl-nl/azure/virtual-machines/managed-disks-overview

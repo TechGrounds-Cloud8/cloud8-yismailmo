@@ -78,3 +78,5 @@ Is the recommended method to configure your Azure Firewall. It's a global resour
 https://docs.microsoft.com/en-us/azure/firewall-manager/
 
 https://docs.microsoft.com/en-us/azure/firewall/tutorial-firewall-deploy-portal
+
+
