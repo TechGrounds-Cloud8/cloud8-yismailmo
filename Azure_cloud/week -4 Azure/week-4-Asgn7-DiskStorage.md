@@ -73,7 +73,7 @@ new Disk and view the file.
 # Challenges overcame
 Learning about Azure Managed Disk and attaching it to 2 VMs. 
 
-Checking on the second Vmachine if i can read the file.
+Checking on the second Vmachine if i can read the file, hich we found out it was not possible because second disk can't read the file on first disk despite being shared due to synchronization issue.
 
 
 # Sources: 

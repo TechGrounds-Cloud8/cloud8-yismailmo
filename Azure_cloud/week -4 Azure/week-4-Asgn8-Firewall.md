@@ -72,6 +72,8 @@ Is the recommended method to configure your Azure Firewall. It's a global resour
 ![FWRoute](../00_includes/AZFWNATrule.png)
 
 
+#### Challenges overcame:
+setting up webserver via htttp and blocking ssh, so i had to allow http in the NAT rule.
 
 # Sources
 
