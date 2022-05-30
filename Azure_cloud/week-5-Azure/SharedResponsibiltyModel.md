@@ -26,7 +26,6 @@ implementation of service access controls
 
 ![IAMsharedresp](../../00_includes/IAMsharedRespo.png)
 
-Encryption is a shared repsonsibility
 
 The Cloud solution provider(CSP) offers extra services with which one can manage their own responsibilities more easily.
 
