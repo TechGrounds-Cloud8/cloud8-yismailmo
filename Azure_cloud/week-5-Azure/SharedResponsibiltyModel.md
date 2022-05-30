@@ -33,7 +33,7 @@ In a shared responsibility model, a layered approach to security is illustrated 
 
 • For on-premises solutions, the customer is both accountable and responsible for all aspects of security and operations.
 
-• For IaaS solutions, the elements such as buildings, servers, networking hardware, and the hypervisor should be managed by the platform Cloud service provider(CSP). The customer is responsible or has a shared responsibility for securing and managing the operating system, network configuration, applications, identity, clients, and data.
+• For IaaS solutions, the elements such as buildings, servers, networking hardware, and the hypervisor should be managed by the Cloud service provider(CSP). The customer is responsible or has a shared responsibility for securing and managing the operating system, network configuration, applications, identity, clients, and data.
 
 • PaaS solutions build on IaaS deployments, and the provider is additionally responsible to manage and secure the network controls. The customer is still responsible or has a shared responsibility for securing and managing applications, identity, clients, and data.
 
