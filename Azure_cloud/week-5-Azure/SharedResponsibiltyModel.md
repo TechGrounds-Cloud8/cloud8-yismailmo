@@ -29,6 +29,7 @@ implementation of service access controls
 The Cloud solution provider(CSP) offers extra services with which one can manage their own responsibilities more easily.
 
 In a shared responsibility model, a layered approach to security is illustrated as:
+
 • For on-premises solutions, the customer is both accountable and responsible for all aspects of security and operations.
 
 • For IaaS solutions, the elements such as buildings, servers, networking hardware, and the hypervisor should be managed by the platform vendor. The customer is responsible or has a shared responsibility for securing and managing the operating system, network configuration, applications, identity, clients, and data.
@@ -45,4 +46,5 @@ https://azure.microsoft.com/mediahandler/files/resourcefiles/shared-responsibili
 
 https://docs.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility
 
-file:///C:/Users/TG/Downloads/Data-Classification-for-Cloud-Readiness.pdf
+https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/policy-compliance/data-classification
+Data-Classification-for-Cloud-Readiness.pdf
