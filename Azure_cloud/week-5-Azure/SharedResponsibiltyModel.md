@@ -1,10 +1,10 @@
 # Shared Responsibility Model
 
+The shared responsibility model is about clearly defining the responsibilities of cloud solution provider(CSP) and the customer, and what services the CSP and customer are both responsible for (like encryption).
+
 In the cloud many of the responsibilities from physical security of the data center to the security and encryption of your data, but also the maintenance and management of the building are taken over by the cloud solution provider(CSP).
 
 Defining the line between customer responsibilities and those of the Cloud service providers(CSP) is imperative for reducing the risk in the public, hybrid, and multi-cloud environments.
-
-The shared responsibility model is about clearly defining the responsibilities of CSP and the customer, and what services the CSP and customer are both responsible for (like encryption).
 
 So as a customer you can rent the infrastructure without having to worry about physical network infrastructure.
 
@@ -21,8 +21,7 @@ While security in the cloud is the responsibility of the customer like:
 
 - Data to servers
 - Turn on encryption
-- configuration of an identity provider, configuration of administrative services, establishing and configuration of user identities, and
-implementation of service access controls
+- multi-factor authentication is up to the customer
 
 ![IAMsharedresp](../../00_includes/IAMsharedRespo.png)
 
@@ -39,7 +38,7 @@ In a shared responsibility model, a layered approach to security is illustrated 
 
 • For SaaS solutions, a CSP provides the application and abstracts customers from the underlying components. Nonetheless, the customer continues to be accountable; they must ensure that data is classified correctly, and they share a responsibility to manage their users and end-point devices. 
 
-![sharedrespmodel](../../00_includes/SharedResponmodel.png)
+![sharedrespmodel](../../00_includes/SharedRespmodel02.png)
 
 # Sources
 
