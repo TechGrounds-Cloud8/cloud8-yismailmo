@@ -12,10 +12,9 @@ However, as a customer, you are still responsibile for access control to data an
 
 Therefore CSP (Azure) manages security of the cloud like:
 
-- Disk Storage
-- Database
-- Networking
-- Global infrastructure (regions,AZ, region pairs)
+- Database (ensuring effective functionality of underlying infrastructure)
+- Networking control configuration (network infrastructure )
+- Global infrastructure (regions,AZ, region pairs) physical security
 
 While security in the cloud is the responsibility of the customer like:
 
