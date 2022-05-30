@@ -2,7 +2,10 @@
 
 In the cloud many of the responsibilities from physical security of the data center to the security and encryption of your data, but also the maintenance and management of the building are taken over by the cloud solution provider(CSP).
 
-So as a customer you can rent the infrastructure without having to worry about it.
+Defining the line between customer responsibilities and those of the Cloud service providers(CSP) is imperative for reducing the risk in the public, hybrid, and multi-cloud environments.
+
+
+So as a customer you can rent the infrastructure without having to worry about physical network infrastructure.
 
 However, as a customer, you are still responsibile for access control to data and software, encryption of data at rest and data in transit.
 
@@ -23,9 +26,23 @@ implementation of service access controls
 ![IAMsharedresp](../../00_includes/IAMsharedRespo.png)
 
 
-The Cloud solution provider(CSP) extra offers extra services with which you can manage your own responsibilities more easily.
+The Cloud solution provider(CSP) offers extra services with which one can manage their own responsibilities more easily.
+
+In a shared responsibility model, a layered approach to security is illustrated as:
+• For on-premises solutions, the customer is both accountable and responsible for all aspects of security and operations.
+
+• For IaaS solutions, the elements such as buildings, servers, networking hardware, and the hypervisor should be managed by the platform vendor. The customer is responsible or has a shared responsibility for securing and managing the operating system, network configuration, applications, identity, clients, and data.
+
+• PaaS solutions build on IaaS deployments, and the provider is additionally responsible to manage and secure the network controls. The customer is still responsible or has a shared responsibility for securing and managing applications, identity, clients, and data.
+
+• For SaaS solutions, a vendor provides the application and abstracts customers from the underlying components. Nonetheless, the customer continues to be accountable; they must ensure that data is classified correctly, and they share a responsibility to manage their users and end-point devices. 
+
+![sharedrespmodel](../../00_includes/SharedResponmodel.png)
 
 # Sources
 
 https://azure.microsoft.com/mediahandler/files/resourcefiles/shared-responsibility-for-cloud-computing/Shared%20Responsibility%20for%20Cloud%20Computing-2019-10-25.pdf
 
+https://docs.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility
+
+file:///C:/Users/TG/Downloads/Data-Classification-for-Cloud-Readiness.pdf
