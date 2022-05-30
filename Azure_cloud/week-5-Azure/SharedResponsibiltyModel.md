@@ -45,5 +45,4 @@ https://azure.microsoft.com/mediahandler/files/resourcefiles/shared-responsibili
 
 https://docs.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility
 
-https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/policy-compliance/data-classification
-Data-Classification-for-Cloud-Readiness.pdf
+https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/policy-compliance/data-classification-Data-Classification-for-Cloud-Readiness.pdf
