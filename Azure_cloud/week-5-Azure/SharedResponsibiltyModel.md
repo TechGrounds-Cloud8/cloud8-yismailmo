@@ -1,6 +1,6 @@
 # Shared Responsibility Model
 
-In the cloud many of the responsibilities from physical security of the data center to the security and encryption of your data. But also the maintenance and management of the building are taken over by the cloud solution provider(CSP).
+In the cloud many of the responsibilities from physical security of the data center to the security and encryption of your data, but also the maintenance and management of the building are taken over by the cloud solution provider(CSP).
 
 So as a customer you can rent the infrastructure without having to worry about it.
 
