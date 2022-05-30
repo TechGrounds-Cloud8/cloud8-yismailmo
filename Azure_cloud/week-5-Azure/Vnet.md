@@ -34,45 +34,54 @@ You can also connect two Azure VNets using virtual network peering. This is made
 Create a Virtual Network with the following requirements:
 
 - Region: Western Europe
-Name: Lab-VNet
-IP range: 10.0.0.0/16
+- Name: Lab-VNet
+- IP range: 10.0.0.0/16
 
-Prerequisites for Subnet 1:
-Name: Subnet-1
-IP Range: 10.0.0.0/24
-This subnet must not have a route to the internet
+**Prerequisites for Subnet 1**:
 
-Prerequisites for Subnet 2:
-Name: Subnet-2
-IP Range: 10.0.1.0/24
+- Name: Subnet-1
+- IP Range: 10.0.0.0/24
+- This subnet must not have a route to the internet
+
+**Prerequisites for Subnet 2**:
+
+- ame: Subnet-2
+- IP Range: 10.0.1.0/24
 
 ![Vnet](../../00_includes/AZ10Vnet.png)
 
 ### Task 2:
 
-Create a VM with the following requirements:
-An apache server must be installed with the following custom data:
+**Create a VM with the following requirements:
+An apache server must be installed with the following custom data**:
 
 #!/bin/bash
+
 sudo su
+
 apt update
+
 apt install apache2 -y
+
 ufw allow 'Apache'
+
 systemctl enable apache2
+
 systemctl restart apache2
 
 No SSH access is required, but HTTP
 
-Subnet: Subnet-2
-Public IP: Enabled
-Check if your website is reachable
+- Subnet: Subnet-2
+- Public IP: Enabled
+
+**Check if your website is reachable**
 
 ![VM](../../00_includes/AZ10VM.png)
 
 ![Webserverworks](../../00_includes/AZ10webserverworks.png)
 
 # Challenges overcame
-Actually i did this assignment when I was creating the firewall, where I had to create a Vnet and VM. Then checked whether webserver was working with only HTTP and SSH access.
+Actually i did this assignment when I was creating the firewall in assignment 8, where I had to create a Vnet and VM. Then checked whether webserver was working with only HTTP and not with a SSH access.
 
 # Sources
 
