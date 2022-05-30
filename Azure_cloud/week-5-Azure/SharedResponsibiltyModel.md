@@ -24,6 +24,8 @@ While security in the cloud is the responsibility of the customer like:
 
 ![IAMsharedresp](../../00_includes/IAMsharedRespo.png)
 
+![sharedresponsi](../../00_includes/AZ10_shared_responsibility_model-03.jpg)
+
 
 The Cloud solution provider(CSP) offers extra services with which one can manage their own responsibilities more easily.
 
