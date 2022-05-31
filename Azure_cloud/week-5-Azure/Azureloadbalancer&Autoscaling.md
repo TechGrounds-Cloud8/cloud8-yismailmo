@@ -106,6 +106,12 @@ This load balancer operates on layer 7 of the OSI stack (HTTP/HTTPS). It also ha
 - Add a VM at 75% CPU usage
 - Delete a VM at 30% CPU usage
 
+
+![VMscaaleset01](../../00_includes/AZ11-ASvM01.png)
+![VMAutoScal02](../../00_includes/AZ11-ASVM02.png)
+![VMAutoscale03](../../00_includes/AZ11-ASVM03.png)
+
+![autoscaleVM02](../../00_includes/AZ11-createVMscaleset02.png)
 ![VMscaleset](../../00_includes/AZ11-Autoscale01.png)
 
 
@@ -116,6 +122,10 @@ This load balancer operates on layer 7 of the OSI stack (HTTP/HTTPS). It also ha
 Run a load test on your server(s) to enable auto scaling. There may be a delay in creating new VMs, depending on the settings in your VM Scale Set**.
 
 ![autoscale2vm](../../00_includes/AZ11-autoscalevm02.png)
+
+After low traffic and running my weberver, the second VM is deleted.
+
+![VM2delete](../../00_includes/AZ11-autoscalereducevm2.png)
 
 # Sources
 
