@@ -127,6 +127,8 @@ After low traffic and running my weberver, the second VM is deleted.
 
 ![VM2delete](../../00_includes/AZ11-autoscalereducevm2.png)
 
+![vmtest](../../00_includes/AZ11-Stresstest.png)
+
 # Sources
 
 https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview
