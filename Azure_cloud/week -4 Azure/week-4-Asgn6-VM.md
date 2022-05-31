@@ -85,3 +85,5 @@ Fun exercise and i only had to search for command 'systemctl status apache2'
 # sources
 
 https://www.codegrepper.com/code-examples/shell/sudo+service+apache2+status
+
+https://www.cyberciti.biz/faq/star-stop-restart-apache2-webserver/
