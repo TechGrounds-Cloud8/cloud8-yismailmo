@@ -141,3 +141,4 @@ https://www.red-gate.com/simple-talk/cloud/azure/autoscaling-in-microsoft-azure/
 
 https://stackoverflow.com/questions/55241569/azure-auto-scaling
 
+https://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/
