@@ -123,7 +123,7 @@ Run a load test on your server(s) to enable auto scaling. There may be a delay i
 
 ![autoscale2vm](../../00_includes/AZ11-autoscalevm02.png)
 
-After low traffic and running my weberver, the second VM is deleted.
+After low traffic and running my weberver, the second VM is deleted. Also the stress test is done for the cpu of the VM by running **sudo apt-get install stress** and play around with the cpu capacity.
 
 ![VM2delete](../../00_includes/AZ11-autoscalereducevm2.png)
 
