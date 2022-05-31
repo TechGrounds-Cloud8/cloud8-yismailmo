@@ -138,3 +138,4 @@ https://azure.microsoft.com/nl-nl/pricing/details/load-balancer/
 https://www.red-gate.com/simple-talk/cloud/azure/autoscaling-in-microsoft-azure/
 
 https://stackoverflow.com/questions/55241569/azure-auto-scaling
+
