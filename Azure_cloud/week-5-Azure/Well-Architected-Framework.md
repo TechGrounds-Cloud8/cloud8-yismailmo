@@ -5,14 +5,14 @@ The Cloud Providers benefit from their customers running good, secure applicatio
 
 The Well-Architected Framework of Azure and AWS are very similar. They are based on almost the same 'pillars', namely:
 
-- reliability
-- Security
 - Cost Optimization
+- Reliability
 - Operational Excellence
 - Performance Efficiency
+- Security
 
 
-A way to remember these pillars is CROPS.
+In short **CROPS**.
 
 Each pillar discusses an aspect of your application, and how the Cloud can help to optimize it.
 
