@@ -21,3 +21,54 @@ You, as a cloud engineer, should be able to build an application with this Well-
 # Task
 
 How to implement each pillar with cloud services
+
+In Cost Optimization are five design principles in the cloud:
+
+    - Implement cloud financial management
+    - Adopt a consumption model
+    - Measure overall efficiency
+    - Stop spending money on undifferentiated running heavy workloads.
+    - Analyzing and allocating expenses.
+
+†
+
+    There are five design principles in the cloud in Reliability:
+
+    - Automatically recover from an error
+    - Test recovery procedures
+    - Horizontally scale to increase total workload availability
+    - Stop guessing capacity
+    - Manage change in automation
+  
+†
+
+    Operational Excellence, five design principles in the cloud are:
+
+    - Make edits as code
+    - Make small, reversible changes regularly
+    - Refine surgery procedures regularly
+    - Anticipate failure
+    - Learn from all operational mistakes
+
+†
+
+
+    In Performance Efficiency, there are five design principles in the cloud:
+
+    - Democratizing advanced technologies
+    - Go worldwide in minutes
+    - Using serverless architectures
+    - Experiment more often
+    - Consider mechanical sympathy
+
+†
+
+    In Security are seven design principles in the cloud:
+
+    - Implement a strong identity foundation
+    - Enable traceability
+    - Apply security to all layers
+    - Automate security best practices
+    - Protect data in transit and at rest
+    - Keep people away from data
+    - Prepare for security events
