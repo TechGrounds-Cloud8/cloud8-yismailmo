@@ -138,6 +138,10 @@ By using the following command (first installing **sudo apt install stress-ng**)
 
 ![loadtest01](../../00_includes/AZ11-loadtestvmscaled.png)
 
+### Challenges overcame
+
+Could not do the load test in azure portal so I used **stress-ng** command in CLI to add an extra load to the VM and in that way i could see the extra VM being created. 
+
 # Sources
 
 https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview
