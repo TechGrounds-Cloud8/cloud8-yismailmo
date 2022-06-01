@@ -27,13 +27,13 @@ Study:
 
 Is a managed, cloud-based network security service that protects your Azure Virtual Network resources.
 
-![stdfirewall](../00_includes/AZ08firewallbasic.png)
+![stdfirewall](../../00_includes/AZ08firewallbasic.png)
 
 2. Azure Firewall Premium;
 
 provides advanced threat protection that meets the needs of highly sensitive and regulated environments, such as the payment and healthcare industries.
 
-![firewallprem](../00_includes/AZ08firewallprem.png)
+![firewallprem](../../00_includes/AZ08firewallprem.png)
 
 Azure Firewall Premium includes the following features:
 
@@ -52,7 +52,7 @@ Firewall Policy;
 
 Is the recommended method to configure your Azure Firewall. It's a global resource that can be used across multiple Azure Firewall instances in Secured Virtual Hubs and Hub Virtual Networks. Policies work across regions and subscriptions.
 
-![firewallpolicy](../00_includes/AZ08firewallpolicy.png)
+![firewallpolicy](../../00_includes/AZ08firewallpolicy.png)
 
 
 
@@ -61,15 +61,15 @@ Is the recommended method to configure your Azure Firewall. It's a global resour
 
 #### Turn on a web server. Make sure the ports for both SSH and HTTP are open.
 
-![webserverportopen](../00_includes/AZ08webserver.png)
+![webserverportopen](../../00_includes/AZ08webserver.png)
 
 #### Create an Azure Firewall in VNET. Make sure that your web server is still reachable via HTTP, but that SSH is blocked.
 
-![FWNAT](../00_includes/AZ08FWRG01.png)
+![FWNAT](../../00_includes/AZ08FWRG01.png)
 
-![FWroute](../00_includes/AZ08FWR01.png)
+![FWroute](../../00_includes/AZ08FWR01.png)
 
-![FWRoute](../00_includes/AZFWNATrule.png)
+![FWRoute](../../00_includes/AZFWNATrule.png)
 
 
 #### Challenges overcame:
