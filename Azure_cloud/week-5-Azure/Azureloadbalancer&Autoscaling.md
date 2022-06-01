@@ -123,11 +123,20 @@ Run a load test on your server(s) to enable auto scaling. There may be a delay i
 
 ![autoscale2vm](../../00_includes/AZ11-autoscalevm02.png)
 
+![webserver01](../../00_includes/AZ11-webserver01.png)
+![webserver02](../../00_includes/AZ11-webserver02.png)
+
 After low traffic and running my weberver, the second VM is deleted. Also the stress test is done for the cpu of the VM by running **sudo apt-get install stress** and play around with the cpu capacity.
 
 ![VM2delete](../../00_includes/AZ11-autoscalereducevm2.png)
 
-![vmtest](../../00_includes/AZ11-Stresstest.png)
+By using the following command (first installing **sudo apt install stress-ng**) to test whether extra vms will be added when the load increases in 1 vm.
+
+![loadtest](../../00_includes/AZ11-loadtestvm1.png)
+
+![loadtestwithincreasecpu](../../00_includes/AZ11-loadtest02.png)
+
+![loadtest01](../../00_includes/AZ11-loadtestvmscaled.png)
 
 # Sources
 
@@ -141,4 +150,4 @@ https://www.red-gate.com/simple-talk/cloud/azure/autoscaling-in-microsoft-azure/
 
 https://stackoverflow.com/questions/55241569/azure-auto-scaling
 
-https://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/
+https://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool
