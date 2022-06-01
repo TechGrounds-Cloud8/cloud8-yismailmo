@@ -3,7 +3,7 @@
 
 The Cloud Providers benefit from their customers running good, secure applications on the provider's infrastructure. The Well-Architected Framework was created to give customers a guideline on what a good, secure application looks like.
 
-The Well-Architected Framework of Azure and AWS are very similar. They are based on almost the same 'pillars', namely:
+The Well-Architected Framework of Azure and AWS are very similar(eventhough AWS has now added sustainability). They are based on almost the same 'pillars', namely:
 
 - Cost Optimization
 - Reliability
@@ -16,13 +16,13 @@ In short **CROPS**.
 
 Each pillar discusses an aspect of your application, and how the Cloud can help to optimize it.
 
-You, as a cloud engineer, should be able to build an application with this Well-Architected Framework that makes optimal use of the possibilities in the Cloud.
+As a cloud engineer, I'm expected to be able to build an application with this Well-Architected Framework that makes optimal use of the possibilities in the Cloud.
 
 # Task
 
 How to implement each pillar with cloud services
 
-In Cost Optimization are five design principles in the cloud:
+ Cost Optimization are five design principles in the cloud:
 
     - Implement cloud financial management
     - Adopt a consumption model
@@ -30,9 +30,9 @@ In Cost Optimization are five design principles in the cloud:
     - Stop spending money on undifferentiated running heavy workloads.
     - Analyzing and allocating expenses.
 
-†
 
-    There are five design principles in the cloud in Reliability:
+
+There are five design principles in the cloud in Reliability:
 
     - Automatically recover from an error
     - Test recovery procedures
@@ -40,9 +40,9 @@ In Cost Optimization are five design principles in the cloud:
     - Stop guessing capacity
     - Manage change in automation
   
-†
 
-    Operational Excellence, five design principles in the cloud are:
+
+Operational Excellence, five design principles in the cloud are:
 
     - Make edits as code
     - Make small, reversible changes regularly
@@ -50,10 +50,8 @@ In Cost Optimization are five design principles in the cloud:
     - Anticipate failure
     - Learn from all operational mistakes
 
-†
 
-
-    In Performance Efficiency, there are five design principles in the cloud:
+Performance Efficiency, there are five design principles in the cloud:
 
     - Democratizing advanced technologies
     - Go worldwide in minutes
@@ -61,9 +59,9 @@ In Cost Optimization are five design principles in the cloud:
     - Experiment more often
     - Consider mechanical sympathy
 
-†
 
-    In Security are seven design principles in the cloud:
+
+In Security are seven design principles in the cloud:
 
     - Implement a strong identity foundation
     - Enable traceability
