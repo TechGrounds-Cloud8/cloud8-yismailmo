@@ -16,7 +16,9 @@ In short **CROPS**.
 
 Each pillar discusses an aspect of your application, and how the Cloud can help to optimize it.
 
-As a cloud engineer, I'm expected to be able to build an application with this Well-Architected Framework that makes optimal use of the possibilities in the Cloud.
+When designing a cloud solution, focus on generating incremental value early. Apply the principles of **Build-Measure-Learn**, to accelerate your time to market while avoiding capital-intensive solutions.
+
+That is why Azure Well-Architected Framework is a guide to improve the quality of a workload.
 
 # Task
 
@@ -70,3 +72,7 @@ Security's seven design principles in the cloud are:
     - Protect data in transit and at rest
     - Keep people away from data
     - Prepare for security events
+
+# Sources
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/
