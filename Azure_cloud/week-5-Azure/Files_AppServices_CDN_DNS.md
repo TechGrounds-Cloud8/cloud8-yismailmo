@@ -10,9 +10,11 @@
 
     -   How does App Service fit / replace App Service in a classic setting?
 
+        -  In the classic setting of deployment model, resource states, policies, and tags are all managed individually. If you need to delete resources, you do so individually. This quickly becomes a management challenge.
+
         - Azure app service is different from hosting on your own on-premise server(classic setting). Because with on-premise web hosting, you or your organisation is reponsible for managing pretty much everything (from storage to networking equipment). 
 
-        - While in Azure app service everything else is managed by Azure. You don't have to worry about any of the things like, managing the network or underlying infrastructure.
+        - While in Azure app service everything else is managed by Azure. So you don't have to worry about any of the things like, managing the network or underlying infrastructure.
 
         - Meet rigorous, enterprise-grade performance, security, and compliance requirements by using the fully managed platform for your operational and monitoring tasks.
 
@@ -40,34 +42,36 @@
 
     - What is CDN ?
 
-        - It puts stuff like blobs and other static content in a cache(increase the speed of cloud services). The process involves placing the data at strategically chosen locations and caching it. As a result, it provides maximum bandwidth for its delivery to users. 
+    It puts stuff like blobs and other static content in a cache(increase the speed of cloud services) on edge servers. The process involves placing the data at strategically chosen locations  and caching it(in point of presence). As a result, it provides maximum bandwidth for its delivery to users. 
 
-        - 
+    ![CDN](../../00_includes/AZ13-cdn-overview.png)
             
+    -   How does CDN / replace CDN in a classic setting?
 
-        How does CDN / replace CDN in a classic setting?
+        -   CDN provides better performance and improved user experience for end users, especially when using applications in which multiple round-trips are required to load content. In comparison to a classical setting where some VM are located far from end users thus creating high latency. 
 
-        -   
-
-        How can I combine CDN with other services?
+    -   How can I combine CDN with other services?
 
 
-        -   
+        -   You can integrate an Azure storage account with Azure CDN. Also you can add Azure Content Delivery Network (CDN) to a web app in Azure App Service. 
 
-        What is the difference between CDN and other similar services?
+    -   What is the difference between CDN and other similar services?
 
-        -   
+        -  CDN and Web Hosting seem to be similar, but they are totally two different concepts. Web Hosting is hosting your content of your website in a server. There are different hosting plans available these days like shared hosting, VPS (Virtual Private Hosting), Dedicated Hosting and Cloud Hosting.
+
+        -   Mostly, web content are hosted in a single server, but CDN content will be spread across the world, in multiple hosted environment.
 
 3. Azure DNS 
 
     -   What is Azure DNS for?
-
-
-        -   
+     
+     Is a cloud service that allows you to host and manage domain name system (DNS) domains, also known as DNS zones. It works like a phonebook, but here is where computers  resolve domain names to IP addresses.
+     For example, www.tailwindtraders.com (a host record) mapping to a specific IP address (40.71.177.34).
+    
 
     -   How does Azure DNS / replace Azure DNS in a classic setting?
 
-        -   
+        - Traditionally when a DNS service is hosted on a server running Windows Server or Linux and a DNS zone gets delegated to that server. But DNS zones in Azure DNS are hosted across Azure's global network of DNS name servers. These servers use Anycast networking so that queries for DNS zone data will be answered by the DNS server closest to the querying client. 
 
     -   How can I combine Azure DNS with other services?
 
@@ -84,10 +88,12 @@
 
 1. Azure Files / EFS(AWS)
 
-        Where can I find this service in the console?
+    -   Where can I find this service in the console?
+        
+        -   
 
+    -   How do I enable this service?
 
-        How do I enable this service?
 
 
         How can I link this service to other resources?
@@ -122,11 +128,15 @@
 
 https://www.tutorialspoint.com/microsoft_azure/microsoft_azure_cdn.htm
 
+https://www.parkmycloud.com/blog/azure-classic-vs-arm/
+
+https://docs.microsoft.com/en-us/azure/cdn/cdn-add-to-web-app
+
+https://www.differencebetween.com/difference-between-content-delivery-network-cdn-and-vs-web-hosting-servers/
+
+https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-dns/2-what-is-azure-dns
 
 
 
 
-
-
-
-  https://docs.microsoft.com/en-us/azure/storage/files/storage-files-introduction#why-azure-files-is-useful  
+https://docs.microsoft.com/en-us/azure/storage/files/storage-files-introduction#why-azure-files-is-useful  
