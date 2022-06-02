@@ -8,6 +8,18 @@
 
         Is Platform as a Service (PaaS) that enables you to build and host web apps, mobile back ends, and RESTful APIs in the programming language of your choice without managing infrastructure.
 
+        The app service offers a range of plans to meet the needs of your app. Azure App Service runs web and API apps at scale and works seamlessly with other first or third party applications/integrations to meet the app solution requirements you envision.
+
+        To configure an App Service, start with an App Service subscription:
+
+    1. It is essentially the scope and scale of what your application will have available.
+        It determines how much storage space it has, how much CPU and memory, etc.
+    2. It's just like the billing model and feature set for the app services.
+    3. You can have multiple applications installed in the App Service Plan.
+    4. The App Service will run your application.
+    5. The web apps app service has deployment slots. This allows you to create a
+        instance of your application, meaning you can have multiple versions of your website and switch between them when you deploy them.
+
     -   How does App Service fit / replace App Service in a classic setting?
 
         -  In the classic setting of deployment model, resource states, policies, and tags are all managed individually. If you need to delete resources, you do so individually. This quickly becomes a management challenge.
@@ -75,11 +87,20 @@
 
     -   How can I combine Azure DNS with other services?
 
-        -   
+        - Azure Firewall DNS proxy can be used as DNS forwarder for On-premises workloads and Virtual network workloads using a DNS forwarder.
 
-    -   What is the difference between Azure DNS and other similar services?
+        - Use Azure DNS for private domains.  
 
-        -   
+
+    -   What is the difference between Azure DNS(Small-Business) and other similar services?
+
+        -   Route 53; for mid-market
+
+        - Cloudflare DNS; Small-Business
+
+        - Google Cloud DNS; Small-Business
+
+        - GoDaddy; Small-Business
 
 
 
@@ -90,24 +111,47 @@
 
     -   Where can I find this service in the console?
         
-        -   
+        - You can find Azure File share under a tab in your Storage account. See below picture.
+
+        ![fileshare](../../00_includes/AZ13-fileshare.png)
+        
+       
 
     -   How do I enable this service?
 
+         -  You can use Azure Files when you have created a Storage account. 
+        The storage account is already active, but there is nothing on it. Azure Documentation expalined that, Azure Files is really put into use when I upload a file in it.
+        Below I have an example. I have uploaded a file in Azure Files share. 
+
+      
 
 
-        How can I link this service to other resources?
+
+    -   How can I link this service to other resources?
+
+        -  You can link your file share to different services. You can share the file and connect to your current OS. For example, on-premises machines, which can import and use the files. You can also connect the File share to a VM, which is made accessible via a private endpoint and can then be connected to the location that needs access. The configurations must be fine-tuned, which ensures that the files are available from both endpoints. Finally you can also connect it to the storage account.  
 
 
-2. Azure Database (+ managed instance) / RDS, Aurora(AWS)
+2. Azure Database (+ managed instance):
 
-        Where can I find this service in the console?
+    Azure SQL Database is a fully managed platform as a service (PaaS) database engine that handles most of the database management functions such as upgrading, patching, backups, and monitoring without user involvement. Azure SQL Database is always running on the latest stable version of the SQL Server database engine and patched OS with 99.99% availability.
+
+    It enables you to process both relational data and non-relational structures, such as graphs, JSON, spatial, and XML.
+
+    A SQL Managed Instance is created in its own VNet with no public endpoint. To access client applications, you can create a virtual machine in the same VNet (with a different subnet) with a point-to-site VPN connection to the VNet from the client computer using one of these quickstarts:
+
+- Enable public endpoint on your SQL Managed Instance to access your data directly from your environment.
+- Create Azure Virtual Machine in the SQL Managed Instance VNet for client application connectivity, including SQL Server Management Studio.
+- Set up a point-to-site VPN connection to your SQL Managed Instance from your client computer running SQL Server Management Studio and other client connection applications. This is one of two other options for connectivity to your SQL Managed Instance and its VNet. The other option is to use an express route over a site-to-site connection from your local network.
+
+    -   Where can I find this service in the console?
+
+        -   Via Azure SQL, kan je kiezen om een Managed Instance aan te maken.  
+        
+    -   How do I enable this service?
 
 
-        How do I enable this service?
-
-
-        How can I link this service to other resources?
+    -   How can I link this service to other resources?
 
 
  # Sources
@@ -137,6 +181,10 @@ https://www.differencebetween.com/difference-between-content-delivery-network-cd
 https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-dns/2-what-is-azure-dns
 
 
+https://www.g2.com/compare/amazon-route-53-vs-azure-dns-vs-cloudflare-dns-vs-google-cloud-dns
 
+https://docs.microsoft.com/en-us/azure/storage/files/storage-files-introduction
 
-https://docs.microsoft.com/en-us/azure/storage/files/storage-files-introduction#why-azure-files-is-useful  
+https://docs.microsoft.com/en-us/azure/storage/files/storage-files-quick-create-use-windows
+
+https://docs.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview?view=azuresql
