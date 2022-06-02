@@ -38,42 +38,44 @@
 
 2. Content Delivery Network (CDN) 
 
-        What is CDN ?
+    - What is CDN ?
 
-            - It puts stuff like blobs and other static content in a cache(increase the speed of cloud services). The process involves placing the data at strategically chosen locations and caching it. As a result, it provides maximum bandwidth for its delivery to users. 
-            -
+        - It puts stuff like blobs and other static content in a cache(increase the speed of cloud services). The process involves placing the data at strategically chosen locations and caching it. As a result, it provides maximum bandwidth for its delivery to users. 
+
+        - 
+            
 
         How does CDN / replace CDN in a classic setting?
 
-            - 
+        -   
 
         How can I combine CDN with other services?
 
 
-            - 
+        -   
 
         What is the difference between CDN and other similar services?
 
-            - 
+        -   
 
 3. Azure DNS 
 
-        What is Azure DNS for?
+    -   What is Azure DNS for?
 
 
-            - 
+        -   
 
-        How does Azure DNS / replace Azure DNS in a classic setting?
+    -   How does Azure DNS / replace Azure DNS in a classic setting?
 
-            - 
+        -   
 
-        How can I combine Azure DNS with other services?
+    -   How can I combine Azure DNS with other services?
 
-            - 
+        -   
 
-        What is the difference between Azure DNS and other similar services?
+    -   What is the difference between Azure DNS and other similar services?
 
-            - 
+        -   
 
 
 
