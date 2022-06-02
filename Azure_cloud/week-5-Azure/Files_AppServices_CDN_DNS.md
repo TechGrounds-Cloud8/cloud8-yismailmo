@@ -34,21 +34,46 @@
 
             - Google App engine; Build web applications on the same scalable systems that power Google applications. When assessing the two solutions, reviewers found Azure App Service easier to use and set up. However, Google App Engine is easier to administer. Reviewers felt that Azure App Service meets the needs of their business better than Google App Engine.
 
-            - 
+            - Heroku;  Heroku is a service that enables companies to spend their time developing and deploying apps. When assessing the two solutions, reviewers found Salesforce Heroku easier to use, administer, and do business with overall. However, reviewers preferred the ease of set up with Azure App Service.
 
 2. Content Delivery Network (CDN) 
 
-        What is CDN for?
+        What is CDN ?
+
+            - It puts stuff like blobs and other static content in a cache(increase the speed of cloud services). The process involves placing the data at strategically chosen locations and caching it. As a result, it provides maximum bandwidth for its delivery to users. 
+            -
+
         How does CDN / replace CDN in a classic setting?
+
+            - 
+
         How can I combine CDN with other services?
+
+
+            - 
+
         What is the difference between CDN and other similar services?
+
+            - 
 
 3. Azure DNS 
 
         What is Azure DNS for?
+
+
+            - 
+
         How does Azure DNS / replace Azure DNS in a classic setting?
+
+            - 
+
         How can I combine Azure DNS with other services?
+
+            - 
+
         What is the difference between Azure DNS and other similar services?
+
+            - 
 
 
 
@@ -84,6 +109,16 @@
 
  https://www.g2.com/compare/aws-elastic-beanstalk-vs-azure-app-service
 
+ https://www.g2.com/compare/azure-app-service-vs-google-app-engine-vs-salesforce-heroku
+
+ https://www.heroku.com/what#:~:text=Heroku%20is%20part%20of%20the,enables%20full%2Dcycle%20CRM%20engagement
+
+ https://www.g2.com/compare/azure-app-service-vs-salesforce-heroku
+
+
+ https://docs.microsoft.com/en-us/azure/cdn/
+
+https://www.tutorialspoint.com/microsoft_azure/microsoft_azure_cdn.htm
 
 
 
