@@ -10,6 +10,7 @@ Azure AD takes this approach to the next level by providing organizations with a
 
  
  1. Identity;
+ 
 An object that can get authenticated, it also includes applications or other servers that might require authentication through secret keys or certificates.
 
 2. Account;
@@ -18,6 +19,7 @@ An identity that has data associated with it. You can't have an account without 
 
 
 3. Azure AD Account;
+
 An identity created through Azure AD or another Microsoft cloud service, such as Microsoft 365. Identities are stored in Azure AD and accessible to your organization's cloud service subscriptions. This account is also sometimes called a Work or school account.
 
 4. Azure subscription;
