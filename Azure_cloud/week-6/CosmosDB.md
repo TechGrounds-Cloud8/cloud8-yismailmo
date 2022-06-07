@@ -11,3 +11,11 @@ Azure Cosmos DB is used within web and mobile applications and is well-suited fo
 ***Where can I find this service in the console?***
 
 - In the Azure portal there is a separate tab for Azure CosmosDB.
+
+![AzurecosmosDB1](../../00_includes/AZCosmosDB01.png)
+
+
+# Sources
+
+https://docs.microsoft.com/en-us/azure/cosmos-db/introduction
+
