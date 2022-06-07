@@ -37,7 +37,7 @@ This classic subscription administrator role is conceptually the billing owner o
 
 This role helps you **manage all Azure resources, including access**. This role is built on a newer authorization system called Azure role-based access control (Azure RBAC)
 
-More instances of Azure AD can be created.
+
 
 Azure AD is the underlying product providing the identity service.
 The term Tenant means a single instance of Azure AD representing a single organization.
@@ -46,17 +46,35 @@ The terms **Tenant and Directory** are often **used interchangeably**.
 
 #### Where can I find this service in the console?
 
-
+In all services, then Azure Active Directory.
 #### How do I enable this service?
 
+
+Associate or add your subscription, then Sign in and select the subscription you want to use from the Subscriptions page in Azure portal.
+
+![AzureactiveD](../../00_includes/AZAAD01.png)
+
+Then after that you can create users and groups.
+
+![AzureactiveDpage](../../00_includes/AZAAD02.png)
+
+![groupmember](../../00_includes/AZAAD03.png)
 
 
 #### How can I link this service to other resources?          
 
+1. Integrate with popular apps (Salesforce, Slack)
 
+2. Integrate apps that rely on other identity providers;
+
+![AzureActiveDintegrate](../../00_includes/AZAADfoto1.png)
+
+3. Integrate on-premises applications
 
  # Sources
 
  https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis
 
  https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-compare-azure-ad-to-ad
+
+ https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/five-steps-to-full-application-integration-with-azure-ad
