@@ -6,11 +6,11 @@ Microsoft introduced Active Directory Domain Services in Windows 2000 to give or
 
 Azure AD takes this approach to the next level by providing organizations with an Identity as a Service (IDaaS) solution for all their apps across cloud and on-premises.
 
- ### Ket Terminologies:
+ ### Key Terminologies:
 
  
  1. Identity;
- 
+
 An object that can get authenticated, it also includes applications or other servers that might require authentication through secret keys or certificates.
 
 2. Account;
