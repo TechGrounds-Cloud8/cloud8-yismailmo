@@ -1,8 +1,4 @@
-# Event Grid, Queue Storage, Service Bus
-
-**What is 'Event Grid, Queue Storage, Service Bus' for?**
-
-### ***Event Grid:***
+# Event Grid
 
 
 Azure Event Grid is an event broker used to integrate workloads that use event-driven architectures.
