@@ -34,7 +34,7 @@ Here below is the support plans in my Azure account.
 
 ### Comparison
 
-AWS support plan from free to premium which has the business and Enterprise pricing and is calculated at a percentage of AWS usage that decreases across brackets (10%-3%). so the more your AWS usgae you have the less you % you'll pay.
+AWS support plan from free to premium which has the business and Enterprise pricing and is calculated at a percentage of AWS usage that decreases across brackets (10%-3%). so the more your AWS usage you have, the less % you'll pay.
 
 Azure has support and pricing between Role-based support and Premier support. It comes with a price tag from free to $1000/month per user.
 
