@@ -30,7 +30,7 @@ NoSQL, also referred to as "Not Only SQL", "No-SQL", is an approach to database 
 
 ***How do I enable this service?***
 - You go to Azure Cosmos DB and press Create. You choose the API according to your preference.
-You can choose between Core SQL (which is recommended as it recognizes different SQLs such as .NET, Python and Javascript) MongoDB, Cassandra, Azure Table and Gremlin.
+You can choose between Core SQL (which is recommended as it recognizes different SQLs) MongoDB, Cassandra, Azure Table and Gremlin.
 
 
 ![cosmosDBapi](../../00_includes/AZcosmosDB02.png)
