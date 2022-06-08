@@ -73,3 +73,6 @@ it  usually depends on what you'd like to use it for, e.g. Scheduled Tasks, Remi
 https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview
 
 https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-python
+
+https://www.serverless360.com/azure-functions
+
