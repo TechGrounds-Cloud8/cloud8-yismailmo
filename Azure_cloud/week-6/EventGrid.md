@@ -24,7 +24,7 @@ An event is a lightweight notification of a condition or a state change. The pub
 
 An event handler is the place where the event is sent. The handler takes some further action to process the event. 
 
-Event source;
+- Event source;
 
 The event source is the name of the software that logs the event. It is often the name of the application or the name of a subcomponent of the application if the application is large. 
 
