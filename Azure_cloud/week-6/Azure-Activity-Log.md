@@ -59,7 +59,7 @@ There is consistent logging irrespective of the management tool being used becau
 
 ![Activitylog](../../00_includes/AZactivityLog.png)
 
-Connect with Azure subscription, then after diagnostic setting you can for example archive the data in the data storage for less costs.  
+Connect with Azure subscription.
 
 ![connect with subscr](../../00_includes/AZAppconfig02.png)
 
