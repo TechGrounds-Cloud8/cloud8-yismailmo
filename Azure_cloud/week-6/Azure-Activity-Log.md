@@ -34,7 +34,16 @@ The DELETE method is used to delete a resource.
 
 - It doesn’t include read operations (GET)
 
-- It also logs Azure role assignments (the operation to assign resource permissions to identities)
+- It also logs Azure role assignments (the operation to assign resource permissions to identities).
+
+- If a resource is not available, an “unavailable” status notification will be logged in activity logs.
+
+- If a service health incident/notification occurs, an event is automatically logged in activity logs by the Azure platform under this category.
+
+- The start and status of all autoscaling events are logged in Activity logs.
+
+- If an issue is detected by Security Center, a notification will be logged in activity logs.
+
 
 
 **How to combine Activity log to other services**
@@ -46,13 +55,6 @@ There is consistent logging irrespective of the management tool being used becau
 
 ![Activitylog](../../00_includes/AZactivityLog.png)
 
-- If a resource is not available, an “unavailable” status notification will be logged in activity logs.
-
-- If a service health incident/notification occurs, an event is automatically logged in activity logs by the Azure platform under this category.
-
-- The start and status of all autoscaling events are logged in Activity logs.
-
-- If an issue is detected by Security Center, a notification will be logged in activity logs.
 
 
 # Sources
