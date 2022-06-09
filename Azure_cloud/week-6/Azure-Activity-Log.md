@@ -44,7 +44,11 @@ The DELETE method is used to delete a resource.
 
 - If an issue is detected by Security Center, a notification will be logged in activity logs.
 
+**Where the logs stored and for how long?**
 
+The logs are stored on the Azure platform for 90 days.
+
+This means that we can only view the activity logs only for the last three months.
 
 **How to combine Activity log to other services**
 
@@ -55,7 +59,9 @@ There is consistent logging irrespective of the management tool being used becau
 
 ![Activitylog](../../00_includes/AZactivityLog.png)
 
+Connect with Azure subscription, then after diagnostic setting you can for example archive the data in the data storage for less costs.  
 
+![connect with subscr](../../00_includes/AZAppconfig02.png)
 
 # Sources
 
