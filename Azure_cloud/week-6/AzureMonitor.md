@@ -7,7 +7,7 @@ Helps you understand how your applications are performing and proactively identi
 
 - Metric
 
-Metrics are numerical data that define properties like CPU usage, memory usage, network usage, etc. These are real-time measurements stored in intervals
+Metrics are numerical data that define properties like CPU usage, memory usage, network usage, etc. These are real-time measurements stored in intervals.
 
 ![metrics](../../00_includes/AZMonitor-metrics.png)
 
@@ -21,7 +21,7 @@ Events, performance data, traces, etc. related to specific applications are stor
 
 Log data collected by Azure Monitor can be analyzed with queries to quickly retrieve, consolidate, and analyze collected data.
 
-Azure Monitor uses a version of the Kusto query language (suitable for simple log queries)
+Azure Monitor uses a version of the Kusto query language (suitable for simple log queries).
 
 
 
