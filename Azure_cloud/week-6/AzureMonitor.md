@@ -27,16 +27,26 @@ Azure Monitor uses a version of the Kusto query language (suitable for simple lo
 
 ### How do you use Monitor and what information does it collect?
 
-1. Response and Integration;
+1. Experiences, Visualize, Analyze, Response and Integration;
 
-A good monitoring service should also be able to respond to critical situations. Azure Monitor can send alerts and can be used to automate tasks based on the data it collects.
+A good monitoring service should also be able to respond to critical situations. Azure Monitor can analyze, visualize and also send alerts.
 
 ![azmonitor](../../00_includes/AZMonitorusecase.svg)
 
-2. Alerts;
 
-Alerts in Azure Monitor Alerts can notify about critical conditions and can start actions to solve the issue. Alerts based on metrics give real-time notifications and based on logs can alert for complex logic between multiple sources.
+It collects the following information:
 
+- Data about the performance and functionality of the code you have written.
+
+- Guest OS monitoring data. 
+
+- Azure resource monitoring data.
+
+- Azure subscription monitoring data and also data about the health and operation of Azure itself.
+
+- Azure tenant monitoring data: Data about the Azure Active Directory.
+
+- Data about changes within your Azure resource and how to address it.
 
 
 
