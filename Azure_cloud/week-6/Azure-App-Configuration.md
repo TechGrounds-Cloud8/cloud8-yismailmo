@@ -47,12 +47,12 @@ For event driven infrastructure
 
 The easiest way to add an App Configuration store to the application is through Microsoft’s client library. Depending on the language and framework chosen, the following methods are available to connect with your application:
 
-For .NET Core and ASP.NET Core, used an App Configuration provider for .NET Core
-For .NET Framework and ASP.NET, App Configuration builder for .NET
-For Java Spring, App Configuration client for Spring Cloud is available.
-For Python, App Configuration client for Python.
-For JavaScript/Node.js, App Configuration client for JavaScript.
-For others, we have App Configuration REST API.
+- For .NET Core and ASP.NET Core, used an App Configuration provider for .NET Core
+- For .NET Framework and ASP.NET, App Configuration builder for .NET
+- For Java Spring, App Configuration client for Spring Cloud is available.
+- For Python, App Configuration client for Python.
+- For JavaScript/Node.js, App Configuration client for JavaScript.
+- For others, we have App Configuration REST API.
 
 # Sources
 
