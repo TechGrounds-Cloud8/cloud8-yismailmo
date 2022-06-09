@@ -1,4 +1,4 @@
-Azure Activity Log
+# Azure Activity Log
 
 Activity logs records events from multiple sources.
 
