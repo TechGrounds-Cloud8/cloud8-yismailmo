@@ -1,4 +1,4 @@
-Azure App Configuration
+# Azure App Configuration
 
 Enables you to centralize your app configuration. This App Configuration can manage a service that helps developers centralize their app configuration and feature settings simply and securely.
 
