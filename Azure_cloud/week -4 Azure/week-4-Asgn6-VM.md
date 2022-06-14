@@ -62,15 +62,15 @@ ufw allow 'Apache'
 systemctl enable apache2
 systemctl restart apache2
 
-![VMgemaakt](../00_includes/VMAzuregemaakt.png)
+![VMgemaakt](../../00_includes/VMAzuregemaakt.png)
 
-![vmgemaakt](../00_includes/VMmaken.png)
+![vmgemaakt](../../00_includes/VMmaken.png)
 
-![VMmade](../00_includes/VMAzuregemaakt02.png)
+![VMmade](../../00_includes/VMAzuregemaakt02.png)
 
 #### Check if your server is working.
 
-![checkVM](../00_includes/VMAzureconnect01.png)
+![checkVM](../../00_includes/VMAzureconnect01.png)
 
 ![VMconnectchecl](../00_includes/VMAzureconnect02.png)
 

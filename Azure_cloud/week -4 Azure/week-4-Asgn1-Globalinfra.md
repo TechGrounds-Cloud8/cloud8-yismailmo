@@ -9,7 +9,7 @@ The global infrastructure of Azure consists of the following components:
 
 Is a set of datacenters, deployed within a latency-defined perimeter (low latency/delay to end user) and connected through a dedicated regional low-latency network.
 
-![azureregion](../00_includes/wk4-Azure%20regions01.png)
+![azureregion](../../00_includes/wk4-Azure%20regions01.png)
 
 With more global regions than any other cloud provider, Azure gives customers the flexibility to deploy applications where they need. An Azure region has discrete pricing and service availability.
 

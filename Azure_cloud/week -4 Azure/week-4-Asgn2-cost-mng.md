@@ -19,7 +19,7 @@ Azure provides the following principles to successfully reduce your costs:
 
 The Total Cost of Ownership (TCO) is used to calculate how much an infrastructure costs when hosted in the traditional way. With the TCO calculator you can compare the costs of a traditional infrastructure with the costs for the same infrastructure on Azure.
 
-![costmng](../00_includes/Week4-Azure-costmng-02.png)
+![costmng](../../00_includes/Week4-Azure-costmng-02.png)
 
 #### Key principle and best practices on cost management:
 
@@ -43,7 +43,7 @@ The Total Cost of Ownership (TCO) is used to calculate how much an infrastructur
 
 Go to 'cost management', then choose 'cost alerts' in order to create an alert. Then add anomaly alert.
 
-![costalert](../00_includes/AZ-costmng.png)
+![costalert](../../00_includes/AZ-costmng.png)
 
 #### Understand the options Azure offers to view your spend.
 
