@@ -97,4 +97,4 @@ Buold on top of IoT Hub and it Analyzes Data on end-users devices.
 
 is designed for ad hoc data exploration and operational analysis allowing you to uncover hidden trends, spotting anomalies, and conduct root-cause analysis. Won't be supported from 2025 by Microsoft.
 
-24. **DDoS Protection Basic** and **DDoS Protection Standard**(Real time attack metrics & diagnostics via Azure monitor plus post attack reports).
+24. **DDoS Protection Basic** and **DDoS Protection Standard**(Real time attack metrics & diagnostics via Azure monitor plus post attack reports). [Read more](https://azure.microsoft.com/en-in/blog/azure-ddos-protection-for-virtual-networks-generally-available/)
