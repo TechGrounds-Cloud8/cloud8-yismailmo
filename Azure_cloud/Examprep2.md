@@ -76,3 +76,25 @@ How every service is released for public use.
 - development phase
 - Public preview
 - Release for general availability 
+
+19. Azure Data lake Analytics;
+
+Simplifies big data by writing queries and provides valueable insights on the data.
+
+20. Azure Cosmo DB Table API;
+
+Applications written for Azure Table storage can migrate to Azure CosmoDB using Table API.
+
+21. IoT Hub;
+
+A managed service hosted in the cloud that acts as a central message hub for secure communication (bi-directional) between an IoT application and its attached devices. 
+
+22. IoT Edge;
+
+Buold on top of IoT Hub and it Analyzes Data on end-users devices.
+
+23. Azure Time Series Insight;
+
+is designed for ad hoc data exploration and operational analysis allowing you to uncover hidden trends, spotting anomalies, and conduct root-cause analysis. Won't be supported from 2025 by Microsoft.
+
+24. **DDoS Protection Basic** and **DDoS Protection Standard**(Real time attack metrics & diagnostics via Azure monitor plus post attack reports).
