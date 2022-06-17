@@ -32,12 +32,16 @@ Solution enables you to provide faster resolution of incidents by bringing servi
 
 8. Azure Security center;
 
+Gives security recommendations for resources deployed to the Azure subscription.
+
 Supports virtual machines and servers on different types of hybrid environments(SQL, storage services etc):
 
 - Only Azure
 - Azure and on-premises
 - Azure and other clouds
 - Azure, other clouds, and on-premise
+
+You can also use the Azure security center to enable 'Just in time'VM access.
 
 9. User Risk policy;
 
@@ -54,4 +58,11 @@ Provides the access for group of users and helps in managing efficiently.
 
 12. ![Management Group, Subscription, Resource groups and resources](../00_includes/MG-SB-RG-R.png)
 
+13. Azure Front Door;
+
+Is Microsoft’s modern cloud Content Delivery Network (CDN) that provides fast, reliable, and secure access between your users and your applications’ static and dynamic web content across the globe. 
+
+14. Azure Sentinel;
+
+Is a security information and event management system for detecting and responding to threats. 
 
