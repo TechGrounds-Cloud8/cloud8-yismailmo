@@ -99,7 +99,11 @@ Helps control, analyze, and optimize workload costs
 
 20. Azure Blueprints;
 
-is a repeatable set of governance tools that helps development teams quickly build and create new environments while adhering to organizational compliance to speed up development and deployment.
+is a repeatable set of governance tools that helps development teams quickly build and create new environments while adhering to organizational compliance to speed up development and deployment. So it's a declarative way to orchistrate;
+- Role assignment
+- Policy assignment
+- ARM JSON Template
+- RG
 
 21. Geo-redundant storage (GRS);
 

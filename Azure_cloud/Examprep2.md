@@ -54,7 +54,7 @@ Policies you can use it for governance(who creates a certain resource), and RG f
 
  15. Azure Databricks;
 
- An Apache spark-based analytics that privides the ability to host a big data analysis service for machine learning. 
+ An Apache spark-based analytics that provides the ability to host a big data analysis service for machine learning. 
 
 16. Application Insights;
 
@@ -91,10 +91,21 @@ A managed service hosted in the cloud that acts as a central message hub for sec
 
 22. IoT Edge;
 
-Buold on top of IoT Hub and it Analyzes Data on end-users devices.
+Build on top of IoT Hub and it Analyzes Data on end-users devices.
 
 23. Azure Time Series Insight;
 
 is designed for ad hoc data exploration and operational analysis allowing you to uncover hidden trends, spotting anomalies, and conduct root-cause analysis. Won't be supported from 2025 by Microsoft.
 
 24. **DDoS Protection Basic** and **DDoS Protection Standard**(Real time attack metrics & diagnostics via Azure monitor plus post attack reports). [Read more](https://azure.microsoft.com/en-in/blog/azure-ddos-protection-for-virtual-networks-generally-available/)
+
+25. Point-to-site connection;
+
+- Connection between Azure virtual network and workstation (IT admins) using VPN Gateway and you'll need to install VPN client
+
+26. Site-to-Site connection;
+
+- Connection between Azure virtual network and on-premise networks using VPN gateway.
+- On-premise network should have a VPN device with IP adress and Internet gateway(routable over the internet).
+
+
