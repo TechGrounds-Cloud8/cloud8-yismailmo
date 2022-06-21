@@ -66,3 +66,8 @@ Is Microsoft’s modern cloud Content Delivery Network (CDN) that provides fast,
 
 Is a security information and event management system for detecting and responding to threats. 
 
+15. Azure Service Fabric service;
+
+- The number of node types in the cluster
+- The properties for each node type
+

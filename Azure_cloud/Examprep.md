@@ -73,6 +73,11 @@ provides extensible application performance management (APM) and monitoring for 
 
  A Point-to-point Ethernet connection is supported by ExpressRoute for connecting your on-premises network to Azure.
 
+ The three models that ExpressRoute supports are:
+• CloudExchange colocation
+• Point-to-point Ethernet connection
+• Any-to-any-connection
+
  14. Management Group;
 
  Management groups help you manage access, policy, and compliance for multiple subscriptions. All subscriptions in a management group automatically inherit the conditions applied to the management group.
