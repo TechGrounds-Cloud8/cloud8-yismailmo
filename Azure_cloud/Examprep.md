@@ -39,7 +39,7 @@ provides extensible application performance management (APM) and monitoring for 
 
 5. Azure Logic App;
 
- is a cloud-based platform for creating and running automated workflows that integrate your apps, data, services, and systems. 
+ is a cloud-based platform for creating and running automated workflows that integrate your apps, data, services, and systems without writing any code. 
  [Logic App](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-overview).
 
  6. CosmoDB [test without a cost](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator?tabs=ssl-netstd21).
@@ -74,9 +74,10 @@ provides extensible application performance management (APM) and monitoring for 
  A Point-to-point Ethernet connection is supported by ExpressRoute for connecting your on-premises network to Azure.
 
  The three models that ExpressRoute supports are:
-• CloudExchange colocation
-• Point-to-point Ethernet connection
-• Any-to-any-connection
+
+- CloudExchange colocation
+- Point-to-point Ethernet connection
+- Any-to-any-connection
 
  14. Management Group;
 
@@ -116,7 +117,7 @@ copies data to a secondary region from the primary region across multiple datace
 
 22.  Resource groups;
 
-to organize resources in an Azure subscription.
+to logically group/organize resources in an Azure subscription.
 
 23. The perimeter layer;
 

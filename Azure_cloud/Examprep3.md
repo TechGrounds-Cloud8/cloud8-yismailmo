@@ -11,8 +11,7 @@ Change the way traffic is routed in a virtual network.
 
 4. Initiative definition;
 
-Is a collection of policy definitions that are tailored towards achieving singular overarching goal. So it 
-Simplifies managing and assigning policy definition.
+Is a collection of policy definitions that are tailored towards achieving singular overarching goal. So it Simplifies the managing and assigning policy definition.
 
 5. Azure AD Identity Secure Score;
 
@@ -53,7 +52,7 @@ Identify suspicious login attempts.
 
 11. Conditional access;
 
-Provides the access for group of users and helps in managing efficiently.
+Provides the access for group of users and helps in managing efficiently by requiring users to login from only a specific location.
 
 
 12. ![Management Group, Subscription, Resource groups and resources](../00_includes/MG-SB-RG-R.png)
@@ -66,7 +65,9 @@ Is Microsoft’s modern cloud Content Delivery Network (CDN) that provides fast,
 
 Is a security information and event management system for detecting and responding to threats. 
 
-15. Azure Service Fabric service;
+15. Azure Service Fabric;
+
+This helps in developing microservices and container orchestration on Linux or Windows.
 
 - The number of node types in the cluster
 - The properties for each node type
