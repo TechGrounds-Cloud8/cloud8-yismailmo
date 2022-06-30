@@ -47,4 +47,3 @@ Make the game repeat until the user inputs 100.
 
 https://www.w3schools.com/python/python_conditions.asp
 
-https://www.w3schools.com/python/python_try_except.asp

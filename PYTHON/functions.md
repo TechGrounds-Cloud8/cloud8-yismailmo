@@ -17,6 +17,7 @@ for i in range(5):
     print (random.randint(0, 100))
 
 # i means the iteration(process of repeating)
+# The randint() method returns an integer number selected element from the specified range.
 #output:
 18
 90
@@ -82,3 +83,6 @@ print ("The average of",x,"and", y, "is", z)
 # output:
 The average of 128 and 255 is 191.5
 ```
+### Source
+
+https://www.w3schools.com/python/ref_random_randint.asp

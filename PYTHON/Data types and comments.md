@@ -49,7 +49,7 @@ Write a comment above every line of code that tells the reader what is going on 
 # Exercise 1
 
 # since b is an integer, and d is valued as a string. 
-# so I have to change it to a float in order to add b and d
+# so I have to change it to a float(using casting) in order to add b and d
 # c is a boolean and a is a string
 x = ((b) +float(d))
 print (x)
@@ -73,7 +73,7 @@ print("Username is: " + username)
 # OR this code
 
 user_input = input()
-print(user_input)
+print(type(user_input))
 
 # After running the code I could still give the input as an integer or a string.
 
