@@ -44,6 +44,25 @@ You ran out of guess ;( the answer was 71 <--
 
 - The game should be played in a predetermined number of rounds.
 
+Output:
+```python
+Rock,Paper or Scissors?:sci
+Rock,Paper or Scissors?:scissors
+computer: rock
+Player: scissors
+YOU LOSE:(
+Play again?(Yes/No):yes
+Rock,Paper or Scissors?:rock
+computer: rock
+Player: rock
+Draw!
+Play again?(Yes/No):yes
+Rock,Paper or Scissors?:rock
+computer: paper
+Player: rock
+YOU WIN !:D
+Play again?(Yes/No):
+```
 3. Tic-Tac-Toe:
 
 - Generate a 3x3 board on the command line.

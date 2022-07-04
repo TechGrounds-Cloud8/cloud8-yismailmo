@@ -28,7 +28,8 @@ Dict = {
     "Company": "Techgrounds",
 
 }
-print(Dict)
+for y, z in Dict.items():
+    print(y, ":", z )
 
 
 ```
@@ -48,7 +49,7 @@ Write the information to a csv file (comma-separated values). The data should no
 import csv #  It is required to import the csv module in Python in order to use the functions included in this module to read the file.
 
 
-dict = {
+Dict = {
     "First Name": input("First name: "), 
     "Last Name": input("Last name: "),
     "Job Title": input("Job Title: "),

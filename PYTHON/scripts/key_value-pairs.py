@@ -7,9 +7,11 @@ Dict = {
     "Company": "Techgrounds",
 
 }
-print(Dict)
+for y, z in Dict.items():
+    print(y, ":", z )
 
 import csv
+from hashlib import new
 
 
 dict = {
@@ -19,7 +21,7 @@ dict = {
     "Company": input("Company: "),
 }
 
-with open('thecsvfile.csv', 'a') as f:
+with open('thecsvfile.csv', 'a', newline= "") as f:
     w = csv.writer(f)
     w.writerow(dict.keys())
     w.writerow(dict.values())
