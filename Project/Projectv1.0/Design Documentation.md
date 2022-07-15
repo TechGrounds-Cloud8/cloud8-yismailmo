@@ -12,14 +12,17 @@ Small  incrementally changes has to be added to the application when bulding it 
 For the webserver i will need to have a vnet and a second vnet for the admin/management server(because it should only be reachable from a trusted location).
 
 # Services needed:
-- 2 vnet
+- 2 vnet (peered with 2 subnets)
+- subscription
 - Resource group
 - storage account
 - key vault
-- vm
-- Network Interface
+-  2 vm
+    - windows os for management/admin
+    - Linux os for webserver
+- Network Interface card
 - Network Security group
 - Recovery service vault
-- Linux OS
-- recovery
+- PostDeploymentScripts
+
  

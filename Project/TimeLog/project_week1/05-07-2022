@@ -1,10 +1,16 @@
 # Log [05-07-2022]
 
 ## Dagverslag (1 zin)
+
   Using Bicep to deploy some Vnet(as a practice)
+
 ## Obstakels
+
  struggled with trying to write the Bicep syntax and how the structure works, i couldn't connect bicep with azure.
+
  I was also struggling to figure out how to structure the requirements of the project and how to formulate my assumptions for the project.
+ 
+ SKU (pricing tier),
 ## Oplossingen
 Use microsoft learning modules:
 

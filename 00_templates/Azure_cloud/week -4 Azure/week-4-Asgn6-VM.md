@@ -72,11 +72,11 @@ systemctl restart apache2
 
 ![checkVM](../../00_includes/VMAzureconnect01.png)
 
-![VMconnectchecl](../00_includes/VMAzureconnect02.png)
+![VMconnectchecl](../../00_includes/VMAzureconnect02.png)
 
-![vmcliapache2check](../00_includes/VMAZureApacheworkincli.png)
+![vmcliapache2check](../../00_includes/VMAZureApacheworkincli.png)
 
-![VMapacheserverworks](../00_includes/VMserverworks.png)
+![VMapacheserverworks](../../00_includes/VMserverworks.png)
 
 ### Challenges overcame
 

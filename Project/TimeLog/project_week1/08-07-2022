@@ -1,11 +1,19 @@
-# Log [04-07-2022]
+# Log [08-07-2022]
 
 ## Dagverslag (1 zin)
-  Learn Bicep
+  Practicing with setting up some resources like vnet, storage account and vm in Bicep
 ## Obstakels
  
 ## Oplossingen
-Use microsoft learning modules:
 
-Introduction to infrastructure as code using Bicep
 ## Learnings
+
+Structure and syntax of a Bicep file
+
+https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/file
+
+https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/parameters
+
+
+
+Deploy a bicep file with vnet and vm

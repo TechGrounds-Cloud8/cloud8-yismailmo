@@ -1,11 +1,17 @@
-# Log [04-07-2022]
+# Log [07-07-2022]
 
 ## Dagverslag (1 zin)
-  Learn Bicep
+  deploy a trial vnet using Bicep
 ## Obstakels
- 
+ Couldn't log into the azure portal, 
 ## Oplossingen
+
+after doing some trouble shooting (deleting and download again Auth App), it worked.
 Use microsoft learning modules:
 
 Introduction to infrastructure as code using Bicep
 ## Learnings
+
+install the latest powershell version
+
+https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?WT.mc_id=THOMASMAURER-blog-thmaure&view=powershell-7
