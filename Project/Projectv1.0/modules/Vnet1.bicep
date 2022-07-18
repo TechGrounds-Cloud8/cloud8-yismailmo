@@ -17,7 +17,7 @@ param location string = resourceGroup().location
 param OperatingSystemVersion string = '2019-Datacenter'
 
 
-var virtualMachineName = 'VM-1Nic'
+var virtualMachineName = 'AdminVM' /* change the name*/
 var nic1Name = 'nic-1'
 var virtualNetworkName = 'virtualNetwork'
 var subnet1Name = 'subnet-1'
