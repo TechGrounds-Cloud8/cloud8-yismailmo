@@ -19,7 +19,7 @@ param OperatingSystemVersion string = '2019-Datacenter'
 
 var virtualMachineName = 'AdminVM' /* change the name*/
 var nic1Name = 'nic-1'
-var virtualNetworkName = 'virtualNetwork'
+var virtualNetworkName = 'AdminVnet'
 var subnet1Name = 'subnet-1'
 var publicIPAddressName = 'publicIp'
 var networkSecurityGroupName = 'NSG'
