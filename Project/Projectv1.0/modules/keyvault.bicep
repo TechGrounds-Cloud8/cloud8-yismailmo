@@ -1,104 +1,99 @@
-targetScope = 'resourceGroup'
+// Also: 
+// * KeyVaults secrets CANNOT BE EXPORTED into ARM/Bicep format via the Template Export capability. 
+// * documentation on key vault secret resource types: 
+//   https://docs.microsoft.com/en-us/azure/templates/microsoft.keyvault/vaults/secrets?tabs=json
+// * 201/key-vault-secret=create in pre-decompiled ARM format
+//   https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.keyvault/key-vault-secret-create
 
-param vaultName string = 'keyVault' // must be globally unique
+@description('Specifies the name of the key vault.')
+param keyVaultName string
+
+@description('Specifies the Azure location where the key vault should be created.')
 param location string = resourceGroup().location
-param sku string = 'secr'
- // replace with your tenantId
-param accessPolicies array = [
-  {
-   
-    // replace with your objectId
-    permissions: {
-      keys: [
-        'Get'
-        'List'
-        'Update'
-        'Create'
-        'Import'
-        'Delete'
-        'Recover'
-        'Backup'
-        'Restore'
-      ]
-      secrets: [
-        'Get'
-        'List'
-        'Set'
-        'Delete'
-        'Recover'
-        'Backup'
-        'Restore'
-      ]
-      certificates: [
-        'Get'
-        'List'
-        'Update'
-        'Create'
-        'Import'
-        'Delete'
-        'Recover'
-        'Backup'
-        'Restore'
-        'ManageContacts'
-        'ManageIssuers'
-        'GetIssuers'
-        'ListIssuers'
-        'SetIssuers'
-        'DeleteIssuers'
-      ]
-    }
-  }
+
+@description('Specifies whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.')
+param enabledForDeployment bool = false
+
+@description('Specifies whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.')
+param enabledForDiskEncryption bool = false
+
+@description('Specifies whether Azure Resource Manager is permitted to retrieve secrets from the key vault.')
+param enabledForTemplateDeployment bool = false
+
+@description('Specifies the Azure Active Directory tenant ID that should be used for authenticating requests to the key vault. Get it by using Get-AzSubscription cmdlet.')
+param tenantId string = subscription().tenantId
+
+@description('Specifies the object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies. Get it by using Get-AzADUser or Get-AzADServicePrincipal cmdlets.')
+param objectId string
+
+@description('Specifies the permissions to keys in the vault. Valid values are: all, encrypt, decrypt, wrapKey, unwrapKey, sign, verify, get, list, create, update, import, delete, backup, restore, recover, and purge.')
+param keysPermissions array = [
+  'list'
 ]
 
-param enabledForDeployment bool = true
-param enabledForTemplateDeployment bool = true
-param enabledForDiskEncryption bool = true
-param enableRbacAuthorization bool = false
-param softDeleteRetentionInDays int = 90
+@description('Specifies the permissions to secrets in the vault. Valid values are: all, get, list, set, delete, backup, restore, recover, and purge.')
+param secretsPermissions array = [
+  'list'
+]
 
-param keyName string = 'prodKey'
-param secretName string = 'IsmailProject12'
-param secretValue string = 'AzProjectV1'
+@description('Specifies whether the key vault is a standard vault or a premium vault.')
+@allowed([
+  'standard'
+  'premium'
+])
+param skuName string = 'standard'
 
-param networkAcls object = {
-  ipRules: []
-  virtualNetworkRules: []
-}
+@description('Specifies all secrets {"secretName":"","secretValue":""} wrapped in "secrets" member array in a secure object.')
+@secure()
+param secretsObject object
+// secretsObject should be passed in dynamically as a parameter (not checked in to
+// source code control).  It should be an object in this format:
+// {
+//   secrets: [
+//     {
+//       secretName: 'yourSecret'
+//       secretValue: 'yourValue'
+//     }
+//   ]
+// }
 
-resource keyvault 'Microsoft.KeyVault/vaults@2019-09-01' = {
-  name: vaultName
+resource vault 'Microsoft.KeyVault/vaults@2019-09-01' = {
+  name: keyVaultName
   location: location
+  tags: {
+    displayName: 'KeyVault'
+  }
   properties: {
-    accessPolicies: accessPolicies
     enabledForDeployment: enabledForDeployment
-    enabledForDiskEncryption: enabledForDiskEncryption
     enabledForTemplateDeployment: enabledForTemplateDeployment
-    softDeleteRetentionInDays: softDeleteRetentionInDays
-    enableRbacAuthorization: enableRbacAuthorization
-    networkAcls: networkAcls
-  }
-}
-
-// create key
-resource key 'Microsoft.KeyVault/vaults/keys@2019-09-01' = {
-  name: '${keyvault.name}/${keyName}'
-  properties: {
-    kty: 'RSA' // key type
-    keyOps: [
-      // key operations
-      'encrypt'
-      'decrypt'
+    enabledForDiskEncryption: enabledForDiskEncryption
+    tenantId: tenantId
+    accessPolicies: [
+      {
+        objectId: objectId
+        tenantId: tenantId
+        permissions: {
+          keys: keysPermissions
+          secrets: secretsPermissions
+        }
+      }
     ]
-    keySize: 4096
+    sku: {
+      name: skuName
+      family: 'A'
+    }
+    networkAcls: {
+      defaultAction: 'Allow'
+      bypass: 'AzureServices'
+    }
   }
 }
 
-// create secret
-resource secret 'Microsoft.KeyVault/vaults/secrets@2018-02-14' = {
-  name: '${keyvault.name}/${secretName}'
+resource secrets 'Microsoft.KeyVault/vaults/secrets@2019-09-01' = [for secret in secretsObject.secrets: {
+  parent: vault
+  name: secret.secretName
   properties: {
-    value: secretValue
+    value: secret.secretValue
   }
-}
+}]
 
-output proxyKey object = key
