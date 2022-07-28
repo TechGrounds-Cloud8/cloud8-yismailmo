@@ -19,7 +19,7 @@ resource storageacc 'Microsoft.Storage/storageAccounts@2021-09-01'={
   
 }
 
-/* Storage blob encryption from the requirements that all  Disks must be encrypted*/
+
 
 resource blobServices 'Microsoft.Storage/storageAccounts/blobServices@2021-09-01' = {
   parent: storageacc
