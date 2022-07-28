@@ -60,16 +60,16 @@ Create a text file.
 
 #### Change the owner of the file to a different user. If everything went well, you shouldn’t be able to read the file unless you assume root privileges with ‘sudo’.
 
-![rmrw](../00_includes/LNX05chgrp.png)
+![rmrw](../../00_includes/LNX05chgrp.png)
 
-![chownfile](../00_includes/LNX05chfileperm.png)
+![chownfile](../../00_includes/LNX05chfileperm.png)
 
 
 
 
 #### Change the group ownership of the file to a different group.
 
-![grpc](../00_includes/LNX05grpownch.png)
+![grpc](../../00_includes/LNX05grpownch.png)
 
 
 ### Sources

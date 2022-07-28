@@ -1,10 +1,5 @@
-// Also: 
-// * KeyVaults secrets CANNOT BE EXPORTED into ARM/Bicep format via the Template Export capability. 
-// * documentation on key vault secret resource types: 
-//   https://docs.microsoft.com/en-us/azure/templates/microsoft.keyvault/vaults/secrets?tabs=json
-// * 201/key-vault-secret=create in pre-decompiled ARM format
-//   https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.keyvault/key-vault-secret-create
 
+targetScope = 'resourceGroup'
 @description('Specifies the name of the key vault.')
 param keyVaultName string
 
@@ -12,29 +7,20 @@ param keyVaultName string
 param location string = resourceGroup().location
 
 @description('Specifies whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.')
-param enabledForDeployment bool = false
+param enabledForDeployment bool = true
 
 @description('Specifies whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.')
-param enabledForDiskEncryption bool = false
+param enabledForDiskEncryption bool = true
 
 @description('Specifies whether Azure Resource Manager is permitted to retrieve secrets from the key vault.')
-param enabledForTemplateDeployment bool = false
+param enabledForTemplateDeployment bool = true
 
 @description('Specifies the Azure Active Directory tenant ID that should be used for authenticating requests to the key vault. Get it by using Get-AzSubscription cmdlet.')
 param tenantId string = subscription().tenantId
 
 @description('Specifies the object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies. Get it by using Get-AzADUser or Get-AzADServicePrincipal cmdlets.')
-param objectId string
+param objectId string = 'e86f7f25-f048-4436-afc9-3c0415281672'
 
-@description('Specifies the permissions to keys in the vault. Valid values are: all, encrypt, decrypt, wrapKey, unwrapKey, sign, verify, get, list, create, update, import, delete, backup, restore, recover, and purge.')
-param keysPermissions array = [
-  'list'
-]
-
-@description('Specifies the permissions to secrets in the vault. Valid values are: all, get, list, set, delete, backup, restore, recover, and purge.')
-param secretsPermissions array = [
-  'list'
-]
 
 @description('Specifies whether the key vault is a standard vault or a premium vault.')
 @allowed([
@@ -43,19 +29,6 @@ param secretsPermissions array = [
 ])
 param skuName string = 'standard'
 
-@description('Specifies all secrets {"secretName":"","secretValue":""} wrapped in "secrets" member array in a secure object.')
-@secure()
-param secretsObject object
-// secretsObject should be passed in dynamically as a parameter (not checked in to
-// source code control).  It should be an object in this format:
-// {
-//   secrets: [
-//     {
-//       secretName: 'yourSecret'
-//       secretValue: 'yourValue'
-//     }
-//   ]
-// }
 
 resource vault 'Microsoft.KeyVault/vaults@2019-09-01' = {
   name: keyVaultName
@@ -73,8 +46,18 @@ resource vault 'Microsoft.KeyVault/vaults@2019-09-01' = {
         objectId: objectId
         tenantId: tenantId
         permissions: {
-          keys: keysPermissions
-          secrets: secretsPermissions
+          keys: [
+            'all'
+          ]
+          secrets: [
+            'all'
+          ]
+          certificates: [
+            'all'
+          ]
+          storage: [
+            'all'
+          ]
         }
       }
     ]
@@ -89,11 +72,59 @@ resource vault 'Microsoft.KeyVault/vaults@2019-09-01' = {
   }
 }
 
-resource secrets 'Microsoft.KeyVault/vaults/secrets@2019-09-01' = [for secret in secretsObject.secrets: {
-  parent: vault
-  name: secret.secretName
-  properties: {
-    value: secret.secretValue
-  }
-}]
+resource mngId 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' = {
+  name:  'admin'
+  location: location
+  dependsOn: [
+    vault
+  ]
+}
 
+resource secret 'Microsoft.KeyVault/vaults/secrets@2019-09-01' = {
+  name: '${keyVaultName}/mySecret'  // The first part is KV's name
+  properties: {
+    value: 'mySecretValue'
+  }
+}
+resource vmdiskencryption 'Microsoft.Compute/diskEncryptionSets@2022-03-02' = {
+  name: 'vmdiskencrypt'
+  location: location
+  identity: {
+    type: 'systemAssignedIdentities'
+  }
+  properties:{
+    activeKey:{
+      sourceVault:{
+        id: keyVaultName
+      }
+      keyUrl: keyVaultName
+    }
+  }
+}
+    
+
+/* create key */
+resource RSAkey 'Microsoft.KeyVault/vaults/keys@2021-10-01' = {
+  name: 'RSAKey'
+  parent: vault
+  properties: {
+    kty: 'RSA' // key type
+    keySize: 4096
+    keyOps: [
+      // key operations
+      'encrypt'
+      'decrypt'
+    ]
+    
+    attributes:{
+      enabled: true
+    }
+  }
+}
+
+
+
+
+output keyvaultId string = vault.id
+output Key object = RSAkey
+output objectId string = objectId

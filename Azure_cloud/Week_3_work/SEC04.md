@@ -27,7 +27,7 @@ Is the process of converting data from a readable format to a scrambled piece of
 
 Instead of sending the plaintext to the receiver, the ciphertext is sent through insecure channels of communication. 
 
-![encryption process](../00_includes/encr_data.png)
+![encryption process](../../00_includes/encr_data.png)
 
 
 There are two types of Data encryption:
@@ -85,13 +85,13 @@ The term 'Enigma Code' is generally understood as the cipher device used by Germ
 
 The brunt of the deciphering work was conducted by Polish code breakers and famously, Alun Turing and his team at Bletchley Park with his Bombe Enigma cracking machine.
 
-![EnigmaCode](../00_includes/ALAN-TURING-Enigma.jpg)
+![EnigmaCode](../../00_includes/ALAN-TURING-Enigma.jpg)
 
 2. The Pigpen cipher, as known as masonic or freemason cipher, is a geometric simple substitution cipher. It uses symbols to encode the letters within a message.
 
 It is encoded and decoded by producing a grid or set of grids to produce the subsequent symbols.
 
-![pigpen](../00_includes/code_pigpen_resize.jpg)
+![pigpen](../../00_includes/code_pigpen_resize.jpg)
 
 
 ###### Find two digital ciphers that are being used today.
@@ -112,7 +112,7 @@ There are several systems that cover this range of applications, from transactio
 
 #### Send a symmetrically encrypted message to one of your peers via the public Slack channel. They should be able to decrypt the message using a key you share with them. Try to think of a way to share this encryption key without revealing it to everyone. 
 
-![privmsg](../00_includes/keymessSEC04.png)
+![privmsg](../../00_includes/keymessSEC04.png)
 
 You are not allowed to use any private messages or other communication channels besides Slack. **Analyse the shortcomings of this method**.
 

@@ -132,7 +132,7 @@ resource nsg 'Microsoft.Network/networkSecurityGroups@2020-06-01' = {
   properties: {
     securityRules: [
       {
-        name: 'default-allow-rdp'
+        name: 'default-allow-ssh'
         properties: {
           priority: 1000
           sourceAddressPrefix: '*'

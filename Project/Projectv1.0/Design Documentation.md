@@ -13,7 +13,7 @@ For the webserver i will need to have a vnet and a second vnet for the admin/man
 
 # Services needed:
 - 2 vnet (peered with 2 subnets)
-- subscription
+- Vnet peering
 - Resource group
 - storage account
 - key vault
