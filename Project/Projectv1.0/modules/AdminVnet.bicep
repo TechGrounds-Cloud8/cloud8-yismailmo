@@ -141,8 +141,24 @@ resource nsg 'Microsoft.Network/networkSecurityGroups@2020-06-01' = {
           direction: 'Inbound'
           sourcePortRange: '*'
           destinationAddressPrefix: '*'
+          
+        } 
+      }
+
+      {
+        name: 'default-allow-ssh'
+        properties: {
+          priority: 1100
+          sourceAddressPrefix: '*'
+          protocol: 'Tcp'
+          destinationPortRange: '22'
+          access: 'Allow'
+          direction: 'Outbound'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '*'
         }
       }
+
     ]
   }
 }
