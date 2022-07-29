@@ -22,7 +22,7 @@ Within your home directory, create a new directory named ‘techgrounds’.
 Within the techgrounds directory, create a file containing some text.
 Move around your directory
 
-![file directories in absolute&relative paths](https://github.com/yismailmo/TechGrounds-cloud8-cloud8-yismailmo/blob/main/00_includes/file%20directories.png)
+![file directories in absolute&relative paths](../../00_includes/FileInDirectory.png)
 
 # Challenges overcame:
 
