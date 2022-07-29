@@ -26,7 +26,7 @@ mkdir scripts then cd scripts
 Create a script that appends a line of text to a text file whenever it is executed.
 
 
-
+[scripts](../../00_includes/LNX07-1.png)
 # Create a script that installs the httpd package, activates httpd, and enables httpd. Finally, your script should print the status of httpd in the terminal.
 
 
