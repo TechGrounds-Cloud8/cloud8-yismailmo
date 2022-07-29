@@ -36,7 +36,7 @@ Any group listed in /etc/group can be assigned as the group of a file.
 
 - ls -l command, ten characters are displayed before user owner and group. First character tells us about the type of the file.
 
-![fileperm](../00_includes/LNX05files.png)
+![fileperm](../../00_includes/LNX05files.png)
 
 
 
@@ -46,14 +46,14 @@ Create a text file.
 
 #### Who is the file’s owner and group? # What kind of permissions does the file have?
 
-![fileperm](../00_includes/LNX05-1.png)
+![fileperm](../../00_includes/LNX05-1.png)
 
 
 -rw-rw-r-- 1 ismael ismael   15 May  8 19:50 date1.txt
 
 #### Make a long listing to view the file’s permissions.
 
-![filelst](../00_includes/LNX05-2.png)
+![filelst](../../00_includes/LNX05-2.png)
 
 
 #### Remove the read and write permissions (rw) from the file for the group and everyone else, but not for the owner. Can you still read it?
