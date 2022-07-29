@@ -4,12 +4,11 @@ targetScope = 'resourceGroup'
 param vmSize1 string = 'Standard_B1s'
 
 @description('Default Admin username')
-param adminUsername string
+param adminUsername string = 'Admin-123'
 
 @description('Default Admin password')
 @secure()
-param adminPassword string
-
+param adminPassword string 
 
 
 @description('Location for all resources.')
@@ -132,7 +131,7 @@ resource nsg 'Microsoft.Network/networkSecurityGroups@2020-06-01' = {
   properties: {
     securityRules: [
       {
-        name: 'default-allow-ssh'
+        name: 'default-allow-RDP'
         properties: {
           priority: 1000
           sourceAddressPrefix: '*'
