@@ -79,7 +79,7 @@ An IPS monitors the network for suspicious activity or attacks in progress. When
 
 - False positives. If an IDS gives you an alert about something that isn't troublesome at all, you're the only one inconvenienced. If an IPS shuts down traffic, many people could be impacted. 
 
-![IDSvsIPS](../00_includes/SEC08IDSvsIPS1.jpg)
+![IDSvsIPS](../../00_includes/SEC08IDSvsIPS1.jpg)
 
 
 Many companies avoid the IDS vs. IPS problem by **deploying both solutions(IDS&IPS)**  they could use the IPS for active network security while the IDS gives you a deep understanding of how the traffic moves across your network. 
@@ -100,7 +100,7 @@ One of the standard guidance for security incident handling is the National Inst
 
 - Post-incident activity – Reviewing lessons learned and having a plan for evidence retention.
 
- ![IRplan](../00_includes/SEc08IRplan.png)
+ ![IRplan](../../00_includes/SEc08IRplan.png)
 
 #### The concept of systems hardening:
 
@@ -138,7 +138,7 @@ Different types of disaster recovery plans(DRP) options:
 
 (DRP) is a documented, structured approach that describes how an organization can quickly resume work after an unplanned incident.
 
-![DRP](../00_includes/SEC08DRP.png)
+![DRP](../../00_includes/SEC08DRP.png)
 
 Types of disaster recovery plans(DRP):
 
@@ -162,7 +162,7 @@ RTO:
 
 The recovery time objective (RTO) describes the amount of time critical applications can be down, typically measured in hours, minutes or seconds. 
 
-![RTO&RPO](../00_includes/SEC08RTO%26RPO.png)
+![RTO&RPO](../../00_includes/SEC08RTO%26RPO.png)
 
 Automatic Failover:
 
