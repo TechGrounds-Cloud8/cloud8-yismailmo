@@ -41,15 +41,15 @@ in nano the  the text file by
 
 by using the following command
 
-**nano samen.txt**
+        nano samen.txt
 
-**Then I added the text techgrounds by redirecting it to the file techgrounds.txt** using the following command
+        Then I added the text techgrounds by redirecting it to the file techgrounds.txt** using the following command
 
-**echo "techground" >> techgrounds.txt**
+        echo "techground" >> techgrounds.txt**
 
-**to test that the techgrounds.txt file** had been edited I used the following command
+        to test that the techgrounds.txt file had been edited I used the following command
 
-**cat "techgrounds.txt"**
+        cat "techgrounds.txt"
 
 
 
@@ -85,10 +85,10 @@ To test this again
 cat nieuwesamen.txt
 
 
-![echo techgrounds](https://github.com/yismailmo/TechGrounds-cloud8-cloud8-yismailmo/blob/main/00_includes/techgrounds%20echo.png)
+![echo command and output redirection to write a new sentence into my text file](../../00_includes/LNXEchoNanoFile.png)
 
 
-![echo techgrounds](https://github.com/yismailmo/TechGrounds-cloud8-cloud8-yismailmo/blob/main/00_includes/techgrounds%20output.png)
+![Cat files](../../00_includes/LNXCATFiles.png)
 
 # Challenges overcame
 
