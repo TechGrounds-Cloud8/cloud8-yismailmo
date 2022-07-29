@@ -54,8 +54,8 @@ https://www.cyberciti.biz/faq/unix-linux-getting-current-date-in-bash-ksh-shell-
 
 https://phoenixnap.com/kb/set-up-cron-job-linux
 
-![date&time](../blob:chrome-untrusted://media-app/32a6d66b-fca6-4b66-895f-c4fea315e368)
-![cronjobs](../blob:chrome-untrusted://media-app/e6f7263b-92f2-4bac-8a94-516c37d35627)
+![date&time](../../00_includes/blob:chrome-untrusted://media-app/32a6d66b-fca6-4b66-895f-c4fea315e368)
+![cronjobs](../../blob:chrome-untrusted://media-app/e6f7263b-92f2-4bac-8a94-516c37d35627)
 ### Overcome challanges
 Couldn't finish the second and third question even when me and my team mates even asked help from other groups.
 
