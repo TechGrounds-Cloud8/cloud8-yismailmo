@@ -81,6 +81,20 @@ resource nsg 'Microsoft.Network/networkSecurityGroups@2020-06-01' = {
   properties: {
     securityRules: [
       {
+        name: 'allow-ssh'
+        properties: {
+          priority: 1000
+          sourceAddressPrefix: '*'
+          protocol: 'Tcp'
+          destinationPortRange: '22'
+          access: 'Allow'
+          direction: 'inbound'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '*'
+        }
+      }
+
+      {
         name: 'HTTP'
         properties: {
           priority: 1000
