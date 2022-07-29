@@ -44,12 +44,11 @@ sudo nmap -sn (ip address range 10.126.176.0/24) --> gets you a list of the devi
 
 #### Open Wireshark in Windows/MacOS Machine. Analyse what happens when you open an internet browser. (Tip: you will find that Zoom is constantly sending packets over the network. You can either turn off Zoom for a minute, or look for the packets sent by the browser between the packets sent by Zoom.)
 
-Still cannot download wireshark, but i did the exercise together with Sanjai by sharing the screen and following the steps (also on NTW03).
 
 
 #### Challenges:
 
-Still need to download wireshark on own computer and make a screenshot of the browser activities.
+Took a lot time  to download wireshark on own computer.
 
 ### sources
 

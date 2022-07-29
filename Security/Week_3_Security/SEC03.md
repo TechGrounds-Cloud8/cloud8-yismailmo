@@ -66,11 +66,11 @@ OAuth is an authorization protocol, which enables the API to authenticate and ac
 ### Exercises
 ##### The difference between authentication and authorization.
 
-![Authentication&Authorization](../00_includes/SEC03Diff.jpg)
+![Authentication&Authorization](../../00_includes/SEC03Diff.jpg)
 
 ##### Here are the differences between Authentication and Authorization;
 
-![differences](../00_includes/SEC03-1.png)
+![differences](../../00_includes/SEC03-1.png)
 
 
 ##### The three factors of authentication and how MFA improves security.

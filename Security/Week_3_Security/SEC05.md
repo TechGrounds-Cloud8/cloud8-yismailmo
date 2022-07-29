@@ -25,7 +25,7 @@ Together, they are used to encrypt and decrypt messages. If you encode a message
 
 Together, the publi/private keys help to ensure the security of the exchanged data. 
 
-![publ-to-priv-encry](../00_includes/end-to-end-encryption.png)
+![publ-to-priv-encry](../../00_includes/end-to-end-encryption.png)
 
 **Generating public and private keys**
 The public and private key  are really large prime numbers that are mathematically related to one another. Being related in this case means that whatever is encrypted by the public key can only be decrypted by the related private key.
@@ -63,7 +63,7 @@ You are not allowed to use any private messages or other communication channels 
 
 So in the screenshot below i used my teammate Sanjay's public key to generate an  encrypted message(Good teamwork Jay). After that my teammate needs to use my encrypted message and his private key to decrypt my message. Then in return i can decrypt his message by using my private key and his encrypted text(which he created by using my public key) to decrypt his message. 
 
-![asymmetric-encryption](../00_includes/SEC05.png)
+![asymmetric-encryption](../../00_includes/SEC05.png)
 
 ### challenges overcame
 

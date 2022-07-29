@@ -32,7 +32,7 @@ Key Terminology:
 
 contains one entry per line, each representing a user account. You can view the contents of the file, with a text editor or a command such as cat.
 
-![etcshd](../00_includes/SEC07etcshdw.png)
+![etcshd](../../00_includes/SEC07etcshdw.png)
 
 MD5: MD5(message-digest algorithm) is a one-way cryptographic function that accepts a message of any length as input and returns as output a fixed-length digest value to be used for authenticating the original message. It used to be the most popular hash algorithm which converted a 16-byte hash value to a 32-bit hexadecimal number. It has been deprecated from use because of vulnerabilities found in it, but it can still be used as a checksum to verify data integrity only against unintentional corruption.
 
@@ -63,7 +63,7 @@ Therefore hashing is a technique or process of mapping keys, values into the has
 
 A function that converts a given big number to a small practical integer value.
 
-![hashfunc](../00_includes/SEC07hash_function-mapsnames.png)
+![hashfunc](../../00_includes/SEC07hash_function-mapsnames.png)
 
 
 **Hash table**:
@@ -84,7 +84,7 @@ Rainbow tables are tables of reversed hashes used to crack password hashes. Comp
 03F6D7D1D9AAE7160C05F71CE485AD31
 03D086C9B98F90D628F2D1BD84CFA6CA
 
-![MD5pswd](../00_includes/SEC07rainbow.png)
+![MD5pswd](../../00_includes/SEC07rainbow.png)
 
 From the picture it is clear that when the hash is present in the database(https://crackstation.net/), the password can be recovered in a fraction of a second (it was a match because it is a weak password), while the other password consists of 16 randomly generated characters.
 
@@ -100,9 +100,9 @@ After I used the command
 
 Look up the hash in a Rainbow Table.
 
-![hashpsswd2usrs](../00_includes/SEC07rnbwusrcompare.png)
+![hashpsswd2usrs](../../00_includes/SEC07rnbwusrcompare.png)
 
-![diffusrpsswd](../00_includes/SEC072usrpswd.png)
+![diffusrpsswd](../../00_includes/SEC072usrpswd.png)
 
 Despite the bad password, and the fact that Linux uses common hashing algorithms, I can't get a match in the Rainbow Table. This is because the passwords are salted even when comparing to a teammate with the same password. 
 

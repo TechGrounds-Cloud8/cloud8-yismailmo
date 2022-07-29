@@ -6,7 +6,7 @@
 
  The **importance of PKI** is this combination of encryption and authentication makes trustworthy online communication possible.
 
-![PKI](../00_includes/Public-Key-Infrastructure.png)
+![PKI](../../00_includes/Public-Key-Infrastructure.png)
 
 It consists of  **entities** that assure you can communicate securely over an insecure network like the public internet.
 
@@ -31,7 +31,7 @@ There have traditionally been three approaches to getting this trust: certificat
 
 
 
-![digital-cert](../00_includes/digital_certificate-x509.jpg)
+![digital-cert](../../00_includes/digital_certificate-x509.jpg)
 
 
 ### Key terminology
@@ -59,25 +59,25 @@ First I need to install required packages for OpenSSL, the open source SSL toolk
 
  Then i used openssl to generate a new RSA private key in 'Myfuro.key'
 
-![genRSAprivkey](../00_includes/SEC06VMCert1.png)
+![genRSAprivkey](../../00_includes/SEC06VMCert1.png)
 
-![VMRSAprivkey](../00_includes/SEC06CMcert2.png)
+![VMRSAprivkey](../../00_includes/SEC06CMcert2.png)
 
 #### Analyze some certification paths of known websites (ex. techgrounds.nl / google.com / ing.nl).
 
-![certRoot](../00_includes/SEC06CertRoot.png)
+![certRoot](../../00_includes/SEC06CertRoot.png)
 
-![Certgoogle](../00_includes/SEC06Google%20(2).png)
+![Certgoogle](../../00_includes/SEC06Google%20(2).png)
 
-![ING](../00_includes/SEC06ING.png)
+![ING](../../00_includes/SEC06ING.png)
 
 #### Find the list of trusted certificate roots on your system (bonus points if you also find it in your VM).
 
 I found out about the certifacates in my system by typing to 'certmgr' in powershell, then went to the certifactions file.
 
-![certsinmysys](../00_includes/SEC06certbonus.png)
+![certsinmysys](../../00_includes/SEC06certbonus.png)
 
-![certinVM](../00_includes/SEC06vmbonuscerts.png)
+![certinVM](../../00_includes/SEC06vmbonuscerts.png)
 
 
 ### Challenges overcssme
