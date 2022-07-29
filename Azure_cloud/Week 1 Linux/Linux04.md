@@ -41,22 +41,23 @@ cat ect/group
 to test if the new user data is created
 grep yaska
 
+
+### Results
+
+
+![usergroup](../../00_includes/LNX04usrgrp.png)
+
+
+![usrgrp](../../00_includes/LNX04grpadd2.png)
+
+### Overcome challanges
+
+Creating a user in my VM and navigating through vm.
+
+
 ### Sources
 
 
 https://linuxize.com/post/how-to-add-user-to-group-in-linux/
 
 https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu/
-
-
-### Overcome challanges
-
-Creating a user in my VM and navigating through vm.
-
-### Results
-
-
-![usergroup](../00_includes/LNX04usrgrp.png)
-
-
-![usrgrp](../00_includes/LNX04grpadd2.png)
