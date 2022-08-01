@@ -19,7 +19,7 @@ Below is a list of the essential requirements:
 
 8. SSH or RDP connections to the web server may only be established from the admin server.
 
-9. I can add some Improvements to the current architecture, but also keep in mind the deadline.
+
 
 Budget given for the entire project is maximum 150 euros.
 
