@@ -1,30 +1,38 @@
+
 targetScope = 'resourceGroup'
 
-@description('Virtual machine size (has to be at least the size of Standard_A3 to support 2 NICs)')
-param vmSize1 string = 'Standard_B1s'
-
-@description('Default Admin username')
-param adminUsername string = 'Admin-123'
-
-@description('Default Admin password')
-@secure()
-param adminPassword string 
-
-
-@description('Location for all resources.')
 param location string = resourceGroup().location
-param OperatingSystemVersion string = '2019-Datacenter'
 
 
-var virtualMachineName = 'AdminVM' /* change the name*/
-var nic1Name = 'nic-1'
-var virtualNetworkName = 'AdminVnet'
+param ManagementVmName string = 'AdminVm'
+param adminUsername1 string
+
+@description('Password for the Virtual Machine.')
+@minLength(6)
+@secure()
+param adminPassword1 string
+
+param OSVersion string = '2019-Datacenter'
+param vmSize1 string = 'Standard_B1s'
+param dnsLabelPrefix1 string = toLower('adminManage-vm-${uniqueString(resourceGroup().id)}')
+param sourceAddressPrefix string = '84.86.21.149' /*(Home ip)*/
+param virtualNetworkName string = 'management-prd-vnet'
+param nicName1 string = 'adminnic'
 var subnet1Name = 'subnet-1'
-var publicIPAddressName = 'publicIp'
-var networkSecurityGroupName = 'NSG'
+var vnet1Config = {
+  addressSpacePrefix: '10.10.0.0/24'
+  subnet1Name: 'admsubnet'
+  subnetPrefix: '10.10.0.0/27'
+}
+
+var nsgName = 'adminNSG'
+var publicIPAddressName = 'AdminPublicIP'
 
 
-// This will build a Virtual Network.
+resource dskEncrKey 'Microsoft.Compute/diskEncryptionSets@2021-08-01' existing = {
+  name: 'dskEncrKeyV1'
+}
+
 resource vnet 'Microsoft.Network/virtualNetworks@2020-06-01' = {
   name: virtualNetworkName
   location: location
@@ -47,51 +55,9 @@ resource vnet 'Microsoft.Network/virtualNetworks@2020-06-01' = {
 }
 
 
-// This is the virtual machine that you're building.
-resource vm 'Microsoft.Compute/virtualMachines@2020-06-01' = {
-  name: virtualMachineName
-  location: location
-  properties: {
-    osProfile: {
-      computerName: virtualMachineName
-      adminUsername: adminUsername
-      adminPassword: adminPassword
-      windowsConfiguration: {
-        provisionVMAgent: true
-      }
-    }
-    hardwareProfile: {
-      vmSize: vmSize1
-    }
-    storageProfile: {
-      imageReference: {
-        publisher: 'MicrosoftWindowsServer'
-        offer: 'WindowsServer'
-        sku: OperatingSystemVersion
-        version: 'latest'
-      }
-      osDisk: {
-        createOption: 'FromImage'
-      }
-    }
-    networkProfile: {
-      networkInterfaces: [
-        {
-          properties: {
-            primary: true
-          }
-          id: nic1.id
-        }
-      ]
-    }
-  }
-}
 
-
-
-// This will be your Primary NIC
 resource nic1 'Microsoft.Network/networkInterfaces@2020-06-01' = {
-  name: nic1Name
+  name: nicName1
   location: location
   properties: {
     ipConfigurations: [
@@ -115,57 +81,110 @@ resource nic1 'Microsoft.Network/networkInterfaces@2020-06-01' = {
 }
 
 
-// Public IP for your Primary NIC
-resource pip 'Microsoft.Network/publicIPAddresses@2020-06-01' = {
-  name: publicIPAddressName
-  location: location
-  properties: {
-    publicIPAllocationMethod: 'Dynamic'
-  }
-}
-
-// Network Security Group (NSG) for your Primary NIC
 resource nsg 'Microsoft.Network/networkSecurityGroups@2020-06-01' = {
-  name: networkSecurityGroupName
+  name: nsgName
   location: location
   properties: {
     securityRules: [
       {
-        name: 'default-allow-RDP'
+        name: 'SSH'
         properties: {
           priority: 1000
-          sourceAddressPrefix: '*'
           protocol: 'Tcp'
-          destinationPortRange: '3389'
           access: 'Allow'
           direction: 'Inbound'
+          sourceAddressPrefix: sourceAddressPrefix
           sourcePortRange: '*'
           destinationAddressPrefix: '*'
-          
-        } 
-      }
-
-      {
-        name: 'default-allow-ssh'
-        properties: {
-          priority: 1100
-          sourceAddressPrefix: '*'
-          protocol: 'Tcp'
           destinationPortRange: '22'
-          access: 'Allow'
-          direction: 'Outbound'
-          sourcePortRange: '*'
-          destinationAddressPrefix: '*'
         }
       }
-
+      {
+        name: 'RDP'
+        properties: {
+          description: 'rdp-rule'
+          protocol: 'Tcp'
+          sourcePortRange: '*'
+          destinationPortRange: '3389'
+          sourceAddressPrefix: sourceAddressPrefix
+          destinationAddressPrefix: '*'
+          access: 'Allow'
+          priority: 300
+          direction: 'Inbound'
+        }
+      }
     ]
   }
 }
 
-output virtualNetworkName string = vm.name
-output virtualMachineName string = vm.name
-output nic1Name string = nic1.id
-output networkSecurityGroupName string = nsg.id
+
+//PUBLIC IP
+resource pip 'Microsoft.Network/publicIPAddresses@2020-06-01' = {
+  name: publicIPAddressName
+  location: location
+  zones: [
+    '1'
+  ]
+  sku: {
+    name: 'Basic'
+  }
+  properties: {
+    publicIPAllocationMethod: 'Static'
+    publicIPAddressVersion: 'IPv4'
+    dnsSettings: {
+      domainNameLabel: dnsLabelPrefix1
+    }
+    idleTimeoutInMinutes: 4
+  }
+}
+
+
+// VM (WINDOWS)
+resource MngVm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
+  name: ManagementVmName
+  location: location
+  zones: [
+    '1'
+  ]
+  properties: {
+    hardwareProfile: {
+      vmSize: vmSize1
+    }
+    osProfile: {
+      computerName: ManagementVmName
+      adminUsername: adminUsername1
+      adminPassword: adminPassword1
+    }
+    storageProfile: {
+      imageReference: {
+        publisher: 'MicrosoftWindowsServer'
+        offer: 'WindowsServer'
+        sku: OSVersion
+        version: 'latest'
+      }
+      osDisk: {
+        name:'adminvmstorage'
+        createOption: 'FromImage'
+        managedDisk: {
+          storageAccountType: 'StandardSSD_LRS'
+          diskEncryptionSet: {
+            id: dskEncrKey.id
+          }
+        }
+      }
+    }
+    networkProfile: {
+      networkInterfaces: [
+        {
+          id: nic1.id
+        }
+      ]
+    }
+  }
+}
+
+
+
+
 
 

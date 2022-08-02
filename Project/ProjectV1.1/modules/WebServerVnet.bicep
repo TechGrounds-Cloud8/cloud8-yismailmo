@@ -149,7 +149,7 @@ resource publicIP 'Microsoft.Network/publicIPAddresses@2020-06-01' = {
   }
 }
 
-resource vm 'Microsoft.Compute/virtualMachines@2020-06-01' = {
+resource webvm 'Microsoft.Compute/virtualMachines@2020-06-01' = {
   name: vmName
   location: location
   properties: {
@@ -201,7 +201,7 @@ resource vaultName_backupFabric_protectionContainer_protectedItem 'Microsoft.Rec
   properties: {
     protectedItemType: 'Microsoft.Compute/virtualMachines'
     policyId: '${recoverySvault.id}/backupPolicies/${backuppolicy_Name}'
-    sourceResourceId: vm.id
+    sourceResourceId: webvm.id
   }
 } 
 
@@ -236,7 +236,7 @@ resource backupPolicy 'Microsoft.RecoveryServices/vaults/backupPolicies@2022-03-
 }
 
 
-output virtualNetworkName string = vm.name
-output virtualMachineName string = vm.name
+output virtualNetworkName string = webvm.name
+output virtualMachineName string = webvm.name
 output nic1Name string = nic.id
 output networkSecurityGroupName string = nsg.id

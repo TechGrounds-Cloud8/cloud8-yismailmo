@@ -3,88 +3,39 @@ targetScope = 'resourceGroup'
 @description('Location of the resources')
 param location string = resourceGroup().location
 
-@description('Name for vNet 1')
-param vnet1Name string = 'Vnet1'
+@description('Set the local VNet name')
+param existingLocalVirtualNetworkName string = 'AdminVnet'
 
-@description('Name for vNet 2')
-param vnet2Name string = 'Vnet2'
+@description('Set the remote VNet name')
+param existingRemoteVirtualNetworkName string = 'WebserverVNet'
 
-var vnet1Config = {
-  addressSpacePrefix: '10.10.10.0/24'
-  subnetName: 'subnet1'
-  subnetPrefix: '10.10.10.0/24'
-}
-var vnet2Config = {
-  addressSpacePrefix: '10.20.20.0/24'
-  subnetName: 'subnet1'
-  subnetPrefix: '10.20.20.0/24'
-}
+@description('Sets the remote VNet Resource group')
+var existingRemoteVirtualNetworkResourceGroupName = 'V1AzProject'
+var existingLocalVirtualNetworkResourceGroupName = 'V1AzProject'
 
-resource vnet1 'Microsoft.Network/virtualNetworks@2020-05-01' = {
-  name: vnet1Name
-  location: location
-  properties: {
-    addressSpace: {
-      addressPrefixes: [
-        vnet1Config.addressSpacePrefix
-      ]
-    }
-    subnets: [
-      {
-        name: vnet1Config.subnetName
-        properties: {
-          addressPrefix: vnet1Config.subnetPrefix
-        }
-      }
-    ]
-  }
-}
-
-resource VnetPeering1 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2020-05-01' = {
-  parent: vnet1
-  name: '${vnet1Name}-${vnet2Name}'
+resource existingLocalVirtualNetworkName_peering_to_remote_vnet 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2021-02-01' = {
+  name: '${existingLocalVirtualNetworkName}/peering-to-remote-vnet'
   properties: {
     allowVirtualNetworkAccess: true
     allowForwardedTraffic: false
     allowGatewayTransit: false
     useRemoteGateways: false
     remoteVirtualNetwork: {
-      id: vnet2.id
+      id: resourceId(existingRemoteVirtualNetworkResourceGroupName, 'Microsoft.Network/virtualNetworks', existingRemoteVirtualNetworkName)
     }
   }
 }
 
-resource vnet2 'Microsoft.Network/virtualNetworks@2020-05-01' = {
-  name: vnet2Name
-  location: location
-  properties: {
-    addressSpace: {
-      addressPrefixes: [
-        vnet2Config.addressSpacePrefix
-      ]
-    }
-    subnets: [
-      {
-        name: vnet2Config.subnetName
-        properties: {
-          addressPrefix: vnet2Config.subnetPrefix
-        }
-      }
-    ]
-  }
-}
 
-resource vnetPeering2 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2020-05-01' = {
-  parent: vnet2
-  name: '${vnet2Name}-${vnet1Name}'
+resource existingRemoteVirtualNetworkName_peering_to_remote_vnet 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2021-02-01' = {
+  name: '${existingRemoteVirtualNetworkName}/peering-to-remote-vnet'
   properties: {
     allowVirtualNetworkAccess: true
     allowForwardedTraffic: false
     allowGatewayTransit: false
     useRemoteGateways: false
     remoteVirtualNetwork: {
-      id: vnet1.id
+      id: resourceId(existingLocalVirtualNetworkResourceGroupName, 'Microsoft.Network/virtualNetworks', existingLocalVirtualNetworkName)
     }
   }
 }
-
