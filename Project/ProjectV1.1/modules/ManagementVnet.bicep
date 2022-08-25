@@ -1,11 +1,11 @@
-
+// Set parameters //
 targetScope = 'resourceGroup'
 
 param location string = resourceGroup().location
 
 
-param ManagementVmName string = 'AdminVm'
-param adminUsername1 string
+param ManagementVmName string = 'ManagementVm'
+param adminUsername1 string = 'Admin-2311'
 
 @description('Password for the Virtual Machine.')
 @minLength(6)
@@ -16,22 +16,19 @@ param OSVersion string = '2019-Datacenter'
 param vmSize1 string = 'Standard_B1s'
 param dnsLabelPrefix1 string = toLower('adminManage-vm-${uniqueString(resourceGroup().id)}')
 param sourceAddressPrefix string = '84.86.21.149' /*(Home ip)*/
-param virtualNetworkName string = 'management-prd-vnet'
+param virtualNetworkName string = 'ManagementVnet'
 param nicName1 string = 'adminnic'
 var subnet1Name = 'subnet-1'
 var vnet1Config = {
-  addressSpacePrefix: '10.10.0.0/24'
+  addressSpacePrefix: '10.10.10.0/24'
   subnet1Name: 'admsubnet'
-  subnetPrefix: '10.10.0.0/27'
+  subnetPrefix: '10.10.10.0/27'
 }
 
 var nsgName = 'adminNSG'
 var publicIPAddressName = 'AdminPublicIP'
 
-
-resource dskEncrKey 'Microsoft.Compute/diskEncryptionSets@2021-08-01' existing = {
-  name: 'dskEncrKeyV1'
-}
+// Management Vnet //
 
 resource vnet 'Microsoft.Network/virtualNetworks@2020-06-01' = {
   name: virtualNetworkName
@@ -55,7 +52,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2020-06-01' = {
 }
 
 
-
+// NIC//
 resource nic1 'Microsoft.Network/networkInterfaces@2020-06-01' = {
   name: nicName1
   location: location
@@ -80,6 +77,7 @@ resource nic1 'Microsoft.Network/networkInterfaces@2020-06-01' = {
   }
 }
 
+// NSG //
 
 resource nsg 'Microsoft.Network/networkSecurityGroups@2020-06-01' = {
   name: nsgName
@@ -87,12 +85,12 @@ resource nsg 'Microsoft.Network/networkSecurityGroups@2020-06-01' = {
   properties: {
     securityRules: [
       {
-        name: 'SSH'
+        name: 'Deny-Inbound-All'
         properties: {
-          priority: 1000
+          priority: 4096
           protocol: 'Tcp'
-          access: 'Allow'
-          direction: 'Inbound'
+          access: 'Deny'
+          direction: 'Outbound'
           sourceAddressPrefix: sourceAddressPrefix
           sourcePortRange: '*'
           destinationAddressPrefix: '*'
@@ -100,16 +98,16 @@ resource nsg 'Microsoft.Network/networkSecurityGroups@2020-06-01' = {
         }
       }
       {
-        name: 'RDP'
+        name: 'Allow-Inbound-Trusted'
         properties: {
-          description: 'rdp-rule'
+          description: 'Allow Inbound from Trusted IPs'
           protocol: 'Tcp'
           sourcePortRange: '*'
           destinationPortRange: '3389'
           sourceAddressPrefix: sourceAddressPrefix
-          destinationAddressPrefix: '*'
+          destinationAddressPrefix: '10.20.20.0/24"'
           access: 'Allow'
-          priority: 300
+          priority: 110
           direction: 'Inbound'
         }
       }
@@ -167,9 +165,9 @@ resource MngVm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
         createOption: 'FromImage'
         managedDisk: {
           storageAccountType: 'StandardSSD_LRS'
-          diskEncryptionSet: {
+          /*diskEncryptionSet: {
             id: dskEncrKey.id
-          }
+          }*/
         }
       }
     }

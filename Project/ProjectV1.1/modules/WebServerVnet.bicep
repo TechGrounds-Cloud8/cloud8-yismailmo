@@ -4,7 +4,7 @@ targetScope = 'resourceGroup'
 param vmName string = 'webVM'
 
 @description('Username for the Virtual Machine.')
-param adminUsername string = 'Admin-12345'
+param adminUsername string = 'Admin-2311'
 
 @description('Name of the Vault')
 param vaultName string = 'vault'
@@ -34,7 +34,7 @@ param location string = resourceGroup().location
 param vmSize string = 'Standard_B2s'
 
 @description('Name of the VNET')
-param virtualNetworkName string = 'WebserverVNet'
+param virtualNetworkName string = 'WebServerVNet'
 
 @description('Name of the subnet in the virtual network')
 param subnetName string = 'Subnet'
@@ -181,7 +181,7 @@ resource webvm 'Microsoft.Compute/virtualMachines@2020-06-01' = {
       computerName: vmName
       adminUsername: adminUsername
       adminPassword: adminPassword
-      customData: loadFileAsBase64('userData.sh')
+      customData: loadFileAsBase64('userData/userData1.sh')
     }
   }
 }

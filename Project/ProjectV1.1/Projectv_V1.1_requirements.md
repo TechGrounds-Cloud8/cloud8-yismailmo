@@ -22,8 +22,11 @@ The customer would like to use more possibilities of the cloud. In addition, the
 • Should a user connect to the load balancer via HTTP, this connection should be automatically upgraded to HTTPS.
 
 • The connection must be secured with at least TLS 1.2 or higher.
+-   ssl offloading or forward https to vm and decrypt
 
 • The web server must undergo a 'health check' on a regular basis.
+
+- 
 
 • Should the web server fail this health check, the server should be automatically restored.
 

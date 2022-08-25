@@ -1,7 +1,7 @@
 
 targetScope = 'resourceGroup'
 @description('Specifies the name of the key vault.')
-param keyVaultName string
+param keyVaultName string = 'keyvault-1-ismail'
 
 @description('Specifies the Azure location where the key vault should be created.')
 param location string = resourceGroup().location
@@ -19,7 +19,7 @@ param enabledForTemplateDeployment bool = true
 param tenantId string = subscription().tenantId
 
 @description('Specifies the object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies. Get it by using Get-AzADUser or Get-AzADServicePrincipal cmdlets.')
-param objectId string = 'e86f7f25-f048-4436-afc9-3c0415281672'
+param objectId string = 'e86f7f25-f048-4436-afc9-3c0415281672' 
 
 
 @description('Specifies whether the key vault is a standard vault or a premium vault.')
@@ -29,6 +29,8 @@ param objectId string = 'e86f7f25-f048-4436-afc9-3c0415281672'
 ])
 param skuName string = 'standard'
 
+
+// Deploy  key vault
 
 resource vault 'Microsoft.KeyVault/vaults@2019-09-01' = {
   name: keyVaultName
@@ -72,59 +74,5 @@ resource vault 'Microsoft.KeyVault/vaults@2019-09-01' = {
   }
 }
 
-resource mngId 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' = {
-  name:  'admin'
-  location: location
-  dependsOn: [
-    vault
-  ]
-}
-
-resource secret 'Microsoft.KeyVault/vaults/secrets@2019-09-01' = {
-  name: '${keyVaultName}/mySecret'  // The first part is KV's name
-  properties: {
-    value: 'mySecretValue'
-  }
-}
-resource vmdiskencryption 'Microsoft.Compute/diskEncryptionSets@2022-03-02' = {
-  name: 'vmdiskencrypt'
-  location: location
-  identity: {
-    type: 'systemAssignedIdentities'
-  }
-  properties:{
-    activeKey:{
-      sourceVault:{
-        id: keyVaultName
-      }
-      keyUrl: keyVaultName
-    }
-  }
-}
-    
-
-/* create key */
-resource RSAkey 'Microsoft.KeyVault/vaults/keys@2021-10-01' = {
-  name: 'RSAKey'
-  parent: vault
-  properties: {
-    kty: 'RSA' // key type
-    keySize: 4096
-    keyOps: [
-      // key operations
-      'encrypt'
-      'decrypt'
-    ]
-    
-    attributes:{
-      enabled: true
-    }
-  }
-}
-
-
-
-
-output keyvaultId string = vault.id
-output Key object = RSAkey
-output objectId string = objectId
+output keyVaultName string = vault.name
+output keyVaultId string = vault.id

@@ -1,8 +1,8 @@
 targetScope = 'subscription'
 
-param location string = 'Northeurope'
+param location string = 'Westeurope'
 
-var ResourceGroupName = 'V1AzProject'
+var ResourceGroupName = 'IsmailAzProject'
 
 resource RG 'Microsoft.Resources/resourceGroups@2021-04-01' = {
  

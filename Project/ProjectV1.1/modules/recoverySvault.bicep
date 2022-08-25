@@ -1,3 +1,5 @@
+// Parameter //
+
 @description('Name of the Vault')
 param RcoverySvault_Name string = 'recoverySvault'
 
@@ -9,9 +11,9 @@ param enableCRR bool = true
   'LocallyRedundant'
   'GeoRedundant'
 ])
-param vaultStorageType string = 'GeoRedundant'
+param vaultStorageType string = 'LocallyRedundant'
 
-
+param backup_policyID_in string
 
 @description('Name of the Backup Policy')
 param backupolicy_Name string
@@ -21,10 +23,6 @@ param backupolicy_Name string
 param location string = resourceGroup().location
 
 var backupFabric = 'Azure'
-var protectionContainer = 'iaasvmcontainer;iaasvmcontainerv2;${resourceGroup().name};${ManagementVM}'
-var protectedItem = 'vm;iaasvmcontainerv2;${resourceGroup().name};${ManagementVM}'
-var protectionContainer2 = 'iaasvmcontainer;iaasvmcontainerv2;${resourceGroup().name};${webvm}'
-var protectedItem2 = 'vm;iaasvmcontainerv2;${resourceGroup().name};${webvm}'
 
 resource recoverySvault 'Microsoft.RecoveryServices/vaults@2020-10-01' = {
 name: RcoverySvault_Name
@@ -36,21 +34,17 @@ name: RcoverySvault_Name
   identity:{
     type: 'UserAssigned'
     userAssignedIdentities:{
-      '${mngId.id}' : {}
+     
     }
   }
  
 }
 
-resource mngId 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' existing = {
-  name:  'projectadmin'
-}
 
-
-
+// backup Fabrics // 
 
 resource vaultName_backupFabric_protectionContainer_protectedItem 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2022-03-01' = {
-  name: '${recoverySvault}/${backupFabric}/${protectionContainer}/${protectedItem}'
+  name: '${recoverySvault}/${backupFabric}'
   properties: {
     protectedItemType: 'Microsoft.Compute/virtualMachines'
     policyId: '${recoverySvault.id}/backupPolicies/${backuppolicy}'
@@ -88,7 +82,7 @@ resource backuppolicy 'Microsoft.RecoveryServices/vaults/backupPolicies@2022-03-
   }
 }
 
-
+// Backup storage config //
 resource vaultName_vaultstorageconfig 'Microsoft.RecoveryServices/vaults/backupstorageconfig@2022-02-01' = {
   parent: recoverySvault
   name: 'vaultstorageconfig'
@@ -102,15 +96,15 @@ resource vaultName_vaultstorageconfig 'Microsoft.RecoveryServices/vaults/backups
 resource ManagementVM 'Microsoft.Compute/virtualMachines@2021-03-01' existing = {
   name: 'adminserv'
 }
-resource webvm 'Microsoft.Compute/virtualMachines@2020-06-01' existing = {
+resource webvmss 'Microsoft.Compute/virtualMachines@2020-06-01' existing = {
   name: 'webserv'
 }
 
 
-resource backupAdmin 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2021-12-01' = {
-  name: '${recoverySvault.name}/${backupFabric}/${protectionContainer}/${protectedItem}'
+resource backupManagment 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2021-12-01' = {
+  name: '${recoverySvault.name}/${backupFabric}'
   tags: {
-    'projectv1': 'jamaltadrous'
+    'projectv1.1': 'IsmailAzProject'
   }
   properties: {
     protectedItemType: 'Microsoft.Compute/virtualMachines'
@@ -124,13 +118,29 @@ resource backupAdmin 'Microsoft.RecoveryServices/vaults/backupFabrics/protection
 
 
 resource backupWeb 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems@2021-12-01' = {
-  name: '${recoverySvault}/${backupFabric}/${protectionContainer2}/${protectedItem2}'
+  name: '${recoverySvault}/${backupFabric}'
   tags: {
-    'projectv1': 'jamaltadrous'
+    'projectv1.1': 'IsmailAzProject'
   }
   properties: {
     protectedItemType: 'Microsoft.Compute/virtualMachines'
     policyId: backuppolicy.id
-    sourceResourceId: webvm.id
+    sourceResourceId: webvmss.id
+  }
+}
+
+resource remediate_sym 'Microsoft.PolicyInsights/remediations@2021-10-01' = {
+  name: 'remed_backup_policy'
+  properties: {
+    failureThreshold: {
+      percentage: 1
+    }
+    filters: {
+      locations: [
+        location
+      ]
+    }
+    policyAssignmentId: backup_policyID_in
+    resourceDiscoveryMode: 'ReEvaluateCompliance'
   }
 }

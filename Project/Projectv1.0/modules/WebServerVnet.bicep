@@ -4,7 +4,7 @@ targetScope = 'resourceGroup'
 param vmName string = 'webVM'
 
 @description('Username for the Virtual Machine.')
-param adminUsername string = 'Admin-12345'
+param adminUsername string = 'Admin-123'
 
 @description('Name of the Vault')
 param vaultName string = 'vault'

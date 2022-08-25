@@ -8,7 +8,7 @@ param adminUsername string = 'Admin-123'
 
 @description('Default Admin password')
 @secure()
-param adminPassword string 
+param adminPassword string = 'Admin-123'
 
 
 @description('Location for all resources.')

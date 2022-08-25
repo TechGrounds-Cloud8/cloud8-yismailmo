@@ -1,10 +1,14 @@
+// parameters
+
 targetScope = 'resourceGroup'
 
 @description('Specifies the Azure location where the key vault should be created.')
 param location string = resourceGroup().location
 
+param containerName string =  'StorageContainer'
 
 
+// Storage account //
 resource storageacc 'Microsoft.Storage/storageAccounts@2021-09-01'={
   name: 'projectv1storage'
   location: location
@@ -14,13 +18,12 @@ resource storageacc 'Microsoft.Storage/storageAccounts@2021-09-01'={
   }
   kind: 'StorageV2'
   properties:{
-    accessTier: 'Hot'/* look into the storage tier*/
+    accessTier: 'Hot'
   }
   
 }
 
-
-
+// Btorage Blob Servoces //
 resource blobServices 'Microsoft.Storage/storageAccounts/blobServices@2021-09-01' = {
   parent: storageacc
   name: 'default'
@@ -43,7 +46,19 @@ resource blobServices 'Microsoft.Storage/storageAccounts/blobServices@2021-09-01
 }
   
 
-/* Storage blob encryption from the requirements that all  Disks must be encrypted*/
+// Container //
+resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2021-08-01' = {
+  name: containerName
+  parent: blobServices
+  properties: {
+    defaultEncryptionScope: '$account-encryption-key'
+    denyEncryptionScopeOverride: false
+    immutableStorageWithVersioning: {
+      enabled: false
+    }
+    publicAccess: 'None'
+  }
+}
 
 
 
