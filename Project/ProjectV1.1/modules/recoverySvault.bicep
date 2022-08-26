@@ -1,3 +1,5 @@
+// Parameter //
+
 @description('Name of the Vault')
 param RcoverySvault_Name string = 'recoverySvault'
 
@@ -37,8 +39,6 @@ name: RcoverySvault_Name
   }
  
 }
-
-
 
 
 // backup Fabrics // 
@@ -82,7 +82,7 @@ resource backuppolicy 'Microsoft.RecoveryServices/vaults/backupPolicies@2022-03-
   }
 }
 
-
+// Backup storage config //
 resource vaultName_vaultstorageconfig 'Microsoft.RecoveryServices/vaults/backupstorageconfig@2022-02-01' = {
   parent: recoverySvault
   name: 'vaultstorageconfig'
@@ -96,7 +96,7 @@ resource vaultName_vaultstorageconfig 'Microsoft.RecoveryServices/vaults/backups
 resource ManagementVM 'Microsoft.Compute/virtualMachines@2021-03-01' existing = {
   name: 'adminserv'
 }
-resource webvm 'Microsoft.Compute/virtualMachines@2020-06-01' existing = {
+resource webvmss 'Microsoft.Compute/virtualMachines@2020-06-01' existing = {
   name: 'webserv'
 }
 
@@ -125,7 +125,7 @@ resource backupWeb 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionCo
   properties: {
     protectedItemType: 'Microsoft.Compute/virtualMachines'
     policyId: backuppolicy.id
-    sourceResourceId: webvm.id
+    sourceResourceId: webvmss.id
   }
 }
 

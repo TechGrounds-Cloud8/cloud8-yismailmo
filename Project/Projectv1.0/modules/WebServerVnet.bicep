@@ -4,7 +4,7 @@ targetScope = 'resourceGroup'
 param vmName string = 'webVM'
 
 @description('Username for the Virtual Machine.')
-param adminUsername string = 'Admin-12345'
+param adminUsername string = 'Admin-123'
 
 @description('Name of the Vault')
 param vaultName string = 'vault'
@@ -13,7 +13,7 @@ var backuppolicy_Name = 'backuppolicy'
 
 @description('SSH Key or password for the Virtual Machine. SSH key is recommended.')
 @secure()
-param adminPassword string = 'Admin-2311'
+param adminPassword string 
 
 @description('Unique DNS Name for the Public IP used to access the Virtual Machine.')
 param dnsLabelPrefix string = toLower('webvm-${uniqueString(resourceGroup().id)}')
@@ -97,7 +97,7 @@ resource nsg 'Microsoft.Network/networkSecurityGroups@2020-06-01' = {
       {
         name: 'HTTP'
         properties: {
-          priority: 1000
+          priority: 1100
           protocol: 'Tcp'
           access: 'Allow'
           direction: 'Inbound'
