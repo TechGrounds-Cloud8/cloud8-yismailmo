@@ -22,7 +22,7 @@ var subnet1Name = 'subnet-1'
 var vnet1Config = {
   addressSpacePrefix: '10.10.10.0/24'
   subnet1Name: 'admsubnet'
-  subnetPrefix: '10.10.10.0/27'
+  subnetPrefix: '10.10.10.0/24'
 }
 
 var nsgName = 'adminNSG'
@@ -30,7 +30,7 @@ var publicIPAddressName = 'AdminPublicIP'
 
 // Management Vnet //
 
-resource vnet 'Microsoft.Network/virtualNetworks@2020-06-01' = {
+resource Managementvnet 'Microsoft.Network/virtualNetworks@2020-06-01' = {
   name: virtualNetworkName
   location: location
   properties: {
@@ -62,7 +62,7 @@ resource nic1 'Microsoft.Network/networkInterfaces@2020-06-01' = {
         name: 'ipconfig1'
         properties: {
           subnet: {
-            id: resourceId('Microsoft.Network/virtualNetworks/subnets', vnet.name, subnet1Name)
+            id: resourceId('Microsoft.Network/virtualNetworks/subnets', Managementvnet.name, subnet1Name)
           }
           privateIPAllocationMethod: 'Dynamic'
           publicIPAddress: {
@@ -105,7 +105,7 @@ resource nsg 'Microsoft.Network/networkSecurityGroups@2020-06-01' = {
           sourcePortRange: '*'
           destinationPortRange: '3389'
           sourceAddressPrefix: sourceAddressPrefix
-          destinationAddressPrefix: '10.20.20.0/24"'
+          destinationAddressPrefix: '10.20.20.0/24'
           access: 'Allow'
           priority: 110
           direction: 'Inbound'

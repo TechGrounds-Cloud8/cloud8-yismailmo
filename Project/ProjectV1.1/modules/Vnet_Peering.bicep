@@ -4,10 +4,10 @@ targetScope = 'resourceGroup'
 param location string = resourceGroup().location
 
 @description('Set the local VNet name')
-param existingLocalVirtualNetworkName string = 'ManagementVnet'
+param existingLocalVirtualNetworkName string = 'Managementvnet'
 
 @description('Set the remote VNet name')
-param existingRemoteVirtualNetworkName string = 'WebServerVNet'
+param existingRemoteVirtualNetworkName string = 'WebVNet'
 
 @description('Sets the remote VNet Resource group')
 var existingRemoteVirtualNetworkResourceGroupName = 'V1AzProject'
