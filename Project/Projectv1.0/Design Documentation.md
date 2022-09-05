@@ -1,7 +1,6 @@
 # Project architecture:
 
-
-Build the Infrastructure as Code app using Bicep for the following architecture(this is just an example and i will have to add services to the design).
+Build the Infrastructure as Code app using Bicep for the following architecture(this is just an example and i will add services to the design).
 
 ![project_architecturev1.0](../../00_includes/Project_architecturev1.0.png)
 
